@@ -50,12 +50,29 @@ def step_transport(rho, vx, vy):
     div = (fx - np.roll(fx, 1, 0)) + (fy - np.roll(fy, 1, 1))
     return rho + DT * (D_DIFF * lap - div), fx, fy
 
-def run(r, ell, tensor, mu, M0, s, rng, C_TH, snapshots=None):
+def run(r, ell, tensor, mu, M0, s, rng, C_TH, snapshots=None, seed_mode="all"):
     rho = initial_density(r)
     delta = rng.uniform(-np.pi, np.pi, (N, N)); w = np.cos(delta / 2) ** 2
-    # seed by R2: one atom sampled ∝ ρ w, initial charge w × threshold
-    p = (rho * w).ravel(); seed = rng.choice(N * N, p=p / p.sum()); si, sj = divmod(seed, N)
-    C = np.zeros((N, N)); C[si, sj] = w[si, sj] * C_TH
+    dep = rho * w
+    p = dep.ravel(); seed = rng.choice(N * N, p=p / p.sum()); si, sj = divmod(seed, N)
+    C = np.zeros((N, N))
+    can = np.ones((N, N), bool)
+    if seed_mode == "all":
+        C[si, sj] = w[si, sj] * C_TH                     # the registered head start (A4)
+    else:
+        can[:] = False
+        if seed_mode == "one":
+            can[si, sj] = True
+        elif seed_mode == "per_lobe":
+            for mask in (XX < N // 2, XX > N // 2):
+                q = np.where(mask, dep, 0.0).ravel(); k = rng.choice(N * N, p=q / q.sum()); can[divmod(k, N)] = True
+        elif seed_mode == "five":
+            ks = rng.choice(N * N, size=5, replace=False, p=p / p.sum())
+            for k in ks:
+                can[divmod(k, N)] = True
+    # the near-equality statistic: the two lobes' largest deposits among the atoms that can charge
+    left = np.where(can & (XX < N // 2), dep, 0.0).max(); right = np.where(can & (XX > N // 2), dep, 0.0).max()
+    dep_ratio = min(left, right) / max(left, right) if max(left, right) > 0 else np.nan
     E = np.zeros((N, N)); eta = np.zeros((N, N)); latched = np.zeros((N, N), bool)
     Mxx = np.full((N, N), float(M0)); Myy = np.full((N, N), float(M0)); Mxy = np.zeros((N, N))
     t_first = [np.nan, np.nan]; mass_err = 0.0; snaps = {}
@@ -91,8 +108,8 @@ def run(r, ell, tensor, mu, M0, s, rng, C_TH, snapshots=None):
         mass_err = max(mass_err, abs(rho.sum() + absorbed.sum() - before))
         # charging, noise, latch
         eta += -eta * DT / TAU_N + s * np.sqrt(DT) * rng.standard_normal((N, N))
-        C += DT * (rho * w - C / TAU_C)
-        new = (~latched) & (C + eta >= C_TH); latched |= new
+        C += DT * (rho * w - C / TAU_C) * can
+        new = (~latched) & can & (C + eta >= C_TH); latched |= new
         for side, mask in ((0, XX < N // 2), (1, XX > N // 2)):
             if np.isnan(t_first[side]) and (new & mask).any():
                 t_first[side] = t
@@ -110,7 +127,7 @@ def run(r, ell, tensor, mu, M0, s, rng, C_TH, snapshots=None):
     else:
         index, area, aniso = np.nan, 0, np.nan
     return dict(first=first, both=both, n_lat=n_lat, coll=coll, t_first=t_first, index=index, area=area, aniso=aniso,
-                mass_err=mass_err, seed_side=int(si > N // 2), snaps=snaps, rho=rho, tr=tr, latched=latched)
+                mass_err=mass_err, seed_side=int(si > N // 2), snaps=snaps, rho=rho, tr=tr, latched=latched, dep_ratio=dep_ratio)
 
 def settings(mu):
     return [
@@ -237,5 +254,57 @@ def figures(res, summary, tag, prm):
     fig.suptitle(f"{tag} set (μ = {prm['mu']:g}, C_th = {prm['cth']:g})", color=TEXT, fontsize=10, fontweight="bold")
     fig.tight_layout(); fig.savefig(OUT / f"fig2_outcomes_{tag}.png", dpi=150); plt.close(fig)
 
+def main_seeded():
+    rng = np.random.default_rng(20260907 + 23)
+    prm = PARAM_SETS["addendum"]
+    lines = ["", "Seeded charging (PREREGISTRATION.md §6, seeded-charging addendum): addendum parameter set, ℓ = 16, tensor, noise 1e-3", ""]
+    rows, summary, worst = [], [], 0.0
+    for mode in ("one", "per_lobe", "five", "all"):
+        for r in (4.0, 1.0):
+            outs = []
+            for j in range(N_TRIALS):
+                res = run(r, 16.0, True, prm["mu"], 10.0, 1e-3, rng, prm["cth"], seed_mode=mode)
+                outs.append(res); worst = max(worst, res["mass_err"])
+                rows.append([mode, r, j, res["seed_side"], res["first"], int(res["both"]), res["n_lat"][0], res["n_lat"][1],
+                             f"{res['coll'][0]:.4f}", f"{res['coll'][1]:.4f}", f"{res['dep_ratio']:.4f}" if not np.isnan(res["dep_ratio"]) else ""])
+            ratios = np.array([o["dep_ratio"] for o in outs if not np.isnan(o["dep_ratio"])])
+            w5 = np.mean(ratios >= 0.95) if ratios.size else np.nan; w10 = np.mean(ratios >= 0.90) if ratios.size else np.nan; w20 = np.mean(ratios >= 0.80) if ratios.size else np.nan
+            both = np.mean([o["both"] for o in outs]); bright = np.mean([o["first"] == 1 for o in outs]); none = np.mean([o["first"] == -1 for o in outs])
+            win = np.mean([o["coll"][o["first"]] if o["first"] >= 0 else 0.0 for o in outs]); tot = np.mean([sum(o["coll"]) for o in outs])
+            summary.append([mode, r, N_TRIALS, f"{both:.2f}", f"{bright:.2f}", f"{none:.2f}", f"{win:.3f}", f"{tot:.3f}",
+                            f"{w5:.2f}" if not np.isnan(w5) else "", f"{w10:.2f}" if not np.isnan(w10) else "", f"{w20:.2f}" if not np.isnan(w20) else "",
+                            f"{np.mean([o['n_lat'][0] for o in outs]):.1f}", f"{np.mean([o['n_lat'][1] for o in outs]):.1f}"])
+            lines.append(f"  {mode:9s} r = {r:g}: double record {both:.2f}, bright lobe first {bright:.2f}, none {none:.2f}, winner collects {win:.3f} (total {tot:.3f}),"
+                         f" deposits within 5/10/20 %: {w5 if np.isnan(w5) else round(w5,2)}/{w10 if np.isnan(w10) else round(w10,2)}/{w20 if np.isnan(w20) else round(w20,2)}")
+    lines.append(f"  mass conservation per step, worst: {worst:.1e}   -> {'PASS' if worst < 1e-6 else 'FAIL'}")
+    with open(OUT / "summary_seeded.csv", "w", newline="") as f:
+        wr = csv.writer(f)
+        wr.writerow(["seed_mode", "r", "trials", "P_double_record", "P_bright_first", "P_no_record", "winner_collected_t60", "total_collected_t60",
+                     "deposits_within_5pct", "deposits_within_10pct", "deposits_within_20pct", "latched_left_mean", "latched_right_mean"]); wr.writerows(summary)
+    with open(OUT / "trials_seeded.csv", "w", newline="") as f:
+        wr = csv.writer(f)
+        wr.writerow(["seed_mode", "r", "trial", "seed_side", "first_lobe", "double_record", "latched_left", "latched_right", "collected_left", "collected_right", "lobe_deposit_ratio"]); wr.writerows(rows)
+    with open(OUT / "verification.txt", "a") as f:
+        f.write("\n".join(lines) + "\n")
+    with open(OUT / "run_info.txt", "a") as f:
+        f.write(f"seeded charging: {'PASS' if worst < 1e-6 else 'FAIL'}\n")
+    print("\n".join(lines))
+    plt.rcParams.update({"font.family": "sans-serif", "font.size": 9, "axes.titlesize": 10, "axes.titleweight": "bold", "axes.edgecolor": GRID,
+                         "axes.labelcolor": TEXT2, "xtick.color": TEXT2, "ytick.color": TEXT2, "axes.titlecolor": TEXT, "figure.facecolor": SURFACE,
+                         "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE, "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.8,
+                         "legend.frameon": False, "legend.fontsize": 7.5, "axes.axisbelow": True})
+    modes = ["one", "per_lobe", "five", "all"]; x = np.arange(4)
+    fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.0))
+    for ax, cols, title in ((axes[0], [(3, "double record"), (4, "bright lobe first")], "Records per quantum"),
+                            (axes[1], [(6, "collected by the winning lobe"), (7, "collected in total")], "Collection by t = 60"),
+                            (axes[2], [(8, "deposits within 5 %"), (10, "deposits within 20 %")], "Near-equality of the lobes' largest deposits")):
+        for k, (ci, lab) in enumerate(cols):
+            for r, hatch in ((4.0, ""), (1.0, "//")):
+                vals = [float(next(s for s in summary if s[0] == m and s[1] == r)[ci] or 0) for m in modes]
+                ax.bar(x + (k - 0.5) * 0.4 + (0.1 if r == 1.0 else -0.1), vals, 0.2, color=SLOT[k], hatch=hatch, label=f"{lab}, r = {r:g}")
+        ax.set_xticks(x); ax.set_xticklabels([m.replace("_", " ") for m in modes]); ax.set_ylim(0, 1.05); ax.set_title(title); ax.legend(loc="upper left")
+    axes[0].axhline(0.8, color=TEXT2, lw=0.8, alpha=0.6)
+    fig.tight_layout(); fig.savefig(OUT / "fig3_seeded.png", dpi=150); plt.close(fig)
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main_seeded() if (len(sys.argv) > 1 and sys.argv[1] == "seeded") else main())

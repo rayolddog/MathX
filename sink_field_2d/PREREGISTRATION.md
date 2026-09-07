@@ -128,3 +128,41 @@ were found.
    in full: μ = 2000 (a passed flow of 0.005 doubles M₀) and C_th = 0.004 (the weak lobe can latch
    by itself in about ten time units). Predictions H1 to H7 are read against both sets; the
    registered set is the one they were written for, and its misses stand as misses.
+
+**2026-09-07, seeded charging (JB's observation of 2026-09-07 that the rate of equal deposits is
+too high; registered with my defaults at his instruction).** Written before the run.
+
+- **D10, seeds.** Only atoms selected by the deposit race can charge. Seeds are sampled without
+  replacement with probability proportional to ρ w (the second study's R2). Modes: **one** seed
+  per quantum; **one per lobe** (one sampled within each lobe); **five** per quantum, sampled
+  over the whole aperture; and **all** atoms, the model as run above. Seeds start from zero
+  charge and charge at ρ_i w_i as in D3; the head start of A4 applies only to the "all" mode,
+  where it was registered. Everything else is the addendum parameter set (μ = 2000,
+  C_th = 0.004, ℓ = 16, tensor conductance, noise 10⁻³), r ∈ {1, 4}, twenty trials per cell.
+- **D11, recorded.** The double-record rate, the side recorded first, the collected fractions,
+  and the ratio of the two lobes' largest seed deposits at t = 0 (the near-equality statistic:
+  the share of trials with that ratio within 5 %, 10 % and 20 % of one; for the "all" mode the
+  largest deposit in each lobe over every atom).
+
+Predictions (the near-equality numbers were computed in scratch before this addendum was written).
+
+| | one | one per lobe | five | all |
+|---|---|---|---|---|
+| lobes' largest deposits within 5 % of each other, r = 1 | no second lobe | 0.03 | between | 0.82 |
+| within 10 % | | 0.08 | between | 0.99 |
+| within 20 % | | 0.15 | between | 1.00 |
+| double-record rate, r = 4 | 0 by construction | below the "all" rate of 1.00, because a weak-lobe seed of low weight cannot reach threshold; about 0.6 | between | 1.00 |
+| double-record rate, r = 1 | 0 | near 0.9: both seeds usually can latch, and the field does not empty a lobe | between | 1.00 |
+| side recorded first, r = 4 | Born's 0.80 exactly, since the seed is the record | above 0.8, the bright seed charges faster | above 0.8 | 0.95 |
+| collected by t = 60, r = 4 | below 0.5: one absorbing cell | | | 0.90 |
+
+- **S1.** Near-equality of deposits falls from the rule to a few percent as soon as the crowd is
+  removed, independent of precision.
+- **S2.** The double-record rate falls with fewer seeds but does not reach the anticorrelation
+  bound in any mode with a seed in each lobe, because suppression is still absent.
+- **S3.** With one seed the site statistics are Born by construction and collection is poor: the
+  cost moves from the double record to the uncollected energy.
+- **S4.** Collection rises with the number of seeds.
+
+Recorded: `results/summary_seeded.csv`, `trials_seeded.csv`, `fig3_seeded.png`, verification lines
+appended to `verification.txt`.

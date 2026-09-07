@@ -50,5 +50,6 @@ question.
 
     cd ../sink_field_2d
     python3 sink_field.py             # the 2-D transport model, two parameter sets; about 100 s
+    python3 sink_field.py seeded      # seeded charging: one, one per lobe, five, all; about 45 s
 
 Python 3.13 with numpy, scipy, matplotlib. Outputs go to each folder's `results/`.

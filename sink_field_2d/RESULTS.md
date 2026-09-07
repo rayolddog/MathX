@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-07. Definitions and predictions were fixed in `PREREGISTRATION.md` before the
 run; its §6 records an erratum found after the first run, a typo, and two added sensitivities.
-Run: `python3 sink_field.py` (about 100 s). Every number below is in `results/`. The first run,
+Run: `python3 sink_field.py` (about 100 s), then `python3 sink_field.py seeded` (about 45 s). Every number below is in `results/`. The first run,
 made with the field's sign reversed, is kept in `results/first_run_wrong_sign/` and not quoted.
 
 ## Read this before quoting any number
@@ -115,8 +115,50 @@ latching everywhere else once one record has begun, which is a nonlocal rule, or
 only the winning lobe can reach, which reproduces the brighter lobe always winning. Neither gives
 Born's statistics from the dynamics; Born enters through the seed and leaves through the race.
 
+## Seeded charging (added 2026-09-07): only atoms chosen by the deposit race can charge
+
+Source: `results/summary_seeded.csv`, `trials_seeded.csv`, `fig3_seeded.png`. Registered in the
+pre-registration's seeded-charging addendum before the run, after JB's observation that the rate
+of equal deposits looked too high and his question whether the amplitude had been quantized. It
+had not; the near-equality came from letting every atom charge, so that each lobe's record was
+made by the best of about a hundred draws. Here the atoms that can charge are the seeds sampled
+by deposit, one per quantum, one per lobe, five, or all. Addendum parameter set, twenty trials.
+
+| seeds | r | double record | bright lobe first | no record | winner collects | total collected | lobes' largest deposits within 5 % / 10 % / 20 % |
+|---|---|---|---|---|---|---|---|
+| one seed per quantum | 4 | 0.00 | 0.85 | 0.05 | 0.048 | 0.048 | 0.00 / 0.00 / 0.00 |
+| one seed per quantum | 1 | 0.00 | 0.60 | 0.05 | 0.026 | 0.026 | 0.00 / 0.00 / 0.00 |
+| one seed per lobe | 4 | 0.50 | 0.80 | 0.00 | 0.043 | 0.050 | 0.00 / 0.05 / 0.05 |
+| one seed per lobe | 1 | 0.85 | 0.55 | 0.05 | 0.032 | 0.049 | 0.00 / 0.00 / 0.05 |
+| five seeds | 4 | 0.40 | 0.95 | 0.00 | 0.161 | 0.167 | 0.00 / 0.00 / 0.00 |
+| five seeds | 1 | 0.95 | 0.25 | 0.00 | 0.067 | 0.105 | 0.15 / 0.20 / 0.35 |
+| all atoms (the model above) | 4 | 1.00 | 0.90 | 0.00 | 0.700 | 0.904 | 0.00 / 0.00 / 0.00 |
+| all atoms (the model above) | 1 | 1.00 | 0.45 | 0.00 | 0.454 | 0.909 | 0.95 / 1.00 / 1.00 |
+
+For the "one seed" mode there is no second lobe to compare, so the last column is empty; "no
+record" counts quanta whose seed never reached threshold within t = 60.
+
+**Reading.** Removing the crowd removes the near-equality, as registered: at equal lobes the two
+largest deposits fall within 20 % of each other in every trial when all atoms charge, in a third
+of trials with five seeds, and in one trial of twenty with one seed per lobe. The double-record
+rate falls with it but not to the anticorrelation bound in any mode that puts a seed in each lobe
+(0.50 at r = 4 and 0.85 at r = 1 with one per lobe), because nothing suppresses the second seed
+once it can reach threshold. With a single seed there is no second record by construction, the
+record's side is Born's share within the trial-to-trial spread (0.85 against 0.80), and the cost
+moves where the registration said it would: one absorbing atom collects about five percent of
+the quantum in sixty time units, against ninety percent when every atom in the lobe absorbs. A
+new small cost appears as well: a seed of low phase weight cannot reach threshold, so one quantum
+in twenty makes no record at all in the single-seed and per-lobe modes.
+
+**Predictions against outcome.** S1 held (near-equality from 0.95 to 0.00 within 5 % as the
+crowd is removed; the per-lobe values 0.00 / 0.00 / 0.05 sit below the scratch estimate 0.03 /
+0.08 / 0.15, within twenty trials). S2 held (0.50 and 0.85 with a seed in each lobe, against the
+expectations 0.6 and 0.9). S3 held, more sharply than written: collection with one seed was 0.05,
+not merely below 0.5. S4 held (0.05, 0.05, 0.17, 0.90). The no-record rate was not predicted.
+
 ## Files
 
 `results/summary_registered.csv`, `trials_registered.csv`, `fig1_fields_registered.png`,
 `fig2_outcomes_registered.png`, and the same four with `_addendum`; `verification.txt`,
-`run_info.txt`; `first_run_wrong_sign/` (the reversed-sign run, kept, not quoted).
+`run_info.txt`; seeded charging: `summary_seeded.csv`, `trials_seeded.csv`, `fig3_seeded.png`;
+`first_run_wrong_sign/` (the reversed-sign run, kept, not quoted).
