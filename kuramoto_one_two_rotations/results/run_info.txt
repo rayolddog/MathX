@@ -1,0 +1,4 @@
+run: 2026-09-06T10:52:43
+python 3.13.11, numpy 2.4.3
+origin: DiracKuramotoFramework c9bbf12, tests/kuramoto_sync.py (equation and integration pattern)
+verification: PASS

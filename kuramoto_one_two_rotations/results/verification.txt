@@ -1,0 +1,10 @@
+Verification of the closed-form time to the band (PREREGISTRATION.md §3)
+
+RK45 vs closed form: 80 samples (δ = 0 and 0.25, x in [0.05, 1.5], θ₀ uniform),
+  worst |t_RK45 − t_closed| = 8.57e-13 rotations   (tolerance 1e-6)   -> PASS
+Edge inversion vs grid measure of the locked set (720000 angles): worst |ΔP| = 8.66e-06   -> PASS
+Mutual clocks K₁ = 0.3, K₂ = 0.2, Δω = 0.1, θ₀ = 2.5: RK45 1.008934 rot, Adler with K_eff = K₁+K₂ 1.008934 rot, |diff| = 6.36e-15 rot -> PASS
+
+Pre-registered numbers (§3) recomputed by the script:
+  n = 1: x for P = 50/90/95/99 % at ε = 0.35: 0.276, 0.569, 0.680, 0.937
+  n = 2: x for P = 50/90/95/99 % at ε = 0.35: 0.138, 0.285, 0.340, 0.468

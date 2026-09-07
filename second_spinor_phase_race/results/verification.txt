@@ -1,0 +1,131 @@
+Verification (PREREGISTRATION.md §2): Monte Carlo against closed forms
+
+Part A: worst |MC − closed| over mean best mismatch, P(w_max ≥ 0.95), P(w_max ≥ 0.99), band hit, all N: 1.87e-03   (tolerance 0.01)   -> PASS
+Part B: R2 at r = 4, n = 1000 against Born 0.800: P₁ = 0.8000, |diff| = 0.00e+00   -> PASS
+Part B: pre-registered r = 4 table recomputed: n=1: R2 0.704/γ 1.25, R3 0.790, n=2: R2 0.759/γ 1.66, R3 0.924, n=5: R2 0.788/γ 1.89, R3 0.997, n=10: R2 0.794/γ 1.95, R3 1.000, n=100: R2 0.800/γ 2.00, R3 1.000, n=1000: R2 0.800/γ 2.00, R3 1.000
+Ordered bulk: worst |mean deposit MC − ½(1 + R_κ cos δ_p)| = 1.04e-03   -> PASS
+
+Verification, Part C (PREREGISTRATION.md §2, free flight)
+
+Part C: norm at t_d: |∫ρ − 1| = 2.2e-16;  arrivals at x > 0: 0.8050, ∫_(x>0) ρ(t_d) = 0.7922 (s.e. 0.0064), |diff| = 0.0128   -> PASS
+Part C: max |CDF(arrivals) − CDF(ρ(t_d))| = 0.0133   (tolerance 0.03)   -> PASS
+Part C: r/(1+r) = 0.800; the lobes' spreading across x = 0 by t_d moves ∫_(x>0) ρ(t_d) to 0.7922
+Part C: winner's energy weight, mean: R2 0.7360 (predicted 0.75), R3 0.9905 (predicted ≈ 0.99); blur x_record − x_arrival: R2 mean +0.0019, sd 0.3037; R3 mean +0.0033, sd 0.3026 (uniform on ±0.5: sd 0.2887)
+Part C zitter σ = 1, θ = 0 (reference, start x = 1): max |v| = 0.7405, no oscillation
+Part C zitter σ = 1 (registered), θ = 60°, δ = 0°: v(0, 0) = 0.866025 against sin θ cos δ = 0.866025 (ok); ±E offset over the packet: mean 0.00°, spread 2.99° (δ = 0°), drift to t = 12: 5.3e-12° (maintained); trajectory beat: fitted 2.4240 early, 2.3640 late, against the registered 2 (MISS) and 2⟨E⟩ = 2.2186 (ok); amplitude 0.8195 (sin θ = 0.8660); position half-range 1.0862 (sin θ/2 = 0.4330)   -> PASS
+Part C zitter σ = 1 (registered), θ = 60°, δ = 90°: v(0, 0) = 0.000000 against sin θ cos δ = 0.000000 (ok); ±E offset over the packet: mean 90.00°, spread 12.69° (δ = 90°), drift to t = 12: 1.8e-12° (maintained); trajectory beat: fitted 2.3020 early, 2.0120 late, against the registered 2 (MISS) and 2⟨E⟩ = 2.2186 (ok); amplitude 0.8584 (sin θ = 0.8660); position half-range 0.4287 (sin θ/2 = 0.4330)   -> PASS
+Part C zitter σ = 3 (addendum 2026-09-07), θ = 60°, δ = 0°: v(0, 0) = 0.866025 against sin θ cos δ = 0.866025 (ok); ±E offset over the packet: mean -0.00°, spread 0.00° (δ = 0°), drift to t = 12: 6.1e-13° (maintained); trajectory beat: fitted 2.1100 early, 2.0740 late, against the registered 2 (MISS) and 2⟨E⟩ = 2.0272 (ok); amplitude 0.8495 (sin θ = 0.8660); position half-range 0.5070 (sin θ/2 = 0.4330)   -> PASS
+Part C zitter σ = 3 (addendum 2026-09-07), θ = 60°, δ = 90°: v(0, 0) = 0.000000 against sin θ cos δ = 0.000000 (ok); ±E offset over the packet: mean 90.00°, spread 5.27° (δ = 90°), drift to t = 12: 4.1e-13° (maintained); trajectory beat: fitted 2.0580 early, 2.0480 late, against the registered 2 (MISS) and 2⟨E⟩ = 2.0272 (ok); amplitude 0.8684 (sin θ = 0.8660); position half-range 0.4243 (sin θ/2 = 0.4330)   -> PASS
+
+Verification, Part D (PREREGISTRATION.md §6, addendum of 2026-09-07: the interference term, rule R2)
+
+Part D, D10 (visibility): worst |MC − closed| over the fired atom's mean mismatch, its band fraction, P₁ at n = 1000 against Born, and the ordered two-half law: 5.29e-03   (tolerance 0.01)   -> PASS
+Part D, D11 (bound amplitude): worst |P₁(n = 1000) − (r + β²)/(r + 1 + 2β²)| = 1.60e-04   (tolerance 0.01)   -> PASS
+
+Verification, Part E (PREREGISTRATION.md §6, addendum of 2026-09-07: the energy cost of the shift, rule R2)
+
+Part E, random first spinors: worst |P₁(n = 1000) − quadrature large-n| over η: 1.15e-04   (tolerance 0.01)   -> PASS
+Part E, aligned first spinors: worst |P₁(n = 1000) − quadrature large-n| over η and Δ: 1.58e-04   (tolerance 0.01)   -> PASS
+
+Verification, Part F (PREREGISTRATION.md §6, Part F addendum: the sink)
+
+Part F: split-operator with U = Γ = 0 against the exact propagator after 4 Compton times: max |Δψ| = 2.2e-14   -> PASS
+Part F: well only (U = 1, L = 0.5), norm after 4 Compton times: |∫ρ − 1| = 8.1e-14   -> PASS
+Part F: base initial rate 0.01301 against F1's Γ₀ ρ(x_s) √(2π) L₀ = 0.01301, ratio 1.000   -> PASS
+Part F: base: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0639 
+Part F: gamma0_0.1: norm bookkeeping |near + far + collected − 1| ≤ 0.0e+00; Klein diagnostic max 0.0440 
+Part F: gamma0_10: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0537 
+Part F: no_well: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0578 
+Part F: deep_well_1.5: norm bookkeeping |near + far + collected − 1| ≤ 0.0e+00; Klein diagnostic max 0.0683 
+Part F: width_0.5: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0558 
+Part F: width_2: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0712 
+Part F: no_growth: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0541 
+Part F: channel_lambda_10: norm bookkeeping |near + far + collected − 1| ≤ 0.0e+00; Klein diagnostic max 0.0425 
+Part F: weak_lobe_winner: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0474 
+Part F: wide_lobes_base: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0130 
+Part F: wide_lobes_channel: norm bookkeeping |near + far + collected − 1| ≤ 1.1e-16; Klein diagnostic max 0.0080 
+
+Verification and outcomes, Part G (PREREGISTRATION.md §6, Part G addendum: two sinks racing)
+
+Part G: r = 1, offset 0, noise 0, λ = 0 (1 trial): site 1 first 0.00, site 2 first 0.00, tie 1.00, none 0.00; both latch 1.00
+Part G: r = 1, offset 0, noise 0, λ = 10 (1 trial): site 1 first 0.00, site 2 first 0.00, tie 1.00, none 0.00; both latch 1.00
+Part G: r = 1, offset 0, noise 0.005, λ = 0 (10 trials): site 1 first 0.70, site 2 first 0.30, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.88
+Part G: r = 1, offset 0, noise 0.005, λ = 10 (10 trials): site 1 first 0.50, site 2 first 0.50, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.26
+Part G: r = 1, offset 0, noise 0.02, λ = 0 (10 trials): site 1 first 0.50, site 2 first 0.50, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.87
+Part G: r = 1, offset 0, noise 0.02, λ = 10 (10 trials): site 1 first 0.30, site 2 first 0.70, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.19
+Part G: r = 1, offset 0.5, noise 0, λ = 0 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 1.00; loser reversal 1.00
+Part G: r = 1, offset 0.5, noise 0, λ = 10 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 0.00; loser reversal 0.28
+Part G: r = 1, offset 0.5, noise 0.005, λ = 0 (10 trials): site 1 first 0.60, site 2 first 0.40, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.95
+Part G: r = 1, offset 0.5, noise 0.005, λ = 10 (10 trials): site 1 first 0.80, site 2 first 0.20, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.29
+Part G: r = 1, offset 0.5, noise 0.02, λ = 0 (10 trials): site 1 first 0.50, site 2 first 0.50, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.93
+Part G: r = 1, offset 0.5, noise 0.02, λ = 10 (10 trials): site 1 first 0.40, site 2 first 0.60, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.21
+Part G: r = 1, offset 1, noise 0, λ = 0 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.99
+Part G: r = 1, offset 1, noise 0, λ = 10 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 0.00; loser reversal 0.30
+Part G: r = 1, offset 1, noise 0.005, λ = 0 (10 trials): site 1 first 0.80, site 2 first 0.20, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.97
+Part G: r = 1, offset 1, noise 0.005, λ = 10 (10 trials): site 1 first 0.90, site 2 first 0.10, tie 0.00, none 0.00; both latch 0.50; loser reversal 0.27
+Part G: r = 1, offset 1, noise 0.02, λ = 0 (10 trials): site 1 first 0.80, site 2 first 0.20, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.94
+Part G: r = 1, offset 1, noise 0.02, λ = 10 (10 trials): site 1 first 0.70, site 2 first 0.30, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.21
+Part G: r = 4, offset 0, noise 0, λ = 0 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 1.00; loser reversal 1.00
+Part G: r = 4, offset 0, noise 0, λ = 10 (1 trial): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 0.00; loser reversal 0.18
+Part G: r = 4, offset 0, noise 0.005, λ = 0 (10 trials): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 1.00; loser reversal 1.00
+Part G: r = 4, offset 0, noise 0.005, λ = 10 (10 trials): site 1 first 1.00, site 2 first 0.00, tie 0.00, none 0.00; both latch 0.00; loser reversal 0.18
+Part G: r = 4, offset 0, noise 0.02, λ = 0 (10 trials): site 1 first 0.90, site 2 first 0.10, tie 0.00, none 0.00; both latch 1.00; loser reversal 0.96
+Part G: r = 4, offset 0, noise 0.02, λ = 10 (10 trials): site 1 first 0.90, site 2 first 0.10, tie 0.00, none 0.00; both latch 0.90; loser reversal 0.18
+Part G: Klein diagnostic max over all runs while the remainder exceeds 0.05: 0.1219; trials above the 0.10 flag: 3 of 168   -> FLAGGED (prediction G5 missed); see the cap sensitivity
+Part G, cap sensitivity (well capped at 1.0 mc² instead of 1.5), deterministic channel settings:
+  r = 1, offset 0: cap 1.5 -> winner 2, both 1, reversal nan, Klein 0.122; cap 1.0 -> winner 2, both 1, reversal nan, Klein 0.122   -> same outcome
+  r = 1, offset 0.5: cap 1.5 -> winner 0, both 0, reversal 0.28, Klein 0.085; cap 1.0 -> winner 0, both 0, reversal 0.28, Klein 0.085   -> same outcome
+  r = 1, offset 1: cap 1.5 -> winner 0, both 0, reversal 0.30, Klein 0.083; cap 1.0 -> winner 0, both 0, reversal 0.30, Klein 0.083   -> same outcome
+  r = 4, offset 0: cap 1.5 -> winner 0, both 0, reversal 0.18, Klein 0.042; cap 1.0 -> winner 0, both 0, reversal 0.18, Klein 0.042   -> same outcome
+Part G: outcomes independent of the cap in the flagged regime -> PASS
+
+Part H (PREREGISTRATION.md, Part H addendum): uneven split from a spinor asymmetry, into the two-sink race
+
+  switch ε = 0    C_th = 0.015: double record 1.00, larger share first 0.40, visibility 1.0000, latch gap 0.32, none 0.00
+  switch ε = 0    C_th = 0.03 : double record 0.90, larger share first 0.50, visibility 1.0000, latch gap 0.91, none 0.00
+  switch ε = 0    C_th = 0.06 : double record 0.00, larger share first nan, visibility 1.0000, latch gap nan, none 1.00
+  switch ε = 0.05 C_th = 0.015: double record 1.00, larger share first 0.40, visibility 0.9987, latch gap 0.45, none 0.00
+  switch ε = 0.05 C_th = 0.03 : double record 0.90, larger share first 1.00, visibility 0.9987, latch gap 0.86, none 0.00
+  switch ε = 0.05 C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9987, latch gap nan, none 1.00
+  switch ε = 0.1  C_th = 0.015: double record 1.00, larger share first 0.70, visibility 0.9950, latch gap 0.73, none 0.00
+  switch ε = 0.1  C_th = 0.03 : double record 1.00, larger share first 1.00, visibility 0.9950, latch gap 1.30, none 0.00
+  switch ε = 0.1  C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9950, latch gap nan, none 1.00
+  switch ε = 0.2  C_th = 0.015: double record 1.00, larger share first 0.90, visibility 0.9798, latch gap 0.72, none 0.00
+  switch ε = 0.2  C_th = 0.03 : double record 0.30, larger share first 1.00, visibility 0.9798, latch gap 1.71, none 0.00
+  switch ε = 0.2  C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9798, latch gap nan, none 1.00
+  smooth ε = 0    C_th = 0.015: double record 1.00, larger share first 0.60, visibility 1.0000, latch gap 0.51, none 0.00
+  smooth ε = 0    C_th = 0.03 : double record 1.00, larger share first 0.50, visibility 1.0000, latch gap 0.47, none 0.00
+  smooth ε = 0    C_th = 0.06 : double record 0.00, larger share first nan, visibility 1.0000, latch gap nan, none 1.00
+  smooth ε = 0.05 C_th = 0.015: double record 1.00, larger share first 0.75, visibility 0.9994, latch gap 0.37, none 0.00
+  smooth ε = 0.05 C_th = 0.03 : double record 1.00, larger share first 0.60, visibility 0.9992, latch gap 0.91, none 0.00
+  smooth ε = 0.05 C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9993, latch gap nan, none 1.00
+  smooth ε = 0.1  C_th = 0.015: double record 1.00, larger share first 0.70, visibility 0.9978, latch gap 0.39, none 0.00
+  smooth ε = 0.1  C_th = 0.03 : double record 1.00, larger share first 0.65, visibility 0.9969, latch gap 1.10, none 0.00
+  smooth ε = 0.1  C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9976, latch gap nan, none 1.00
+  smooth ε = 0.2  C_th = 0.015: double record 1.00, larger share first 0.80, visibility 0.9894, latch gap 0.68, none 0.00
+  smooth ε = 0.2  C_th = 0.03 : double record 0.60, larger share first 1.00, visibility 0.9886, latch gap 1.05, none 0.00
+  smooth ε = 0.2  C_th = 0.06 : double record 0.00, larger share first nan, visibility 0.9884, latch gap nan, none 1.00
+
+Part H addendum, slow charging (τ_c = 40, 40 Compton times) (PREREGISTRATION.md, Part H addendum): uneven split from a spinor asymmetry, into the two-sink race
+
+  switch ε = 0    C_th = 0.06 : double record 0.90, larger share first 0.30, visibility 1.0000, latch gap 1.05, none 0.00
+  switch ε = 0    C_th = 0.12 : double record 1.00, larger share first 0.60, visibility 1.0000, latch gap 0.95, none 0.00
+  switch ε = 0.05 C_th = 0.06 : double record 1.00, larger share first 1.00, visibility 0.9987, latch gap 3.48, none 0.00
+  switch ε = 0.05 C_th = 0.12 : double record 0.70, larger share first 1.00, visibility 0.9987, latch gap 1.95, none 0.00
+  switch ε = 0.1  C_th = 0.06 : double record 0.60, larger share first 1.00, visibility 0.9950, latch gap 2.83, none 0.00
+  switch ε = 0.1  C_th = 0.12 : double record 0.40, larger share first 1.00, visibility 0.9950, latch gap 1.57, none 0.00
+  switch ε = 0.2  C_th = 0.06 : double record 0.00, larger share first 1.00, visibility 0.9798, latch gap nan, none 0.00
+  switch ε = 0.2  C_th = 0.12 : double record 0.00, larger share first 1.00, visibility 0.9798, latch gap nan, none 0.00
+  smooth ε = 0    C_th = 0.06 : double record 1.00, larger share first 0.50, visibility 1.0000, latch gap 0.67, none 0.00
+  smooth ε = 0    C_th = 0.12 : double record 1.00, larger share first 0.50, visibility 1.0000, latch gap 0.75, none 0.00
+  smooth ε = 0.05 C_th = 0.06 : double record 1.00, larger share first 0.70, visibility 0.9994, latch gap 2.18, none 0.00
+  smooth ε = 0.05 C_th = 0.12 : double record 1.00, larger share first 0.80, visibility 0.9994, latch gap 1.09, none 0.00
+  smooth ε = 0.1  C_th = 0.06 : double record 1.00, larger share first 1.00, visibility 0.9969, latch gap 2.86, none 0.00
+  smooth ε = 0.1  C_th = 0.12 : double record 0.40, larger share first 0.90, visibility 0.9977, latch gap 1.06, none 0.00
+  smooth ε = 0.2  C_th = 0.06 : double record 0.50, larger share first 1.00, visibility 0.9918, latch gap 1.90, none 0.00
+  smooth ε = 0.2  C_th = 0.12 : double record 0.30, larger share first 1.00, visibility 0.9913, latch gap 1.79, none 0.00
+
+Part H targeted check (switch form, τ_c = 40, C_th = 0.12, 40 Compton times, 50 events each)
+
+  ε = 0.15: double records 1 of 50 (rate 0.02; 95 % upper bound nan if zero), larger share first 1.00, visibility 0.9887
+  ε = 0.2: double records 0 of 50 (rate 0.00; 95 % upper bound 0.058 if zero), larger share first 1.00, visibility 0.9798

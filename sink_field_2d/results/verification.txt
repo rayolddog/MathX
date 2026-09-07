@@ -1,0 +1,30 @@
+Verification (PREREGISTRATION.md §4)
+
+Poisson solve, point source at the centre: max residual of (∇² − 1/ℓ²)Φ + q = 4.3e-16; Φ(48,48) = 0.7176, Φ(64,48) = 0.0681, Φ(48,64) = 0.0681   -> PASS
+Diffusion only for t = 60 against the Gaussian solution (σ² → σ² + 2Dt): max relative error 4.92e-03   -> PASS
+
+Parameter set 'registered': μ = 200, C_th = 0.01
+  base: seed in bright lobe 0.80, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.649 (total 0.683), latched cells L/R 0.1/64.8, channel index nan, heated area 0, anisotropy nan
+  range_4: seed in bright lobe 0.95, bright lobe first 1.00, double record 0.00, none 0.00, winner collects 0.577 (total 0.577), latched cells L/R 0.0/62.4, channel index nan, heated area 0, anisotropy nan
+  range_64: seed in bright lobe 0.85, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.683 (total 0.719), latched cells L/R 0.1/67.5, channel index nan, heated area 0, anisotropy nan
+  no_field: seed in bright lobe 0.90, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.505 (total 0.532), latched cells L/R 0.1/65.7, channel index nan, heated area 0, anisotropy nan
+  scalar_M: seed in bright lobe 0.80, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.648 (total 0.682), latched cells L/R 0.1/66.4, channel index nan, heated area 0, anisotropy nan
+  no_growth: seed in bright lobe 0.75, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.648 (total 0.682), latched cells L/R 0.1/66.6, channel index nan, heated area 0, anisotropy nan
+  r_1: seed in bright lobe 0.60, bright lobe first 0.30, double record 1.00, none 0.00, winner collects 0.343 (total 0.685), latched cells L/R 32.4/33.7, channel index nan, heated area 0, anisotropy nan
+  r_1_range_64: seed in bright lobe 0.45, bright lobe first 0.55, double record 1.00, none 0.00, winner collects 0.367 (total 0.738), latched cells L/R 35.1/34.6, channel index nan, heated area 0, anisotropy nan
+  no_noise: seed in bright lobe 0.90, bright lobe first 1.00, double record 0.00, none 0.00, winner collects 0.667 (total 0.667), latched cells L/R 0.0/49.5, channel index nan, heated area 0, anisotropy nan
+  r_1_no_noise: seed in bright lobe 0.75, bright lobe first 0.65, double record 1.00, none 0.00, winner collects 0.317 (total 0.637), latched cells L/R 22.2/22.3, channel index nan, heated area 0, anisotropy nan
+  mass conservation per step (ρ + absorbed), worst over the set: 4.4e-16   -> PASS
+
+Parameter set 'addendum': μ = 2000, C_th = 0.004
+  base: seed in bright lobe 0.85, bright lobe first 0.95, double record 1.00, none 0.00, winner collects 0.731 (total 0.904), latched cells L/R 66.5/219.8, channel index nan, heated area 0, anisotropy nan
+  range_4: seed in bright lobe 0.75, bright lobe first 0.80, double record 1.00, none 0.00, winner collects 0.617 (total 0.873), latched cells L/R 65.0/228.8, channel index nan, heated area 0, anisotropy nan
+  range_64: seed in bright lobe 0.85, bright lobe first 0.90, double record 1.00, none 0.00, winner collects 0.710 (total 0.917), latched cells L/R 65.8/214.9, channel index nan, heated area 0, anisotropy nan
+  no_field: seed in bright lobe 0.60, bright lobe first 0.85, double record 1.00, none 0.00, winner collects 0.641 (total 0.865), latched cells L/R 63.0/236.7, channel index nan, heated area 0, anisotropy nan
+  scalar_M: seed in bright lobe 0.70, bright lobe first 0.95, double record 1.00, none 0.00, winner collects 0.730 (total 0.903), latched cells L/R 63.0/218.8, channel index nan, heated area 0, anisotropy nan
+  no_growth: seed in bright lobe 0.90, bright lobe first 1.00, double record 1.00, none 0.00, winner collects 0.760 (total 0.902), latched cells L/R 64.4/220.9, channel index nan, heated area 0, anisotropy nan
+  r_1: seed in bright lobe 0.60, bright lobe first 0.50, double record 1.00, none 0.00, winner collects 0.454 (total 0.909), latched cells L/R 163.1/164.3, channel index nan, heated area 0, anisotropy nan
+  r_1_range_64: seed in bright lobe 0.50, bright lobe first 0.45, double record 1.00, none 0.00, winner collects 0.461 (total 0.923), latched cells L/R 163.3/163.9, channel index nan, heated area 0, anisotropy nan
+  no_noise: seed in bright lobe 0.85, bright lobe first 1.00, double record 1.00, none 0.00, winner collects 0.734 (total 0.823), latched cells L/R 16.6/141.2, channel index nan, heated area 0, anisotropy nan
+  r_1_no_noise: seed in bright lobe 0.45, bright lobe first 0.45, double record 1.00, none 0.00, winner collects 0.416 (total 0.833), latched cells L/R 90.0/89.2, channel index nan, heated area 0, anisotropy nan
+  mass conservation per step (ρ + absorbed), worst over the set: 4.4e-16   -> PASS

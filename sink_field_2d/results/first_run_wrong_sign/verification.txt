@@ -1,0 +1,14 @@
+Verification (PREREGISTRATION.md §4)
+
+Poisson solve, point source at the centre: max residual of (∇² − 1/ℓ²)Φ + q = 4.3e-16; Φ(48,48) = 0.7176, Φ(64,48) = 0.0681, Φ(48,64) = 0.0681   -> PASS
+Mass conservation per step (ρ + absorbed), worst over all runs: 5.5e-01   -> FAIL
+Diffusion only for t = 60 against the Gaussian solution (σ² → σ² + 2Dt): max relative error 4.92e-03   -> PASS
+base: seed in bright lobe 0.80, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.342 (total 0.360), channel index nan, heated area 0, anisotropy nan
+range_4: seed in bright lobe 0.95, bright lobe first 1.00, double record 0.00, none 0.00, winner collects 0.474 (total 0.474), channel index nan, heated area 0, anisotropy nan
+range_64: seed in bright lobe 0.85, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.304 (total 0.319), channel index nan, heated area 0, anisotropy nan
+no_field: seed in bright lobe 0.90, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.505 (total 0.532), channel index nan, heated area 0, anisotropy nan
+scalar_M: seed in bright lobe 0.80, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.340 (total 0.357), channel index nan, heated area 0, anisotropy nan
+no_growth: seed in bright lobe 0.75, bright lobe first 0.95, double record 0.05, none 0.00, winner collects 0.347 (total 0.364), channel index nan, heated area 0, anisotropy nan
+r_1: seed in bright lobe 0.60, bright lobe first 0.40, double record 1.00, none 0.00, winner collects 0.119 (total 0.233), channel index nan, heated area 0, anisotropy nan
+no_noise: seed in bright lobe 0.75, bright lobe first 1.00, double record 0.00, none 0.00, winner collects 0.297 (total 0.297), channel index nan, heated area 0, anisotropy nan
+r_1_no_noise: seed in bright lobe 0.70, bright lobe first 0.75, double record 1.00, none 0.00, winner collects 0.056 (total 0.103), channel index nan, heated area 0, anisotropy nan

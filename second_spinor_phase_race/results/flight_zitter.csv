@@ -1,0 +1,6 @@
+case,sigma,theta_deg,delta_deg,v_at_t0,sin_theta_cos_delta,pm_offset_mean_deg,pm_offset_spread_deg,pm_offset_drift_to_t12_deg,two_mean_E,beat_fit_early,beat_fit_late,beat_amplitude_early,position_half_range,predicted_sin_theta_over_2
+registered,1.0,0.0,0.0,,,,,,,,,0.7405,2.1420,0
+registered,1.0,60.0,0.0,0.866025,0.866025,0.00,2.99,5.3e-12,2.2186,2.4240,2.3640,0.8195,1.0862,0.4330
+registered,1.0,60.0,90.0,0.000000,0.000000,90.00,12.69,1.8e-12,2.2186,2.3020,2.0120,0.8584,0.4287,0.4330
+addendum 2026-09-07,3.0,60.0,0.0,0.866025,0.866025,-0.00,0.00,6.1e-13,2.0272,2.1100,2.0740,0.8495,0.5070,0.4330
+addendum 2026-09-07,3.0,60.0,90.0,0.000000,0.000000,90.00,5.27,4.1e-13,2.0272,2.0580,2.0480,0.8684,0.4243,0.4330

@@ -1,0 +1,10 @@
+run: 2026-09-07T10:33:44
+python 3.13.11, numpy 2.4.3
+verification (phase_race.py): PASS
+verification (bohm_dirac_flight.py): PASS
+verification (interference_visibility.py): PASS
+verification (energy_cost.py): PASS
+verification (sink_flow.py): PASS
+verification (sink_race.py): PASS; Klein flag in 3 trials (max 0.122)
+Part H (splitter_asymmetry.py): run; no pass/fail criterion beyond Part G's, which it reuses
+Part H_slow (splitter_asymmetry.py): run; no pass/fail criterion beyond Part G's, which it reuses
