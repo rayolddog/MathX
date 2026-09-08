@@ -11,7 +11,12 @@ the uncertainty and the assumptions before the tables.
 | `kuramoto_one_two_rotations/` | For the Kuramoto/Adler pull of a clock toward a bulk, which coupling K and which starting phase difference lock within one or two turns of the clock, and how likely is that lock over a uniform starting angle | Run 2026-09-06; see its `RESULTS.md` |
 | `second_spinor_phase_race/` | JB's two-spinor model with no pull on the second spinor: first spinors matched at contact, each particle's internal offset carried through, a bulk with random second-spinor phases, and the deposited energy highest where the second spinors are closest in phase; free flight by the Bohm–Dirac velocity | Run 2026-09-07; see its `RESULTS.md` and `LEDGER.md` |
 | `sink_field_2d/` | A transport model with no physics labels: density spread by diffusion, atoms with random phases, the deposit race as the seed, charging and latching at every atom, a screened field from the charges, a conductance tensor that grows with flow. Does one record form per quantum, and is the path a channel or a patch | Run 2026-09-07; see its `RESULTS.md` (most registered predictions missed; the misses are the result) |
+| `spad_surface_contact/` | Two silicon SPAD pixels: the packet carried by its own Dirac current to the surface, contact with the bound electron of least rotation among the atoms in reach, the record as an induced current down a lattice of random resistances (greedy least resistance against a dielectric-breakdown split and diffusion), a Galton–Watson avalanche. Which pixel, how much rotation, whether a pair forms, what the record looks like; the field reading beside it as the cost case. Addendum the same day: the empty pixel given the same contact and current (it does not stay silent), the SPAD's field as a lateral penalty on the channel, and ordered, locked and periodic phase distributions for the bulk | Run 2026-09-08; see its `RESULTS.md` and `LEDGER.md` |
 | `dk_origin/` | The two record scripts this work reuses, copied unchanged, with `PROVENANCE.md` | Copies, not run here |
+
+`MODEL_SECTION.md` (2026-09-07) is a draft of the model section a rewritten Born Selection paper
+would need: the mechanism as computed here, with Born's rule assumed and the two open items named
+first. It is a record, not part of the closed DK repository.
 
 ## Relation to the Dirac–Kuramoto framework
 
@@ -51,5 +56,9 @@ question.
     cd ../sink_field_2d
     python3 sink_field.py             # the 2-D transport model, two parameter sets; about 100 s
     python3 sink_field.py seeded      # seeded charging: one, one per lobe, five, all; about 45 s
+
+    cd ../spad_surface_contact
+    python3 spad_contact.py           # two SPAD pixels, least rotation, induced current; about 3 s
+    python3 empty_pixel.py            # addendum: the empty pixel with the same contact and current, the field, the bulk's phases; about 5 s
 
 Python 3.13 with numpy, scipy, matplotlib. Outputs go to each folder's `results/`.

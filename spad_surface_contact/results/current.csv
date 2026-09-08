@@ -1,0 +1,7 @@
+rule,landscape,width_mean,offset_sd,offset_mean,corr_contact_centroid,time_per_row,time_sd,distinct_end_columns_pixel1,charge_conservation_max_err
+greedy,fixed,0.0000,5.1471,0.5461,0.9870,0.5793,2.7310,10,0.0000
+greedy,fresh,0.0000,6.2693,-0.0490,0.9809,0.5609,3.5302,121,0.0000
+dbm,fixed,6.1078,1.0376,-0.1227,0.9996,0.9197,2.3145,nan,0.0000
+dbm,fresh,6.0718,1.1215,-0.0081,0.9994,0.9116,2.4376,nan,0.0000
+diffusion,fixed,6.1404,0.7614,-0.0221,0.9998,1.6502,4.2795,nan,0.0000
+diffusion,fresh,6.1404,0.7614,-0.0221,0.9998,1.6488,4.7415,nan,0.0000

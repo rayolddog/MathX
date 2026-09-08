@@ -140,3 +140,16 @@ to lock over the (x, θ₀) grid at ε = 0.35), `detuned_edges.csv` (edges and P
 Definitions and predictions were fixed in this file before the sweep was written to disk
 and run. Any later change to a definition is to be made as a dated addendum below, not
 by editing §1 to §4.
+
+**Addendum, 2026-09-08 (the clock; recorded on JB's question of 2026-09-08 whether the
+zitterbewegung frequency was used in the synchronization runs).** C2 above evaluated the posit
+with the electron's zitterbewegung beat as the clock (x ≤ 10⁻⁶). The session of 2026-09-06,
+after this study ran, identified the physical clock of the posit as the site's transition
+frequency, not the zitterbewegung beat and not the mc² carrier; with any detector-scale pull
+that gives x ≈ 10⁻⁵, and "rotations to lock" dissolves into "phase set at contact, amplitude
+over 1/Γ". C2 is therefore overstated as written and its zitterbewegung line is superseded;
+the table values stand as the record of the run. Noted with it: a lower-component lag θ₀ is a
+negative-energy admixture of fraction sin²(θ₀/2) (second study, ledger L4). The
+zitterbewegung frequency is used in this folder only as C2's cost case; the record's
+`../dk_origin/dirac_arnold_tongue.py` uses it as the clock of two confined Dirac particles, and
+the second study's Part C measures it as the beat of the ±E components of a packet (2⟨E⟩).

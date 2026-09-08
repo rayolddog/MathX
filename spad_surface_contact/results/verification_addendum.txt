@@ -1,0 +1,19 @@
+Verification, addendum 2026-09-08 (PREREGISTRATION.md, addendum)
+
+r = 4: empty-pixel contact points in pixel 1 against ρ: max CDF difference 0.0208 (tolerance 0.03) -> PASS
+r = 4: empty-pixel contact points in pixel 2 against ρ: max CDF difference 0.0088 (tolerance 0.03) -> PASS
+channel statistics, r = 4, the particle's contacts, greedy (b = 0): offset sd 6.31 cells, resistance per row 0.574, sd of T 4.44, corr(contact, end) 0.981
+channel statistics, r = 4, the particle's contacts, greedy_field (b = 3): offset sd 4.37 cells, resistance per row 0.865, sd of T 6.23, corr(contact, end) 0.991
+E1/H0, r = 4, θ = 0.45, greedy, τ_d = 0: share 0.8800 against the main run's 0.8027 (s.e. 0.0075), doubles 0 -> FAIL
+E2/H0, τ_d = ∞: doubles 0.5195 = both candidates 0.5195 (predicted 0.515 ± 0.0079) -> PASS
+r = 2: empty-pixel contact points in pixel 1 against ρ: max CDF difference 0.0224 (tolerance 0.03) -> PASS
+r = 2: empty-pixel contact points in pixel 2 against ρ: max CDF difference 0.0164 (tolerance 0.03) -> PASS
+r = 1: empty-pixel contact points in pixel 1 against ρ: max CDF difference 0.0215 (tolerance 0.03) -> PASS
+r = 1: empty-pixel contact points in pixel 2 against ρ: max CDF difference 0.0147 (tolerance 0.03) -> PASS
+B0 rotation 8.65° against π/22 = 8.18° (s.e. 0.14°) -> FAIL
+B2 rotation at δ_p = 0°: max |rotation − δ_p| = 0.0e+00 -> PASS
+B2 rotation at δ_p = 45°: max |rotation − δ_p| = 1.1e-16 -> PASS
+B2 rotation at δ_p = 90°: max |rotation − δ_p| = 0.0e+00 -> PASS
+B2 rotation at δ_p = 135°: max |rotation − δ_p| = 0.0e+00 -> PASS
+B2 rotation at δ_p = 180°: max |rotation − δ_p| = 0.0e+00 -> PASS
+B3 q = 120°, δ_p = 30°: rotation 30.00000000° -> PASS
