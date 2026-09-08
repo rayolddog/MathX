@@ -2,3 +2,5 @@ spad_contact.py, run 2026-09-08 10:56:29, seed 20260908, 3.2 s, numpy 2.4.3
 verification: FAIL
 empty_pixel.py, run 2026-09-08 11:30:54, seed 20260909, 4.9 s
 verification (addendum): FAIL
+transition_coherence.py, run 2026-09-08 11:56:47, seed 20260910, 3.3 s
+verification (Part D): PASS

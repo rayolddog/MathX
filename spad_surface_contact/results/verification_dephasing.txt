@@ -1,0 +1,17 @@
+Verification, Part D (PREREGISTRATION.md, addendum 2)
+
+hom, t = 0: R measured 1.0000 against exp(−s²/2) = 1.0000 -> PASS
+hom, t = 0, δ_p = 0°: max |rotation − δ_p| = 0.0e+00 -> PASS
+hom, t = 0, δ_p = 45°: max |rotation − δ_p| = 1.1e-16 -> PASS
+hom, t = 0, δ_p = 90°: max |rotation − δ_p| = 0.0e+00 -> PASS
+hom, t = 0, δ_p = 135°: max |rotation − δ_p| = 0.0e+00 -> PASS
+hom, t = 0, δ_p = 180°: max |rotation − δ_p| = 0.0e+00 -> PASS
+hom, t = 0, uniform δ_p: pair rate 0.5250 against 0.5325 (s.e. 0.0035) -> PASS
+hom, t = 0.03: R measured 0.9705 against exp(−s²/2) = 0.9704 -> PASS
+hom, t = 0.1: R measured 0.9051 against exp(−s²/2) = 0.9048 -> PASS
+hom, t = 0.3: R measured 0.7414 against exp(−s²/2) = 0.7408 -> PASS
+hom, t = 1: R measured 0.3686 against exp(−s²/2) = 0.3679 -> PASS
+hom, t = 3: R measured 0.0482 against exp(−s²/2) = 0.0498 -> PASS
+hom, t = 10: R measured 0.0015 against exp(−s²/2) = 0.0000 -> PASS
+hom, t = 10, δ_p = 0: rotation 8.18° against π/22 = 8.18° (s.e. 0.06°) -> PASS
+two pixels, hom, t = 10, opposite, δ_p = 0: share 0.8016 against the arrival share 0.8014 (s.e. 0.0077) -> PASS

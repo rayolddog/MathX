@@ -24,7 +24,8 @@ or experiment: `LEDGER.md`, continuing the second study's numbering.
   of 0.76 cells against about 0.4 predicted. Contacts ten or more columns from a lattice edge give
   0.05, contacts within ten columns give 2.36: a reflection at the lattice edge that the scratch
   model's contact distribution did not sample. Recorded under "Predictions against outcome".
-- **Addendum of the same afternoon at the end of this file:** the empty pixel given the same
+- **Two addenda of the same day at the end of this file:** the empty pixel (afternoon) and the
+  crystal as a dephasing transition coherence (evening, Part D). The afternoon one: the empty pixel given the same
   contact and current (the third step reopens; my prediction P7 was wrong), the SPAD's field as a
   lateral penalty on the channel, and the bulk's phase distribution.
 - 4000 quanta per intensity ratio. A share's standard error is about 0.008; a miss rate's about
@@ -370,3 +371,110 @@ real SPAD the interference cancels nothing at the selected atom. It would cancel
 pixel only in a locked crystal (B2) whose phase is opposite to the particle's offset, and then the
 pixel that records is chosen by the particle's phase and not by the intensity, which is the phase
 readout of Table 9, not Born.
+
+---
+
+# Addendum 2, 2026-09-08 (evening): Part D, the crystal as a transition coherence with thermal dephasing
+
+Definitions and predictions: addendum 2 of `PREREGISTRATION.md` (D16 to D18, P13, C9). Script:
+`transition_coherence.py` (seed 20260910, 3 s). Outputs: `results/dephasing_single.csv`,
+`results/dephasing_pixels.csv`, `results/verification_dephasing.txt`, `fig6_dephasing.png`.
+
+## Read this before quoting any number
+
+- Every verification passed and every registered number held (P13). No definition changed.
+- **The cost case C9 comes first.** Part D describes a detector whose transition coherence was
+  driven within about one T2 of the particle's arrival. In silicon at room temperature T2 is of
+  order 10 to 100 fs, and at equilibrium the coherence is absent, suppressed by exp(−ħω/kT) ≈
+  e⁻⁹⁷ at 2.5 eV. A passive SPAD is the random bulk of every earlier run. What Part D shows is
+  what the model would show in a *driven* detector, and where its phase mechanism would be
+  looked for.
+- The MRI mapping is exact in form: the preparation is the 90° pulse, μ_k the pulse phase at
+  pixel k, T2 the irreversible random walk, T2* the static site offsets, and R(t) the transverse
+  magnetization. No echo was run; the T2* part is refocusable in principle and the T2 part is not.
+- One pixel uses pure phase draws with exactly 21 atoms, so the pixel-edge excess of Parts A to
+  C is absent there (the rotation at t = 10 is 8.18° against π/22 = 8.18°). Two pixels use the
+  geometry.
+
+## The answer in one paragraph
+
+Given a shared transition coherence at t = 0, the bulk is the locked crystal of Part C and
+dephases into the random bulk over about one T2, with the mean resultant R(t) = exp(−s²/2)
+reproduced to 0.002. Least rotation tracks the dephasing: for a particle in phase with the
+preparation the rotation used rises from 0 to 8.2°; for one in antiphase it falls from 180°
+through 124° at t = 0.1 T2 and 83° at 0.3 T2 to 8.2° by 3 T2; the pair rate under the weighted
+deposit follows, 0 until t ≈ 0.1 T2 and 1 from t ≈ T2. Two pixels pulsed in antiphase take every
+record of an in-phase particle at t ≤ 0.03 T2 (share 1.000 against Born 0.800), 0.994 at 0.1 T2,
+0.846 at 0.3 T2 and Born from t ≈ T2; for particles of random offset the two pixels' pair rates
+are equal by symmetry and the share is Born at every delay, while the efficiency rises from 0.36
+at t = 0 to 0.67 by t ≈ T2. So in this model the Born share and a phase-independent efficiency
+are what a dephased detector shows, and the phase mechanism leaves a trace only inside one T2 of
+a preparation, in the pixel share for a source of definite offset and in the efficiency for any
+source.
+
+## Table 10. One pixel, homogeneous dephasing (D17; `dephasing_single.csv`), 21 atoms, least rotation, θ = 0.45
+
+| t/T2 | R(t) | rotation, δ_p = 0 | δ_p = 90° | δ_p = 180° | pair rate, δ_p = 180° | pair rate, δ_p uniform | winner's w, uniform |
+|---|---|---|---|---|---|---|---|
+| 0 | 1.000 | 0° | 90.0° | 180.0° | 0 | 0.525 | 0.498 |
+| 0.03 | 0.971 | 0.8° | 63.4° | 149.3° | 0 | 0.676 | 0.644 |
+| 0.1 | 0.905 | 1.5° | 41.6° | 123.9° | 0.021 | 0.798 | 0.750 |
+| 0.3 | 0.741 | 2.6° | 16.3° | 83.4° | 0.704 | 0.964 | 0.884 |
+| 1 | 0.369 | 4.7° | 8.5° | 23.2° | 0.999 | 1.000 | 0.980 |
+| 3 | 0.048 | 7.6° | 8.2° | 9.1° | 1 | 1 | 0.990 |
+| 10 | 0.002 | 8.2° | 8.1° | 8.3° | 1 | 1 | 0.990 |
+
+Predicted: R 1, 0.970, 0.905, 0.741, 0.368, 0.050, 0; rotations 0, 0.8, 1.5, 2.6, 4.6, 7.5, 8.2 /
+90, 63.5, 41.7, 16.3, 8.5, 8.2, 8.2 / 180, 149, 124, 83, 23, 9.1, 8.2; pair rates 0, 0, 0.021,
+0.71, 0.999, 1, 1 and 0.532, 0.679, 0.802, 0.964, 1, 1, 1. All held (the uniform pair rate at
+t = 0 is 0.525 against 0.532, s.e. 0.0035, within 3 s.e.). The inhomogeneous and combined cases
+give the same numbers at equal s, with s = t/T2* and √(2t/T2 + t²/T2*²): at t = 0.3 the
+inhomogeneous bulk still has R = 0.956 and a uniform-offset pair rate of 0.73, the combined
+0.708 and 0.98.
+
+## Table 11. Two pixels, r = 4, trajectory reading (D18; `dephasing_pixels.csv`); arrival share 0.801, Born 0.800
+
+| t/T2 | preparation | δ_p | pair rate pixel 1 | pair rate pixel 2 | efficiency | share pixel 1 |
+|---|---|---|---|---|---|---|
+| 0 | opposite | fixed 0 | 1.000 | 0.000 | 0.534 | **1.000** |
+| 0.03 | opposite | fixed 0 | 1.000 | 0.000 | 0.534 | **1.000** |
+| 0.1 | opposite | fixed 0 | 1.000 | 0.024 | 0.538 | 0.994 ± 0.002 |
+| 0.3 | opposite | fixed 0 | 1.000 | 0.735 | 0.631 | 0.846 ± 0.007 |
+| 1 | opposite | fixed 0 | 1.000 | 0.999 | 0.666 | 0.802 ± 0.008 |
+| 3, 10 | opposite | fixed 0 | 1 | 1 | 0.667 | 0.802 ± 0.008 |
+| 0 | opposite | uniform | 0.544 | 0.527 | 0.355 | 0.808 ± 0.010 |
+| 0.1 | opposite | uniform | 0.797 | 0.796 | 0.531 | 0.805 ± 0.009 |
+| 0.3 | opposite | uniform | 0.960 | 0.966 | 0.641 | 0.800 ± 0.008 |
+| ≥ 1 | opposite | uniform | 1 | 1 | 0.667 | 0.802 ± 0.008 |
+| 0 | same | uniform | 0.529 | 0.539 | 0.355 | 0.800 ± 0.011 |
+| 0.1 | same | uniform | 0.796 | 0.810 | 0.535 | 0.798 ± 0.009 |
+| any | same | fixed 0 | 1 | 1 | 0.667 | 0.802 ± 0.008 |
+
+Inhomogeneous (T2* = T2) at t = 0.3, opposite, fixed 0: pair rate pixel 2 0.000, share 1.000; at
+t = 1: 0.956 and 0.809. Combined at t = 0.3: 0.810 and 0.835. Predicted (hom): 1.000, 1.000,
+0.995, 0.851, 0.803, 0.803, 0.803 for the fixed offset; 0.803 throughout for the uniform offset
+and the same preparation; efficiencies 0.35, 0.45, 0.53, 0.64, 0.66 (uniform) and 0.53, 0.53,
+0.53, 0.62, 0.66 (opposite, fixed): all held.
+
+## Verification (`results/verification_dephasing.txt`)
+
+| Check | Result |
+|---|---|
+| R measured against exp(−s²/2), seven delays | worst difference 0.0016, pass |
+| Rotation at t = 0 equals \|δ_p\|, five offsets | to 10⁻¹⁶, pass |
+| Rotation at t = 10 against π/22 | 8.18° against 8.18°, pass |
+| Uniform-offset pair rate at t = 0 against 0.5325 | 0.5250 (s.e. 0.0035), pass |
+| Two-pixel share at t = 10 against the arrival share | 0.8016 against 0.8014, pass |
+
+## What Part D says
+
+- **On JB's question whether a crystal reduces the phase spread between atoms:** a prepared
+  coherence gives zero spread at t = 0, and thermal dephasing returns it to the random bulk in
+  about one T2. The lattice by itself does not prepare the coherence; a pulse does.
+- **Where the mechanism would show:** in a detector driven within T2 of the arrival, as a pixel
+  share that follows the particle's offset relative to the pulse phase (1.000 against 0.800 for
+  antiphase pixels) and as an efficiency 0.36 against 0.67 for random offsets. Both are gone by
+  t ≈ T2, 10 to 100 fs in silicon.
+- **On Born:** in this model the intensity share is what every dephased detector shows, under the
+  trajectory reading, and the deviation is a coherence effect with the lifetime of the
+  coherence. That is a statement the model makes and quantum mechanics does not; ledger L13.

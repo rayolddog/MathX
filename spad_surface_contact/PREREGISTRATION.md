@@ -296,3 +296,77 @@ doubles at a given drain time fall: P(|ΔT| ≤ τ_d) ≈ 0.09, 0.19, 0.43, 0.76
 10, 20 against 0.21, 0.40, 0.81, 0.98, 1.00 for b = 0 on the main run's landscapes. The field
 straightens the channel and, by widening the spread of connection times, makes the two-pixel
 race less often a tie; it does not silence the second pixel.
+
+---
+
+## Addendum 2, 2026-09-08 (evening): Part D, the crystal as a transition coherence with thermal dephasing
+
+Written before `transition_coherence.py` was run, at JB's instruction of 2026-09-08 ("run the
+crystal as a transition coherence with thermal dephasing"), after the exchange on whether atoms
+have a physical phase: a stationary state has none that can be read; a superposition of two
+levels has a relative phase that turns at the transition frequency, and that is what MRI reads
+as the Larmor phase. Part D gives the bulk that phase. §0 to §3 and the first addendum are
+unchanged. Predicted numbers were computed in scratch from the closed forms and a Monte Carlo of
+2 × 10⁵ draws.
+
+**The mapping, in MRI language.** A preparation at t = 0 gives every atom of pixel k the same
+coherence phase μ_k (the 90° pulse). Afterwards each atom's phase drifts: by a random walk,
+irreversible, which is T2 (homogeneous dephasing); and by a static frequency offset of its own
+site, refocusable by an echo, which is T2* (inhomogeneous dephasing). The magnitude of the
+ensemble's mean phasor, the transverse magnetization, is R(t) = exp(−t/T2) for the first,
+exp(−t²/2T2*²) for the second, and their product for both. R is the second study's mean
+resultant R_κ, now a function of the delay between the preparation and the particle's arrival.
+No echo is run.
+
+**The physical scale, and the cost case named first (C9).** The transition coherence of a
+bound electron in silicon at 2.5 eV turns at about 4 × 10¹⁵ rad/s and dephases, at room
+temperature, in about 10 to 100 fs (semiconductor interband coherence; the record's Paper 1 puts
+silicon thermalisation at 10 fs to 1 ps). At thermal equilibrium the coherence is not merely
+dephased but absent: its amplitude carries the Boltzmann factor exp(−ħω/kT) ≈ e⁻⁹⁷. So Part D
+describes a detector whose coherence was *driven* within about T2 of the arrival, not a passive
+SPAD, and a passive SPAD is the random bulk B0 of every earlier run. Nuclear spins have T2 of
+milliseconds to seconds, but zero transverse coherence without a pulse, and the deposit in this
+model is electronic. Ledger.
+
+- **D16, the phases.** Atom i of pixel k at delay t has δ_i(t) = μ_k + s(t) Z_i with Z_i standard
+  normal, independent per atom and drawn fresh per quantum (a fresh draw of static offsets is the
+  same as a fresh set of atoms). s_hom(t) = √(2t/T2); s_inh(t) = t/T2* with T2* = T2;
+  s_both = √(s_hom² + s_inh²). t/T2 ∈ {0, 0.03, 0.1, 0.3, 1, 3, 10}. R(t) = exp(−s²/2).
+- **D17, one pixel.** n = 21 atoms exactly (pure phase draws, no pixel geometry, so the edge excess
+  of Part C is absent), μ = 0, least rotation, the weighted deposit D4b with θ = 0.45. The particle's
+  offset δ_p ∈ {0, 45, 90, 135, 180}° and uniform. Recorded: R measured, rotation used, the pair
+  rate, the winner's weight.
+- **D18, two pixels.** The r = 4 flight (D2, fresh seed), the trajectory reading, the pixel
+  geometry of D3 and D4, least rotation, D4b, breakdown by D8. Preparations: *same*, μ₁ = μ₂ = 0;
+  *opposite*, μ₁ = 0, μ₂ = π (two devices pulsed in antiphase). δ_p fixed at 0 and uniform.
+  Recorded: pair rate at each pixel, efficiency, share of records at pixel 1 against the arrival
+  share 0.803 and Born 0.800.
+
+**Predictions (P13).**
+
+- R(t) for hom: 1, 0.970, 0.905, 0.741, 0.368, 0.050, 0; inh: 1, 1.000, 0.995, 0.956, 0.607,
+  0.011, 0; both: 1, 0.970, 0.900, 0.708, 0.223, 0.001, 0.
+- One pixel, hom, rotation used at δ_p = 0: 0, 0.8°, 1.5°, 2.5°, 4.6°, 7.5°, 8.2°; at 90°: 90°,
+  63.5°, 41.7°, 16.3°, 8.5°, 8.2°, 8.2°; at 180°: 180°, 149°, 124°, 83°, 23°, 9.1°, 8.2°. Pair rate
+  at 180°: 0, 0, 0.021, 0.71, 0.999, 1, 1; at δ_p = 0 and 90°: 1 throughout. Uniform δ_p: 0.532,
+  0.679, 0.802, 0.964, 1.000, 1, 1. inh and both: the same numbers at equal s, so the same curves
+  against s and different against t.
+- Two pixels, opposite preparation, fixed δ_p = 0: share 1.000, 1.000, 0.995, 0.851, 0.803, 0.803,
+  0.803 (the pixel in phase with the particle takes every record until t ≈ 0.3 T2, Born by
+  t ≈ T2); uniform δ_p: 0.803 at every t, because the two pixels' pair rates are equal by symmetry
+  (I first estimated 0.82 by hand and the Monte Carlo corrected it before the run). Same
+  preparation: 0.803 at every t. Efficiency = 0.847 × 0.778 × pair rate: uniform δ_p 0.35, 0.45,
+  0.53, 0.64, 0.66, 0.66, 0.66; fixed δ_p = 0 with the same preparation 0.66 throughout; with the
+  opposite preparation 0.53, 0.53, 0.53, 0.62, 0.66, 0.66, 0.66.
+- So the trace of the phase mechanism is a Born deviation and an efficiency that both depend on
+  the delay since preparation, gone after about one T2. In this model Born statistics are what a
+  dephased detector shows.
+
+**Verification.** R measured against exp(−s²/2) within 0.005; rotation at t = 0 equals |δ_p| to
+10⁻¹²; rotation at t = 10 against π/22 within 3 s.e.; uniform-δ_p pair rate at t = 0 against
+0.5325 within 3 s.e.; two-pixel share at t = 10 (opposite, fixed δ_p) against the arrival share
+within 3 s.e.
+
+**What will be recorded.** `results/dephasing_single.csv`, `results/dephasing_pixels.csv`,
+`results/verification_dephasing.txt`, `fig6_dephasing.png`; a dated section in `RESULTS.md`;
+ledger L13.
