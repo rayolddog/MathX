@@ -4,3 +4,7 @@ empty_pixel.py, run 2026-09-08 11:30:54, seed 20260909, 4.9 s
 verification (addendum): FAIL
 transition_coherence.py, run 2026-09-08 11:56:47, seed 20260910, 3.3 s
 verification (Part D): PASS
+l13_qm_comparison.py, run 2026-09-08 13:16:00, 0.3 s
+verification (L13 test): PASS
+bound_spinor.py, run 2026-09-08 13:46:36, 16.5 s
+verification (Part E): PASS

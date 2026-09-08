@@ -1,0 +1,6 @@
+Verification, the test of L13 (L13_TEST.md §3)
+
+P14: two-level numeric against closed form, worst |difference| = 1.9e-16 (tolerance 1e-12) -> PASS
+P15: Fock |1> on a π/2-prepared atom, gt = 0.3: net photon change +0.0411 (predicted about +0.045), spread over phase 0.0e+00 -> PASS
+P15: coherent |α|² = 1 on the same atom: fringe amplitude 0.266 (predicted about 0.3), mean +0.0405 -> PASS
+P16: fringe / phase-averaged absorption at θ₁ = 0.3, t = 0: quantum mechanics θ₂ = 0.03: 20.62, θ₂ = 0.1: 6.18, θ₂ = 0.3: 2.05, θ₂ = 1: 0.57, θ₂ = 2: 0.20; the model 1.00 at every θ₂ -> PASS

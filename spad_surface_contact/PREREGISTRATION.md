@@ -370,3 +370,71 @@ within 3 s.e.
 **What will be recorded.** `results/dephasing_single.csv`, `results/dephasing_pixels.csv`,
 `results/verification_dephasing.txt`, `fig6_dephasing.png`; a dated section in `RESULTS.md`;
 ledger L13.
+
+---
+
+## Addendum 3, 2026-09-08 (night): Part E, the bound electron's second spinor, and the deposit weight with unequal amplitudes
+
+Written before `bound_spinor.py` was run, at JB's instruction of 2026-09-08: the second Dirac
+spinor is a complete complex wave, so |A| ≠ |B| in the interference weight; and the ground state
+of an electron bound to an atom is not the ground state of a free electron, so revise the
+calculation on that basis. Predicted numbers were computed in scratch on the same grid.
+
+**What is computed.** A Dirac electron bound in a well, in the record's 1+1-D conventions
+(ħ = c = m = 1, H = σ_x p + σ_z m, the standard representation), so that both readings of "the
+second spinor" can be measured on the same state: JB's reading, the lower row of the Dirac spinor
+(the "original Dirac spinors"); and A4's reading of the second study, the negative-energy
+component in the free-particle expansion. For each: its amplitude relative to the first spinor,
+its phase relative to the first spinor, whether that phase is fixed or free, and how it rotates in
+time. Then the deposit weight of A1 with the two amplitudes unequal.
+
+- **D19, the bound electron.** V(x) = −U₀ exp(−x²/2L²) added to H as a potential energy. Grid
+  1024 points at spacing 0.05. The ground state is the lowest eigenvalue in (−m, m). Four wells,
+  (U₀, L) = (0.05, 4), (0.2, 2), (0.6, 1), (1.0, 0.5), with bindings from 0.03 to 0.35 of the rest
+  energy. A valence electron in silicon is bound by a few eV, 10⁻⁵ of the rest energy, shallower
+  than any well run; the shallow end of the run gives the scaling to extrapolate.
+- **D20, measured.** E_b. Lower-row fraction f_L = ∫|χ|²/∫|ψ|² and amplitude a_L = √f_L. The
+  pointwise phase of χ relative to φ. The identity χ = −i φ′/(E_b + m − V) (the lower row of the
+  Dirac equation in this representation). Free ±E content f₋ = Σ|c₋|²/Σ(|c₊|² + |c₋|²) with c±
+  from Part C's projectors, amplitude a₋ = √f₋. The offset arg(c₋/c₊) over p: its mean and its
+  resultant. The eigenvector residual |Hψ − E_bψ|, which is the statement that c₊ and c₋ both
+  rotate as e^(−iE_b t), together, where a free particle's rotate as e^(∓iE(p)t), apart.
+- **D21, the incident particle.** Its second-spinor amplitude in A4's reading is b = sin(θ/2) for
+  a lag θ (second study, L4); a physical free electron has θ = 0 and b = 0; a photon has no lower
+  spinor (2026-09-06 ledger). In JB's reading a free electron of momentum p has b_L = p/(E + m),
+  0.1 at p = 0.2 m.
+- **D22, the revised weight.** With amplitudes a (bound electron) and b (incident particle),
+  w = [a² + b² + 2ab cos Δφ]/(a + b)², visibility V = 2ab/(a² + b²). Every phase effect of the
+  model (the second study's C5, Part D's fringe and pair rates) scales with V; the minimum of w is
+  [(a − b)/(a + b)]², so the miss under D4b needs V close to 1. Table of V over the four wells'
+  a_L and a₋ against b ∈ {0, a, 0.1, 0.5, 1}.
+
+**Predictions (P17, from scratch on the same grid).**
+
+- E_b = 0.9721, 0.8888, 0.6979, 0.6543; f_L = 0.0041, 0.0167, 0.0537, 0.0904 (a_L = 0.064, 0.129,
+  0.232, 0.301); f₋ = 1.5 × 10⁻⁶, 6.8 × 10⁻⁵, 1.3 × 10⁻³, 4.7 × 10⁻³ (a₋ = 0.0012, 0.0082, 0.036,
+  0.068). The lower fraction is about 0.15 of the binding in rest-energy units at the shallow end;
+  the −E content falls faster, about as the cube of the binding.
+- χ = −i φ′/(E_b + m − V) to 10⁻¹¹. Since φ is real for the ground state, χ is purely imaginary
+  relative to it: the second spinor's phase is +90° on one side of the well and −90° on the other,
+  fixed by the first spinor's gradient, identical for every identical atom. It is not a random
+  variable and not a free one.
+- The ±E offset is not a single number for a bound state: its resultant over p is 0.42, 0.21,
+  0.12, 0.10, with well-dependent means. Both components rotate at E_b together: no counter-
+  rotation. The eigenvector residual is below 10⁻⁹.
+- Visibility: b = 0 gives V = 0 for every well: for a physical incident electron or a photon the
+  phase mechanism is off. V = 1 only at b = a. Shallow well, a_L = 0.064: V = 0.91 at b = 0.1,
+  0.25 at b = 0.5, 0.13 at b = 1; a₋ = 0.0012: V = 0.024 at b = 0.1. Extrapolated to silicon
+  (binding 10⁻⁵): a_L ≈ 10⁻³, a₋ ≈ 10⁻⁸, an order-of-magnitude estimate from the scaling.
+
+**The cost case, named (C10).** If the second spinor of a bound electron is slaved to the first
+and in quadrature with it, the bulk of the second study, random and independent phases, and its
+counter-rotation D1, are not what a Dirac bound state does; and if the incident particle carries
+no negative-energy admixture, the weight's visibility is zero. Ledger.
+
+**Verification.** Eigenvector residual < 10⁻⁹; χ against −i φ′/(E_b + m − V) < 10⁻¹⁰; E_b and
+f_L against the predictions to 10⁻⁴; f₋ to 2 %; V table exact by construction.
+
+**What will be recorded.** `results/bound_spinor.csv`, `results/bound_visibility.csv`,
+`results/verification_bound.txt`, `fig8_bound_spinor.png`; a dated section in `RESULTS.md`;
+ledger L15; a note in `L13_TEST.md`.

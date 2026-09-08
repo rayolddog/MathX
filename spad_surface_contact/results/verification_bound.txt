@@ -1,0 +1,7 @@
+Verification, Part E (PREREGISTRATION.md, addendum 3)
+
+well U0 = 0.05, L = 4: eigenvector residual 2.3e-14 -> PASS; χ against −iφ′/(E_b+m−V): 2.8e-12 -> PASS; E_b 0.9721 against 0.9721 -> PASS; f_L 0.0041 against 0.0041 -> PASS; f₋ 1.51e-06 against 1.5e-06 -> PASS
+well U0 = 0.2, L = 2: eigenvector residual 2.5e-14 -> PASS; χ against −iφ′/(E_b+m−V): 1.1e-12 -> PASS; E_b 0.8888 against 0.8888 -> PASS; f_L 0.0167 against 0.0167 -> PASS; f₋ 6.78e-05 against 6.8e-05 -> PASS
+well U0 = 0.6, L = 1: eigenvector residual 2.5e-14 -> PASS; χ against −iφ′/(E_b+m−V): 3.9e-13 -> PASS; E_b 0.6979 against 0.6979 -> PASS; f_L 0.0537 against 0.0537 -> PASS; f₋ 1.26e-03 against 1.3e-03 -> PASS
+well U0 = 1, L = 0.5: eigenvector residual 3.0e-14 -> PASS; χ against −iφ′/(E_b+m−V): 2.9e-13 -> PASS; E_b 0.6543 against 0.6543 -> PASS; f_L 0.0904 against 0.0904 -> PASS; f₋ 4.66e-03 against 4.7e-03 -> PASS
+scaling through the two shallowest wells: f_L ∝ binding^1.01, f₋ ∝ binding^2.75; extrapolated to binding 1e-5 (silicon valence): f_L ≈ 1.4e-06 (a_L ≈ 1.2e-03), f₋ ≈ 5.0e-16 (a₋ ≈ 2.2e-08); an order-of-magnitude estimate

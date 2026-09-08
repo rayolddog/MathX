@@ -478,3 +478,94 @@ and the same preparation; efficiencies 0.35, 0.45, 0.53, 0.64, 0.66 (uniform) an
 - **On Born:** in this model the intensity share is what every dephased detector shows, under the
   trajectory reading, and the deviation is a coherence effect with the lifetime of the
   coherence. That is a statement the model makes and quantum mechanics does not; ledger L13.
+
+---
+
+# Addendum 3, 2026-09-08 (night): Part E, the bound electron's second spinor, and the deposit weight with unequal amplitudes
+
+Definitions and predictions: addendum 3 of `PREREGISTRATION.md` (D19 to D22, P17, C10). Script:
+`bound_spinor.py` (17 s; dense diagonalisation of the 1+1-D Dirac Hamiltonian with a well).
+Outputs: `results/bound_spinor.csv`, `results/bound_visibility.csv`,
+`results/verification_bound.txt`, `fig8_bound_spinor.png`.
+
+## Read this before quoting any number
+
+- Every verification passed and every registered number held. No definition changed.
+- This part answers two statements of JB's, both correct: the second Dirac spinor of a bound
+  electron is a complete complex wave with its own amplitude, so |A| ≠ |B| in the interference
+  weight; and the ground state of a bound electron is not the ground state of a free electron.
+  What the computation adds is *what* that second spinor is: its amplitude, its phase, and whether
+  either is free.
+- The wells are far deeper than a silicon valence electron's (bindings 0.03 to 0.35 of the rest
+  energy against 10⁻⁵); the silicon numbers are extrapolated by the scaling of the two shallowest
+  wells and are order-of-magnitude estimates.
+- Both readings of "the second spinor" are measured on the same states: JB's, the lower row of
+  the Dirac spinor; and the second study's A4, the negative-energy free component.
+
+## The answer in one paragraph
+
+A Dirac electron bound in a well has a second spinor that is slaved to the first: in this
+representation χ = −iφ′/(E_b + m − V) exactly, so its amplitude is set by the gradient of the
+first spinor and its phase sits at +90° on one side of the well and −90° on the other, fixed to
+10⁻⁸ degrees, the same for every identical atom. Its amplitude relative to the first spinor is
+0.06 for a binding of 0.03 rest energies and 0.30 for 0.35, scaling as the square root of the
+binding, about 10⁻³ for a silicon valence electron. In the free-particle reading the bound state's
+negative-energy content is far smaller, 1.5 × 10⁻⁶ of the norm at the shallow end, scaling as the
+2.75 power of the binding, about 10⁻¹⁶ for silicon; its offset against the positive-energy part
+is not a single number (resultant over momentum 0.42 to 0.10), and both parts rotate together at
+E_b, not against each other. With unequal amplitudes the model's weight becomes
+[a² + b² + 2ab cos Δφ]/(a + b)², of visibility 2ab/(a² + b²): zero for an incident particle
+without a second-spinor amplitude of its own, unity only when the two amplitudes are equal.
+
+## Table 12. The bound electron (D19, D20; `bound_spinor.csv`)
+
+| well U₀, L | binding / m | bound states | lower-row fraction f_L | amplitude a_L | phase of χ against φ (left, right) | −E fraction f₋ | amplitude a₋ | ±E offset: mean, resultant over p |
+|---|---|---|---|---|---|---|---|---|
+| 0.05, 4 | 0.028 | 1 | 0.0041 | 0.064 | −90.0°, +90.0° | 1.5 × 10⁻⁶ | 0.0012 | 168°, 0.42 |
+| 0.2, 2 | 0.111 | 2 | 0.0167 | 0.129 | −90.0°, +90.0° | 6.8 × 10⁻⁵ | 0.0082 | −5°, 0.21 |
+| 0.6, 1 | 0.302 | 2 | 0.0537 | 0.232 | −90.0°, +90.0° | 1.3 × 10⁻³ | 0.036 | −89°, 0.12 |
+| 1.0, 0.5 | 0.346 | 1 | 0.0904 | 0.301 | −90.0°, +90.0° | 4.7 × 10⁻³ | 0.068 | −84°, 0.10 |
+
+The phase spread of χ against φ across each well is below 10⁻⁸ degrees; the first spinor is real
+to 10⁻¹³ (a global phase removed). Scaling through the two shallowest wells: f_L ∝ binding^1.01,
+f₋ ∝ binding^2.75. Silicon valence electron (binding 10⁻⁵): f_L ≈ 1.4 × 10⁻⁶ (a_L ≈ 1.2 × 10⁻³),
+f₋ ≈ 5 × 10⁻¹⁶ (a₋ ≈ 2 × 10⁻⁸). Eigenvector residuals 3 × 10⁻¹⁴; the identity for χ holds to
+3 × 10⁻¹².
+
+## Table 13. The model's phase mechanism with unequal amplitudes (D22; `bound_visibility.csv`)
+
+Visibility V = 2ab/(a² + b²); the weight's minimum is [(a − b)/(a + b)]².
+
+| bound electron's amplitude a | incident b = 0 | b = a | b = 0.1 | b = 0.5 | b = 1 |
+|---|---|---|---|---|---|
+| lower row, shallow well, 0.064 | 0 | 1 | 0.91 | 0.25 | 0.13 |
+| lower row, deepest well, 0.301 | 0 | 1 | 0.61 | 0.88 | 0.55 |
+| −E component, shallow well, 0.0012 | 0 | 1 | 0.024 | 0.005 | 0.002 |
+| silicon, lower row, ≈ 10⁻³ | 0 | 1 | ≈ 0.02 | ≈ 0.005 | ≈ 0.002 |
+| silicon, −E component, ≈ 10⁻⁸ | 0 | 1 | ≈ 10⁻⁷ | ≈ 10⁻⁸ | ≈ 10⁻⁸ |
+
+A physical free electron has b = 0 in the negative-energy reading (a lag θ gives b = sin(θ/2) at a
+pair-scale energy cost, L4) and b = p/(E + m) in the lower-row reading (0.1 at p = 0.2 m); a photon
+has neither.
+
+## What Part E says
+
+- **JB's two statements hold, and they cut against the model's bulk.** The bound electron's
+  second spinor has its own amplitude, but that amplitude and its phase are functions of the first
+  spinor: quadrature, fixed, identical across identical atoms. The random, independent, counter-
+  rotating second-spinor phases of the second study's D1 and D2 are not properties of a Dirac bound
+  state in either reading. A bulk of bound electrons is the locked crystal B2 of Part C with the
+  phase at ±90°, not the random bulk B0.
+- **With the physical amplitudes the phase mechanism's visibility is small or zero.** In the
+  negative-energy reading a physical incident electron has b = 0 and the mechanism is off; a lag
+  admixture equal to the bound electron's (10⁻⁸ for silicon) would switch it on at a pair-scale
+  energy cost. In the lower-row reading a slow free electron has b ≈ 0.1 against the bound
+  electron's 10⁻³, visibility 0.02.
+- **The L13 comparison is revised, not reversed.** With a ≠ b the model's cross term is 2ab cos Δφ
+  on a floor of a² + b², which has the form of the quantum-mechanical cross term with A and B as
+  the two second-spinor amplitudes; the differences in sign, order in the field, and the
+  population factor are as in `L13_TEST.md`, and the visibility is now a further suppression.
+- **On "not the same ground state as a free electron."** Correct, and in a specific way: the bound
+  ground state expanded in free spinors has negative-energy content, with a definite but
+  momentum-dependent phase, and that content is 10⁻⁶ of the norm at a binding of 0.03 rest
+  energies and about 10⁻¹⁶ for silicon.
