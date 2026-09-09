@@ -1,0 +1,26 @@
+Verification, Part G, addendum 5b (re-emitted photons leave)
+
+A r = 1 θ = 0.6: share nan (P20 nan), efficiency 0.000 (0.0), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 1 θ = 0.45: share nan (P20 nan), efficiency 0.000 (0.0), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 1 θ = 0.36: share 0.508 (P20 0.5), efficiency 0.679 (0.68), doubles 0.187 (0.19), closure 0.0e+00 -> PASS
+A r = 1 θ = 0.28: share 0.502 (P20 0.5), efficiency 0.675 (0.68), doubles 0.179 (0.19), closure 0.0e+00 -> PASS
+A r = 2 θ = 0.6: share nan (P20 1.0), efficiency 0.000 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> FAIL
+A r = 2 θ = 0.45: share 1.000 (P20 1.0), efficiency 0.453 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 2 θ = 0.36: share 1.000 (P20 1.0), efficiency 0.439 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 2 θ = 0.28: share 0.500 (P20 0.5), efficiency 0.696 (0.68), doubles 0.180 (0.19), closure 0.0e+00 -> PASS
+A r = 4 θ = 0.6: share 1.000 (P20 1.0), efficiency 0.441 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 4 θ = 0.45: share 1.000 (P20 1.0), efficiency 0.433 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 4 θ = 0.36: share 1.000 (P20 1.0), efficiency 0.434 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+A r = 4 θ = 0.28: share 1.000 (P20 1.0), efficiency 0.432 (0.435), doubles 0.000 (0.0), closure 0.0e+00 -> PASS
+B r = 1 θ = 0.6: share 0.520 (Born 0.500), efficiency 0.390 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 1 θ = 0.45: share 0.520 (Born 0.500), efficiency 0.371 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 1 θ = 0.36: share 0.506 (Born 0.500), efficiency 0.346 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 1 θ = 0.28: share 0.482 (Born 0.500), efficiency 0.364 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 2 θ = 0.6: share 0.687 (Born 0.669), efficiency 0.371 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 2 θ = 0.45: share 0.660 (Born 0.669), efficiency 0.366 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 2 θ = 0.36: share 0.678 (Born 0.669), efficiency 0.385 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 2 θ = 0.28: share 0.657 (Born 0.669), efficiency 0.378 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 4 θ = 0.6: share 0.804 (Born 0.803), efficiency 0.375 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 4 θ = 0.45: share 0.810 (Born 0.803), efficiency 0.377 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 4 θ = 0.36: share 0.785 (Born 0.803), efficiency 0.362 (0.372), doubles 0.000, record energy 1.0000 -> PASS
+B r = 4 θ = 0.28: share 0.806 (Born 0.803), efficiency 0.363 (0.372), doubles 0.000, record energy 1.0000 -> PASS

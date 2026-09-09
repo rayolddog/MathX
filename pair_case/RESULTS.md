@@ -107,3 +107,69 @@ What the model would need is stated in `MODEL_SECTION.md` §6 and is now on reco
 the gap between 2.00 and 2.83 at the standard settings, and the one thing that closes it in the
 model's own terms, a phase-gated efficiency of 0.83, is what the loophole-free experiments were
 built to exclude.
+
+
+---
+
+# Addendum, 2026-09-08 (late night): JB's two options for the violation
+
+Definitions and predictions: the addendum to `PREREGISTRATION.md` (D7 to D9, P4, P5). Script:
+`pair_options.py` (seed 20260913, 4 × 10⁵ pairs per setting, 3 s). Outputs: `results/options.csv`,
+`results/verification_options.txt`, `fig2_options.png`.
+
+## Read this before quoting any number
+
+- Five of six registered checks passed. **One failed on my prediction, not on the model:** for
+  "opposite offsets" I predicted a sign flip of E, which is what orthogonal polarizations give
+  (particle 2 at particle 1's angle plus 90°). D7 as written makes the offsets mirror images about
+  the bulk phase μ, and that gives a correlation that depends on the absolute axes, not on their
+  difference, and averages to 0.004 at the standard settings. A labelled diagnostic after the run
+  reads particle 2 orthogonal to particle 1 and gives the sign flip: option 2 with particle 2 orthogonal to particle 1 (angle + 90°), least: E(22.5°) = -0.4992 (−0.5 for the sign flip), S = -2.0020 (−2). The FAIL stays in
+  `verification_options.txt`.
+- Option 1 is run in the deterministic reading at A (D3's projection) with Malus or least rotation
+  at B; reading A by Malus instead changes nothing in E(θ), since particle 2 is set by A's outcome
+  either way.
+
+## The answer in one paragraph
+
+Option 2, the synchronized bulk, is the model already run under another name: after the equal
+rotations the two second spinors sit at μ + δ, one shared angle, and the outcomes are cos²(μ + δ − a)
+and cos²(μ + δ − b). It gives Bell's sawtooth and S = 1.995 ± 0.003 with least rotation, ½ cos 2θ
+and 1.415 with Malus, whether μ is fixed for the run or drawn per pair. The bulk phase common to
+the two detectors is a common cause fixed before the settings are chosen, and a common cause is
+exactly what Bell's bound already allows: the rotations are equal, the outcomes are correlated,
+and the correlation stops at 2. Option 1, particle 2's phase set by the outcome at A, gives the
+experiment: E(θ) = cos 2θ and S = 2.830 with Malus at B, the quantum values, and a step function
+with S = 4.000 if B reads deterministically. The marginal at B is ½ in both, so nothing is
+signalled; the update of particle 2 by A's outcome is the nonlocality, and it is the projection
+postulate applied to the pair.
+
+## Table 4. The two options at the standard settings (`options.csv`)
+
+| case | E(22.5°) | predicted | S | predicted |
+|---|---|---|---|---|
+| option 2, synchronized bulk, least rotation, μ fixed | 0.502 | 0.500 | 1.995 | 2.000 |
+| option 2, Malus, μ fixed | 0.353 | 0.354 | 1.415 | 1.414 |
+| option 2, least rotation, μ drawn per pair | 0.497 | 0.500 | 1.995 | 2.000 |
+| option 2, least rotation, offsets mirrored about μ | −0.282 | −0.500 (wrong prediction) | 0.004 | −2.000 (wrong prediction) |
+| option 2, particle 2 orthogonal (diagnostic) | −0.50 | −0.500 | −2.00 | −2.000 |
+| option 1, particle 2 set by A's outcome, Malus at B | 0.707 | 0.707 | 2.830 | 2.828 |
+| option 1, least rotation at B | 1.000 | 1.000 | 4.000 | 4.000 |
+
+## What the two options say
+
+- **Option 2 is local and bounded.** Synchronizing the bulks of the two detectors adds a shared
+  variable, μ, to the shared offset δ. Every outcome is still a function of the local axis and of
+  variables fixed before the axes were chosen. Equal rotations at the two detectors are a common
+  cause, and the theorem is about common causes. The run is identical to Tables 1 and 2 with the
+  hidden angle renamed. No communication, and no violation.
+- **Option 1 is the accepted description and it works.** Setting particle 2's polarization to the
+  result at A reproduces cos 2θ exactly when B reads by Malus. It over-shoots to 4 if B reads
+  deterministically, which says the deterministic projection cannot be the reading at the second
+  analyzer either. The nonlocality is in the update, not in any signal: B's own statistics do not
+  change.
+- **What would make option 2 into option 1.** If the bulk at B were re-synchronized by the event at
+  A to a phase that depends on A's outcome, faster than light across the separation of the
+  loophole-free experiments, option 2 would become option 1 with the bulk as the carrier. That is
+  not "no nonlocal communication"; it is nonlocal communication through the bulk, and the
+  spacelike-separated experiments (Weihs 1998 onward) exclude any subluminal version of it.

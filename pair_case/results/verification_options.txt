@@ -1,0 +1,9 @@
+Verification, JB's two options (PREREGISTRATION.md, addendum)
+
+option 2, least, μ fixed: E(22.5°) = +0.5022 against +0.5000; S = +1.9952 against +2.0000 -> PASS
+option 2, Malus, μ fixed: E(22.5°) = +0.3532 against +0.3536; S = +1.4146 against +1.4142 -> PASS
+option 2, least, μ drawn per pair: E(22.5°) = +0.4968 against +0.5000; S = +1.9952 against +2.0000 -> PASS
+option 2, least, opposite offsets: E(22.5°) = -0.2822 against -0.5000; S = +0.0035 against -2.0000 -> FAIL
+option 1, Malus at B: E(22.5°) = +0.7066 against +0.7071; S = +2.8304 against +2.8284 -> PASS
+option 1, least at B: E(22.5°) = +1.0000 against +1.0000; S = +4.0000 against +4.0000 -> PASS
+    diagnostic, not registered (added after the run): option 2 with particle 2 orthogonal to particle 1 (angle + 90°), least: E(22.5°) = -0.4992 (−0.5 for the sign flip), S = -2.0020 (−2)

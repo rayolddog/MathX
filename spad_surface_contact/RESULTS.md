@@ -650,3 +650,140 @@ is the atoms left of the arrival in every case; at δ_p = 0° the nearest atom, 
   fixed at ±90° by the side, not random; in three dimensions it is −i times a direction-dependent
   spin factor. The only random phase in the rebuilt model is the incident particle's own, and
   that exists for a partially reflected wave and not for a photon.
+
+---
+
+# Addendum 5, 2026-09-08 (late night): Part G, release and retry at the excited electron
+
+Definitions and predictions: addendum 5 of `PREREGISTRATION.md` (D27 to D31, P19, C12 to C14).
+Script: `release_retry.py` (seed 20260914, 3000 quanta per configuration, 21 s). Outputs:
+`results/release_retry.csv`, `results/verification_release.txt`, `fig10_release.png`.
+
+## Read this before quoting any number
+
+- Every verification passed and every registered number held (P19). No definition changed.
+- The rates are my defaults in units of the re-emission rate; nothing in them carries a physical
+  scale. The sensitivities show which conclusions depend on them (the efficiency) and which do
+  not (the share, the doubles, the record energy).
+- Two readings of the deposit are run side by side and the difference between them is the
+  result. Reading A is JB's shares as energies with the three release channels. Reading B is the
+  indivisible quantum, the postulate, with the same channels.
+
+## The answer in one paragraph
+
+With the excited electron given three ways to release its holding, ejection above the gap,
+re-emission back to the wave for another try, and phonon loss, the energy of the quantum closes
+to 10⁻¹⁵ in every configuration, so the ledger item L11 is resolved in both readings. In reading
+A the re-emission cycle (about 15 returns per quantum) does what the drain of Part B could not:
+above a gap ratio of one half a double record is impossible, because the energy left after a
+record of at least θ is less than θ, and at the silicon ratio 0.45 none occurred in 36 000
+quanta; doubles return only below θ = 0.36 (0.20 at a balanced split, 0.30 at r = 2 for
+θ = 0.28). The price is Born and the record's energy. The share becomes a step in r: the brighter
+pixel takes 1.000 at r = 4 and 0.97 at r = 2 for θ = 0.6, 0.996 and 0.93 at 0.45, against 0.80
+and 0.67; and each record carries 0.45 to 0.72 of the quantum, 0.65 at r = 4 and 0.45, never the
+whole, while calorimetric detectors measure the whole photon energy per absorption. In reading B
+everything holds at once, Born to 0.01 at every r and θ, no doubles, the full quantum per record,
+closure exact, with the channels adding only an efficiency of 0.58 to 0.60; and nothing is
+derived, because the indivisibility of the deposit is the assumption that does all the work.
+
+## Table 16. Reading A, shares as energies, primary rates (`release_retry.csv`)
+
+| r | θ (nm) | share pixel 1 | Born | doubles | efficiency | record energy | cycles | heat | escape |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 0.6 (660) | 0.52 | 0.50 | 0 | 0.32 | 0.63 | 17.8 | 0.44 | 0.37 |
+| 1 | 0.45 (500) | 0.49 | 0.50 | 0 | 0.39 | 0.60 | 17.4 | 0.41 | 0.35 |
+| 1 | 0.36 (400) | 0.50 | 0.50 | 0.20 | 0.80 | 0.47 | 11.8 | 0.26 | 0.28 |
+| 1 | 0.28 (310) | 0.50 | 0.50 | 0.21 | 0.83 | 0.46 | 12.5 | 0.25 | 0.28 |
+| 2 | 0.6 | 0.97 | 0.67 | 0 | 0.18 | 0.72 | 17.8 | 0.48 | 0.39 |
+| 2 | 0.45 | 0.93 | 0.67 | 0 | 0.60 | 0.59 | 15.7 | 0.33 | 0.31 |
+| 2 | 0.36 | 0.83 | 0.67 | 0 | 0.69 | 0.56 | 15.9 | 0.31 | 0.30 |
+| 2 | 0.28 | 0.58 | 0.67 | 0.30 | 0.85 | 0.45 | 11.3 | 0.23 | 0.26 |
+| 4 | 0.6 | 1.000 | 0.80 | 0 | 0.49 | 0.71 | 16.2 | 0.34 | 0.31 |
+| 4 | 0.45 | 0.996 | 0.80 | 0 | 0.70 | 0.65 | 16.0 | 0.27 | 0.28 |
+| 4 | 0.36 | 0.97 | 0.80 | 0 | 0.72 | 0.63 | 15.5 | 0.27 | 0.27 |
+| 4 | 0.28 | 0.88 | 0.80 | 0.07 | 0.79 | 0.60 | 14.7 | 0.24 | 0.26 |
+
+Standard errors: 0.01 in a share, 0.008 in a rate. Sensitivities at r = 4, θ = 0.45: the share
+stays 0.99 to 1.00 and the record energy 0.62 to 0.67 for every rate change; the efficiency
+runs from 0.36 (slow ejection) to 0.89 (fast ejection, or no phonon loss), and the number of
+cycles from 2 (fast phonon loss or slow re-emission) to 360 (no phonon loss).
+
+## Table 17. Reading B, the indivisible quantum, same channels
+
+| r | share pixel 1 at θ = 0.6, 0.45, 0.36, 0.28 | Born | doubles | efficiency | record energy | cycles |
+|---|---|---|---|---|---|---|
+| 1 | 0.52, 0.50, 0.50, 0.50 | 0.50 | 0 | 0.57 to 0.59 | 1.000 | 0.6 |
+| 2 | 0.67, 0.67, 0.65, 0.67 | 0.67 | 0 | 0.58 to 0.59 | 1.000 | 0.6 |
+| 4 | 0.80, 0.78, 0.80, 0.82 | 0.80 | 0 | 0.58 to 0.60 | 1.000 | 0.6 |
+
+All within 3 standard errors of the normalized Born shares. The efficiency is the fill factor
+times the ejection branch, thinned by the escape fraction on each retry.
+
+## Verification (`results/verification_release.txt`)
+
+| Check | Result |
+|---|---|
+| Energy closure, 31 configurations | ≤ 2 × 10⁻¹⁵, pass |
+| Doubles exactly 0 at θ = 0.6 (both readings) and at every θ in reading B | pass |
+| Reading B's record energy exactly 1 | pass |
+| Reading A's shares at r = 4, θ = 0.45 and r = 1 against P19 | 0.996, 0.494, 0.521 against 0.996, 0.48, 0.50, pass |
+| Reading B's shares against Born, 12 configurations | pass |
+
+## The cases named in the addendum, resolved
+
+- **C12 held:** reading A's records carry 0.45 to 0.72 of the quantum; a transition-edge sensor
+  reports the whole photon energy per absorption. Ledger L21.
+- **C13 held:** reading A's share is a step in r, 1.00 at r = 4 for the silicon gap ratio, against
+  Born's 0.80. Ledger L21.
+- **C14 held:** reading B satisfies every constraint by assuming the indivisible quantum. Ledger
+  L22.
+
+## What Part G says about the third step
+
+The release cycle is the first dynamics in this program that keeps one record per quantum
+without a stop across pixels and without assuming the empty pixel silent: energy conservation
+does it, whenever the gap is more than half the photon energy, and JB's re-emission channel is
+what lets a sub-threshold holding go back to the wave instead of latching. But it does so only
+in the reading where the deposit is divisible, and in that reading the share is not Born and the
+record is not the whole quantum. Both of those are measured facts against it. The reading in
+which the share is Born and the record is whole is the reading in which the quantum is deposited
+indivisibly, and that is the postulate the program set out to derive. The two readings cannot be
+combined: a divisible deposit that always ends in a whole-quantum record is a deposit that draws
+the rest from the wave at the moment of ejection, which is the stop across pixels again.
+
+## Addendum 5b, 2026-09-08 (late night): re-emitted photons leave (`release_retry.py escape`)
+
+JB's objection to D30, registered as D30b before the run: a re-emitted photon does not interact
+with the detectors again. A sub-threshold holding re-emitted as a photon is below the gap, and
+silicon is transparent below its gap; an above-gap photon from a surface atom leaves into the
+half-space away from the material. The accumulation of D29 was a two-photon process. Outputs:
+`results/release_escape.csv`, `results/verification_release_escape.txt`.
+
+**Read this first.** 23 of 24 checks passed. One failed on my closed form: I wrote that at r = 2
+the bright pixel records at every gap ratio, but its share is 0.570, below the 0.6 of 660 nm, so
+at that wavelength reading A makes no record at all at r = 2. The run is right; the FAIL stays in
+the verification file.
+
+| reading | r | θ = 0.6 | 0.45 | 0.36 | 0.28 |
+|---|---|---|---|---|---|
+| A: efficiency | 1 | **0** | **0** | 0.68 | 0.68 |
+| A: efficiency | 2 | **0** | 0.45 | 0.44 | 0.70 |
+| A: efficiency | 4 | 0.44 | 0.43 | 0.43 | 0.43 |
+| A: share pixel 1 | 1 | none | none | 0.51 | 0.50 |
+| A: share pixel 1 | 2 | none | 1.000 | 1.000 | 0.50 |
+| A: share pixel 1 | 4 | 1.000 | 1.000 | 1.000 | 1.000 |
+| A: doubles | 1 | 0 | 0 | 0.19 | 0.18 |
+| A: doubles | 2 | 0 | 0 | 0 | 0.18 |
+| B: share pixel 1 (Born 0.50, 0.67, 0.80) | 1, 2, 4 | 0.52, 0.69, 0.80 | 0.52, 0.66, 0.81 | 0.51, 0.68, 0.79 | 0.48, 0.66, 0.81 |
+| B: efficiency, doubles, record energy | any | 0.35 to 0.39, 0, 1.000 | | | |
+
+Energy closes exactly in every configuration (nothing is ever re-deposited).
+
+**What it says.** Without the retry, reading A detects nothing at a balanced split for every
+wavelength above 470 nm and nothing at r = 2 above 553 nm, and where it detects, the brighter
+pixel takes every record. The retry of D30 was the only thing that gave reading A an efficiency
+at a balanced split, and JB's objection removes it on physical grounds. Reading B loses only
+efficiency (0.37 against 0.58), keeps Born, exclusivity and the whole quantum per record. The
+physical retry that does exist, recycling of whole-quantum photons inside a thick absorber, is
+reading B's kind, and silicon does it weakly (radiative lifetime of microseconds against
+picosecond thermalization). Ledger L23.

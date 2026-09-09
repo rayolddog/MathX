@@ -511,3 +511,103 @@ arrival share within 3 s.e. in every configuration with pair rate 1; a(d) agains
 
 **What will be recorded.** `results/slaved_bulk.csv`, `results/slaved_a_of_d.csv`,
 `results/verification_slaved.txt`, `fig9_slaved.png`; a dated section in `RESULTS.md`; ledger L16.
+
+---
+
+## Addendum 5, 2026-09-08 (late night): Part G, release and retry at the excited electron
+
+Written before `release_retry.py` was run, at JB's instruction "please build and test it", after
+his description of the cycle: the bulk phase does not change; the interacting electron's spinors
+change at contact; relaxing, by ejection or by emitting a photon while dropping to a lower level,
+returns the atom to the bulk's phase distribution. The branching at the excited electron is
+built with three channels, ejection above the gap, re-emission that returns the energy to the
+wave for another try, and phonon loss, and the energy of the quantum is tracked to closure.
+Predicted numbers were computed in scratch (3000 quanta per configuration) before the script.
+
+**The two readings of the deposit, both run (D27).** Reading A, JB's shares as energies: the
+wave's energy is deposited at both pixels in proportion to the density under each, every time
+it arrives, so an electron may hold a fraction of the quantum. Reading B, the indivisible
+quantum (the record's Paper 1, reading B; the golden rule): each arrival deposits the whole
+quantum at one pixel with probability equal to its share, or escapes. Reading B is the
+comparator that shows which assumption does the work.
+
+- **D28, the holdings.** Per quantum: E₁ and E₂ at the two pixels' excited electrons, E_w in the
+  wave, and the sinks: record energy at each pixel, heat, escape. E_w = 1 at the start.
+- **D29, the deposit.** From the wave at rate Γ_dep = 10: reading A gives E_k += E_w s_k with the
+  absolute pixel shares s of D2 (0.687 and 0.168 at r = 4; 0.570 and 0.282 at r = 2; 0.425 each at
+  r = 1) and sends the rest, 1 − s₁ − s₂, to escape (no atoms in the gap and outside); reading B
+  sends the whole E_w to pixel 1 with probability s₁, to pixel 2 with s₂, else to escape.
+- **D30, the release channels** at an electron holding E_k > 0, each a Poisson event: re-emission
+  at Γ_em = 1, the holding returns to the wave (E_w += E_k); phonon loss at Γ_ph = 0.3, the
+  holding goes to heat; ejection at Γ_ej = 1, allowed only if E_k ≥ θ (a real final state above
+  the gap), the holding becomes a record at that pixel. After any release the electron's holding
+  is zero: the atom is back in the bulk distribution. Escape from the wave at Γ_esc = 0
+  (sensitivity 0.3). The quantum's history ends when nothing is held and nothing is in the wave,
+  or at t = 200.
+- **D31, the grid and the statistics.** r ∈ {1, 2, 4}; θ ∈ {0.6, 0.45, 0.36, 0.28} (660, 500, 400,
+  310 nm). Sensitivities (reading A, r = 4, θ = 0.45): Γ_ej ∈ {0.3, 3}; Γ_ph ∈ {0, 1}; Γ_em ∈
+  {0.3, 3}; Γ_esc = 0.3. Recorded per configuration: share of records at pixel 1 (a double counts
+  once at each), doubles per quantum, efficiency (quanta with a record), the first record's
+  energy, the number of re-emission cycles, and the closure record + heat + escape + holdings = 1.
+  3000 quanta per configuration: s.e. about 0.01 in a share, 0.008 in a rate.
+
+**Predictions (P19, from scratch).**
+
+- **Energy closes** to 10⁻¹⁵ in every configuration: the ledger item L11 is resolved by
+  construction in both readings.
+- **Doubles.** Impossible when θ > ½, in either reading, because the energy left after a record
+  of at least θ is less than θ: 0 at θ = 0.6. Reading A at θ = 0.45: 0 at every r (3000 quanta);
+  at 0.36: 0.20 (r = 1), 0 (r = 2), 0 (r = 4); at 0.28: 0.23, 0.28, 0.08. Reading B: 0 always.
+- **The share.** Reading A: r = 4: 1.000, 0.996, 0.96, 0.86 at θ = 0.6, 0.45, 0.36, 0.28 (Born
+  0.80); r = 2: 0.97, 0.93, 0.82, 0.60 (Born 0.667); r = 1: 0.50 throughout. The brighter pixel
+  takes nearly every record once its share exceeds the gap ratio: a step in r, not r/(1 + r).
+  Reading B: 0.80, 0.67, 0.50 at every θ, within 0.01: Born, because every deposit is a draw by
+  share and the release channels do not know the pixel.
+- **The record's energy.** Reading A: the first record carries 0.46 to 0.72 of the quantum
+  (0.65 at r = 4, θ = 0.45), never the whole. Reading B: exactly 1.
+- **Efficiency.** Reading A: 0.29 to 0.86 over the grid, 0.68 at r = 4, θ = 0.45; higher with
+  faster ejection (0.90 at Γ_ej = 3) or no phonon loss (0.90), lower with fast re-emission (0.50
+  at Γ_em = 3) because each cycle loses the escape fraction; the share stays above 0.985 in every
+  sensitivity. Reading B: 0.58 to 0.60 at every r and θ. Cycles: about 15 in reading A at the
+  primary rates, 360 without phonon loss; 0.6 in reading B.
+
+**The cases that cost the model, named (C12 to C14).** C12: in reading A each record carries
+less than the quantum; energy-resolving detectors (transition-edge sensors) measure the full
+photon energy per absorption (the record's Paper 1, test vi). C13: reading A replaces Born's
+share by a step in r; the asymmetric-split experiments the record searched for below 553 nm were
+not located, and calibration practice at percent level stands against a share of 1.00 at r = 4.
+C14: reading B gives Born, exclusivity, full-energy records and closure, and assumes the
+indivisible quantum, which is the postulate; nothing is derived in it, and the release channels
+add only an efficiency.
+
+**Verification.** Closure < 10⁻¹² everywhere; doubles exactly 0 at θ = 0.6 in both readings and at
+every θ in reading B; reading B's record energy exactly 1; reading A's shares at r = 4, θ = 0.45
+and r = 1 within 3 s.e. of P19; reading B's shares within 3 s.e. of the normalized Born shares
+0.803, 0.669, 0.500.
+
+**Recorded.** `results/release_retry.csv`, `results/verification_release.txt`, `fig10_release.png`;
+a section in `RESULTS.md`; ledger L21 and L22.
+
+**Addendum 5b, 2026-09-08 (late night), written before the run: re-emitted photons leave.**
+JB's objection to D30: a re-emitted photon would not enter into further interaction with the
+detectors. It is the physical case. A sub-threshold holding re-emitted as a photon carries less
+than the gap energy, and silicon is transparent below its gap, so it cannot excite another
+electron across the gap anywhere; an above-gap photon re-emitted from a surface atom leaves into
+the half-space away from the material. The accumulation of D29, a sub-gap photon adding to another
+electron's partial holding, is a two-photon process, negligible at single-photon intensity. So:
+
+- **D30b.** As D30, but the re-emission channel sends the holding to escape instead of back to the
+  wave. Everything else unchanged; the same grid as D31 without the sensitivities.
+- **P20 (closed forms).** With no retry, a pixel records only if its first deposit reaches θ and
+  ejection wins the three-way race, probability Γ_ej/(Γ_ej + Γ_em + Γ_ph) = 1/2.3 = 0.435.
+  Reading A: r = 1, θ ≥ 0.45: no pixel reaches θ (0.425), efficiency 0, no record ever; r = 1,
+  θ ≤ 0.36: both pixels can eject, efficiency 1 − (1 − 0.435)² = 0.68, doubles 0.435² = 0.19,
+  share 0.50; r = 2: pixel 1 (0.570) records with 0.435 at every θ, pixel 2 (0.282) only at
+  θ = 0.28, so share 1.00 for θ ≥ 0.36 and efficiency 0.435, doubles 0.19 at θ = 0.28; r = 4:
+  share 1.00, efficiency 0.435, doubles 0 at every θ. Record energy the first share, 0.43 to
+  0.69. Reading B: share Born, doubles 0, record energy 1, efficiency 0.855 × 0.435 = 0.372 at
+  every r and θ.
+- **What this shows.** Reading A's efficiency at a balanced split is zero for every wavelength
+  above 470 nm, and its share is 1.00 for the brighter pixel: the retry of D30 was the only thing
+  that gave reading A an efficiency at a balanced split, and the retry is unphysical. Reading B is
+  unchanged except in efficiency.

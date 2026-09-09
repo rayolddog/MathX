@@ -1,0 +1,33 @@
+Verification, Part G (PREREGISTRATION.md, addendum 5)
+
+A r = 1 θ = 0.6: closure 5.6e-16 -> PASS; doubles 0.0000 (0 exactly) -> PASS; share 0.5212 against P19 0.5 (s.e. 0.0163) -> PASS
+A r = 1 θ = 0.45: closure 6.7e-16 -> PASS; share 0.4935 against P19 0.48 (s.e. 0.0147) -> PASS
+A r = 1 θ = 0.36: closure 6.7e-16 -> PASS
+A r = 1 θ = 0.28: closure 6.7e-16 -> PASS
+A r = 2 θ = 0.6: closure 6.7e-16 -> PASS; doubles 0.0000 (0 exactly) -> PASS
+A r = 2 θ = 0.45: closure 8.9e-16 -> PASS
+A r = 2 θ = 0.36: closure 7.8e-16 -> PASS
+A r = 2 θ = 0.28: closure 6.7e-16 -> PASS
+A r = 4 θ = 0.6: closure 6.7e-16 -> PASS; doubles 0.0000 (0 exactly) -> PASS
+A r = 4 θ = 0.45: closure 5.6e-16 -> PASS; share 0.9962 against P19 0.996 (s.e. 0.0014) -> PASS
+A r = 4 θ = 0.36: closure 7.8e-16 -> PASS
+A r = 4 θ = 0.28: closure 6.7e-16 -> PASS
+B r = 1 θ = 0.6: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.5157 against Born 0.5000 (s.e. 0.0119) -> PASS
+B r = 1 θ = 0.45: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.4972 against Born 0.5000 (s.e. 0.0119) -> PASS
+B r = 1 θ = 0.36: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.5047 against Born 0.5000 (s.e. 0.0121) -> PASS
+B r = 1 θ = 0.28: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.4994 against Born 0.5000 (s.e. 0.0120) -> PASS
+B r = 2 θ = 0.6: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.6742 against Born 0.6691 (s.e. 0.0112) -> PASS
+B r = 2 θ = 0.45: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.6663 against Born 0.6691 (s.e. 0.0113) -> PASS
+B r = 2 θ = 0.36: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.6473 against Born 0.6691 (s.e. 0.0112) -> PASS
+B r = 2 θ = 0.28: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.6689 against Born 0.6691 (s.e. 0.0112) -> PASS
+B r = 4 θ = 0.6: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.7963 against Born 0.8034 (s.e. 0.0093) -> PASS
+B r = 4 θ = 0.45: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.7763 against Born 0.8034 (s.e. 0.0095) -> PASS
+B r = 4 θ = 0.36: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.8021 against Born 0.8034 (s.e. 0.0094) -> PASS
+B r = 4 θ = 0.28: closure 0.0e+00 -> PASS; doubles 0.0000 (0 exactly) -> PASS; record energy 1.000000 (1 exactly) -> PASS; share 0.8211 against Born 0.8034 (s.e. 0.0094) -> PASS
+A sensitivity {'g_ej': 0.3}: closure 8.9e-16 -> PASS; share 0.997, eff 0.363, E_rec 0.636, cycles 16.8
+A sensitivity {'g_ej': 3.0}: closure 4.4e-16 -> PASS; share 0.998, eff 0.894, E_rec 0.663, cycles 15.1
+A sensitivity {'g_ph': 0.0}: closure 1.8e-15 -> PASS; share 0.991, eff 0.892, E_rec 0.642, cycles 363.6
+A sensitivity {'g_ph': 1.0}: closure 2.2e-16 -> PASS; share 0.999, eff 0.453, E_rec 0.651, cycles 2.6
+A sensitivity {'g_em': 0.3}: closure 2.2e-16 -> PASS; share 0.998, eff 0.756, E_rec 0.671, cycles 2.2
+A sensitivity {'g_em': 3.0}: closure 1.3e-15 -> PASS; share 0.993, eff 0.510, E_rec 0.622, cycles 132.6
+A sensitivity {'g_esc': 0.3}: closure 5.6e-16 -> PASS; share 0.996, eff 0.649, E_rec 0.648, cycles 12.7

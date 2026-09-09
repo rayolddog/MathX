@@ -1,2 +1,6 @@
 pair_case.py, run 2026-09-08 21:48:55, seed 20260912, N = 400000 pairs per setting, 1.7 s, numpy 2.4.3
 verification: FAIL
+pair_options.py, run 2026-09-08 22:31:37, seed 20260913, 1.1 s
+verification (options): FAIL
+pair_options.py, run 2026-09-08 22:32:47, seed 20260913, 1.1 s
+verification (options): FAIL

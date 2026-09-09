@@ -86,3 +86,53 @@ within 0.02; g = 0.5 leaves R-least unchanged to 10⁻¹².
 
 `results/correlation.csv`, `results/chsh.csv`, `results/gated.csv`, `results/verification.txt`,
 `results/run_info.txt`, `fig1_pair.png`; `RESULTS.md` with the uncertainty first; `LEDGER.md`.
+
+---
+
+## Addendum, 2026-09-08 (late night): JB's two options for the violation
+
+Written before `pair_options.py` was run. JB (2026-09-08): two ways a violation could occur.
+**Option 1**, nonlocality of the wave function: the rotation of the spinor phases in the
+entangled particles occurs with the first interaction, so the second particle's spinors are
+rotated with the first's. **Option 2**, no nonlocal communication: the first spinors of the bulk
+at both detectors are synchronized (the second spinors are not); the entangled particle becomes
+unentangled at the first interaction but keeps the same (or opposite) phases; when the second
+particle's first spinor rotates to match the second detector's first spinor, which is
+synchronized to the same bulk phase as the first detector's, the rotation is equal, and the
+coupled rotation of the second spinor (equal to that of the first particle's second spinor)
+produces the violation.
+
+- **D7, option 2 (V1, local).** Both bulks share one first-spinor phase μ (fixed for the run, and
+  drawn per pair as the sensitivity). Particle k has first-spinor phase a_k and second-spinor
+  phase b_k with a shared offset δ = b_k − a_k (opposite offsets as the sensitivity). At contact
+  the first spinor rotates to μ, by R_k = μ − a_k, and the second spinor by the same R_k, so its
+  phase becomes μ + δ. The outcome is the projection of the second spinor on the local analyzer
+  axis: least rotation, + if cos 2(μ + δ − a) ≥ 0; Malus, + with probability cos²(μ + δ − a). The
+  rotations R₁ and R₂ are equal when a₁ = a₂ and differ otherwise; either way each outcome is a
+  function of (μ, δ, local axis) only.
+- **D8, option 1 (V2, nonlocal update).** Particle 1 is read at A as in D3. Its outcome s_A then
+  sets particle 2's second-spinor phase to A's axis, a if s_A = +, a + 90° if s_A = −, before
+  particle 2 reaches B, where it is read by Malus (primary) or by least rotation (sensitivity).
+  This is the projection postulate applied to the pair: the state after A's outcome is
+  particle 2 polarized along A's result.
+- **D9, statistics.** As D5: E(θ) at 13 angles, CHSH at the standard settings, 4 × 10⁵ pairs.
+
+**Predictions.**
+
+- **P4, option 2 gives exactly the runs already made.** With Λ = μ + δ the outcomes are
+  cos²(Λ − a) and cos²(Λ − b), the model of D1 to D3 with φ renamed. E(θ) = 1 − 4θ/π and
+  S = 2.000 for least rotation; ½ cos 2θ and 1.414 for Malus; μ fixed or drawn changes nothing;
+  opposite offsets flip the sign of E and leave |S| unchanged. The synchronized bulk phase is a
+  common cause fixed before the settings are chosen, and a common cause is what Bell's bound
+  already allows for. No violation.
+- **P5, option 1 gives the experiment or more.** With Malus at B: P(+ at B | s_A) = cos²(a − b) or
+  sin²(a − b), so E(θ) = cos 2θ and S = 2.828, the quantum values. With least rotation at B the
+  outcome at B is deterministic given s_A: E(θ) = sign(cos 2θ), a step, and S = 4.000, above the
+  quantum value. The marginal at B stays ½ in both, so nothing is signalled; the update of
+  particle 2 by A's outcome is the nonlocality.
+
+**Verification.** V1 against Tables 1 and 2 within 3 s.e.; V2 with Malus against cos 2θ and 2.828
+within 3 s.e.; V2 with least rotation: E(22.5°) = 1.000 exactly, S = 4.000 exactly.
+
+**Recorded.** `results/options.csv`, `results/verification_options.txt`, `fig2_options.png`;
+a section in `RESULTS.md`; ledger L20.

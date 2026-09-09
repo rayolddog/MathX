@@ -1,0 +1,7 @@
+case,S,S_predicted,E_22_5,E_22_5_predicted
+"option 2, least, μ fixed",1.9952,2,0.50223,0.5
+"option 2, Malus, μ fixed",1.4146,1.4142,0.35316,0.35355
+"option 2, least, μ drawn per pair",1.9952,2,0.49679,0.5
+"option 2, least, opposite offsets",0.003545,-2,-0.28218,-0.5
+"option 1, Malus at B",2.8304,2.8284,0.70656,0.70711
+"option 1, least at B",4,4,1,1
