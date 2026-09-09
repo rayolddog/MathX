@@ -224,14 +224,45 @@ correlations say that something must not. The model has no rule that acts across
 |---|---|---|
 | Born reproduced | yes, from \|ψ\|² put in by the deposit or the trajectory | second study Table 2; SPAD study main run |
 | Born derived | no; every dynamics distorts it toward the brighter site | second study Parts G, H; third study; SPAD study, the empty pixel |
-| one record per quantum | only by assumption (the empty wave deposits nothing) or a stop across pixels | SPAD study L7, L10 |
-| local hidden variable | Bell's sawtooth, CHSH 2.00; excluded by experiment | pair case, L17, L18 |
+| one record per quantum | by assumption (the empty wave deposits nothing), by a stop across pixels, or by energy conservation in the divisible reading, which then fails balanced splits and calorimetry | SPAD study L7, L10, L21 to L23 |
+| local hidden variable | Bell's sawtooth, CHSH 2.00, also with a bulk phase shared by both detectors; excluded by experiment | pair case, L17, L18, L20 |
 | detector independence | violated by the phase gate, which is the closed detection loophole; never in silicon | pair case Table 3; SPAD study Part F |
 | the phase itself | fixed in bound electrons, kinematic in free ones, polarization in photons | SPAD study Parts E and F |
 
+**Added later the same night, after Part G and the pair options.**
+
+*The third step, once more.* JB's release cycle at the excited electron, ejection above the gap,
+re-emission, phonon loss, with the quantum's energy tracked to closure, is the first dynamics in
+this program that keeps one record per quantum without a stop across pixels and without
+assuming the empty pixel silent: energy conservation does it whenever the gap exceeds half the
+photon energy. It does so only in the reading where the deposit is divisible, and that reading
+pays twice, with a share that is a step in the intensity ratio (the brighter pixel takes every
+record at r = 4) and with records that carry 0.45 to 0.72 of the quantum where calorimeters
+measure the whole. When the re-emitted photon is allowed to leave, as it physically must below
+the gap, the divisible reading registers nothing at a balanced split above 470 nm and is
+excluded outright. The indivisible reading keeps Born, exclusivity, whole-quantum records and
+closure at once, and derives nothing, because the indivisibility of the deposit is the postulate.
+The two readings cannot be combined: a divisible deposit that always ends in a whole record
+draws the remainder from the wave at the moment of ejection, which is the stop across pixels
+under another name. So the third step now has its final form in this model: it closes either by
+assuming the quantum or by assuming the stop.
+
+*The pair, once more.* JB's second option, both detectors' first spinors synchronized to one
+unchanging bulk phase and the second spinors rotating with them, with no communication, is a
+common cause fixed before the settings are chosen. It gives exactly the correlations of the
+shared-angle model, Bell's sawtooth and CHSH 2.00, because a common cause is what the bound
+already allows. His first option, particle 2's phase set by the outcome at A, reproduces the
+measured cos 2θ and 2.83 when the second analyzer reads by Malus, and over-shoots to 4 when it
+reads deterministically, so the deterministic projection cannot be the rule at the second
+analyzer either. The nonlocality is in the update and signals nothing. A bulk that carried A's
+outcome to B would be the first option with the bulk as carrier, and any version of it at light
+speed or below is excluded by the spacelike-separated experiments.
+
 **What this does to §0.** Its three disclaimers stand and are now numbers: Born is inherited
 (§3) and distorted by dynamics (§4.2); the third step is open (§5), closed only by the trajectory
-reading's assumption; and the pair case, no longer "not run" (§6), gives Bell's foil. The one
-thing the runs added that §0 did not foresee is the fate of the phase variable itself: Parts E and
+reading's assumption; and the pair case, no longer "not run" (§6), gives Bell's foil. The runs added two things §0 did not foresee. The fate of the phase variable itself: Parts E and
 F show it is not free in the detector, and Part D shows where a driven detector would expose it,
-inside one T2, where the form of the deposit rule then disagrees with coherent control (L14).
+inside one T2, where the form of the deposit rule then disagrees with coherent control (L14). And the
+shape of the third step's closure: energy conservation can supply exclusivity, but only in the reading
+that loses Born and the whole-quantum record, so that the model's choice is between assuming the
+quantum and assuming the stop.
