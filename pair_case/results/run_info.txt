@@ -1,0 +1,2 @@
+pair_case.py, run 2026-09-08 21:48:55, seed 20260912, N = 400000 pairs per setting, 1.7 s, numpy 2.4.3
+verification: FAIL

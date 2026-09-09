@@ -1,0 +1,22 @@
+Verification (PREREGISTRATION.md §4)
+
+θ =   0.0°: least +1.0000 (+1.0000), Malus +0.5010 (+0.5000), QM +1.0000 (+1.0000), independent +0.0012 (0) -> PASS
+θ =   7.5°: least +0.8340 (+0.8333), Malus +0.4823 (+0.4830), QM +0.9660 (+0.9659), independent -0.0035 (0) -> PASS
+θ =  15.0°: least +0.6665 (+0.6667), Malus +0.4339 (+0.4330), QM +0.8657 (+0.8660), independent +0.0013 (0) -> PASS
+θ =  22.5°: least +0.5006 (+0.5000), Malus +0.3531 (+0.3536), QM +0.7082 (+0.7071), independent -0.0011 (0) -> PASS
+θ =  30.0°: least +0.3317 (+0.3333), Malus +0.2488 (+0.2500), QM +0.4988 (+0.5000), independent +0.0007 (0) -> PASS
+θ =  37.5°: least +0.1681 (+0.1667), Malus +0.1285 (+0.1294), QM +0.2581 (+0.2588), independent +0.0018 (0) -> PASS
+θ =  45.0°: least -0.0020 (+0.0000), Malus -0.0020 (+0.0000), QM -0.0000 (+0.0000), independent -0.0013 (0) -> PASS
+θ =  52.5°: least -0.1679 (-0.1667), Malus -0.1295 (-0.1294), QM -0.2582 (-0.2588), independent +0.0001 (0) -> PASS
+θ =  60.0°: least -0.3362 (-0.3333), Malus -0.2487 (-0.2500), QM -0.4993 (-0.5000), independent +0.0005 (0) -> PASS
+θ =  67.5°: least -0.4992 (-0.5000), Malus -0.3545 (-0.3536), QM -0.7060 (-0.7071), independent -0.0007 (0) -> PASS
+θ =  75.0°: least -0.6669 (-0.6667), Malus -0.4339 (-0.4330), QM -0.8672 (-0.8660), independent -0.0022 (0) -> PASS
+θ =  82.5°: least -0.8333 (-0.8333), Malus -0.4835 (-0.4830), QM -0.9661 (-0.9659), independent -0.0007 (0) -> PASS
+θ =  90.0°: least -1.0000 (-1.0000), Malus -0.4983 (-0.5000), QM -1.0000 (-1.0000), independent -0.0011 (0) -> PASS
+CHSH least, ideal: S = 2.0022 against 2.0000 (s.e. 0.0032) -> PASS
+CHSH malus, ideal: S = 1.4144 against 1.4142 (s.e. 0.0032) -> PASS
+CHSH qm, ideal: S = 2.8267 against 2.8284 (s.e. 0.0032) -> PASS
+CHSH least, independent angles: S = +0.0006 against 0 -> PASS
+gate 0.5 leaves least unchanged: S = 1.998065 against 2.001155, η₁ = 1.000000 -> FAIL
+Garg–Mermin identity, least at g = 0.6: S_c = 2.6893 against 4/η_c − 2 = 2.6898 (η_c = 0.8529) -> PASS
+    diagnostic, not registered (added after the run): on one draw, gate 0.5 detects 1.000000 of pairs and changes E(a, b) by 0.0e+00
