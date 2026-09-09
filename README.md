@@ -76,3 +76,70 @@ question.
     python3 pair_options.py           # addendum: JB's two options, the synchronized bulk (local, S = 2) and the update by A's outcome (S = 2.83); about 3 s
 
 Python 3.13 with numpy, scipy, matplotlib. Outputs go to each folder's `results/`.
+
+## The session of 2026-09-08, in plain language
+
+JB asked for a microscopic simulation of one particle meeting a detector, built on his
+two-spinor picture: every particle carries two rotating phases, the first locks to the
+detector's electron at contact and the second turns with it, and the electron whose second
+phase is closest to the particle's takes the energy. The detector was a pair of silicon
+single-photon avalanche diodes, simplified to a row of bound electrons on the surface, with
+the record made by a current running down the device along the path of least resistance,
+as lightning does. Everything was written down before it was run, with the numbers it was
+expected to give, and every miss is kept.
+
+**What came out, in order.**
+
+- *The main run.* One record per quantum and the Born share (the brighter pixel getting its
+  share of the counts in proportion to intensity) appeared exactly, but both came from the
+  particle following its guided path to one pixel, not from the phase mechanism. The mechanism
+  only decided which electron, and by how much rotation. Run the same rule on the wave instead
+  of the particle and Born vanishes.
+- *The empty pixel.* Give the pixel without the particle the same rules and it fights back:
+  whenever its share of the wave is above the gap it forms its own record, and the only cures
+  are an instantaneous stop across the two pixels or a head start for the particle's pixel. My
+  own prediction that the empty pixel never pairs was wrong, and that error is on record.
+- *A driven detector.* If the detector's electrons are given a shared oscillation, as an MRI
+  pulse gives spins one, the phase mechanism leaves a trace for about one coherence time, ten to
+  a hundred femtoseconds in silicon, and then the detector is the random one again. A passive
+  detector has no such oscillation at all.
+- *Testing that trace.* Quantum mechanics also predicts a phase-dependent response to coherent
+  light in a driven absorber, and experiments since 1995 confirm it, so my ledger claim that it
+  does not was corrected. Where the two theories differ, in the sign and strength of the effect,
+  the existing experiments side with quantum mechanics.
+- *The bound electron's second spinor.* Computed directly from the Dirac equation for an
+  electron in a well: it is not free. It is fixed at ninety degrees to the first spinor, the
+  same in every atom, and small. Rebuilding the detector on that fact leaves the phase race
+  nothing to choose between.
+- *Release and retry.* Letting the excited electron either eject, re-emit, or lose its energy
+  to heat, with the energy of the quantum tracked to the last digit, gives one record per
+  quantum by energy conservation alone, but only if the quantum can be split between pixels,
+  and then the brighter pixel takes every count and each record carries less than a whole
+  photon, both against experiment. Once a re-emitted photon is allowed to leave, as JB pointed
+  out it must, the split reading detects nothing at a balanced beam splitter. The reading in
+  which the quantum is never split gives everything right and derives nothing.
+- *Two particles.* JB's model of an entangled pair gives Bell's own classical correlation and
+  exactly the classical bound. It rises above that bound only by letting detection depend on
+  the hidden phase, which is the detection loophole that experiments closed in 2015. His idea
+  of a common bulk phase shared by both detectors changes nothing, because a shared phase set
+  in advance is a common cause and the bound already allows for common causes. The accepted
+  picture, the second particle's state fixed by the first result, reproduces the experiment.
+
+**The three answers.** Born's rule is reproduced wherever it is put in, through the square of an
+amplitude in the deposit or through the guided path, and it is never derived; every dynamics
+laid on top pushes the statistics toward the brighter site. The model's hidden phase is either
+fixed by the Dirac equation, set by the particle's direction of motion, or simply the photon's
+polarization, and as a hidden variable for pairs it is excluded by the Bell experiments. The
+model violates detector independence only through its phase gate, the rule that no pair forms
+unless the two second spinors interfere constructively enough; that gate is the closed loophole,
+and in silicon it never closes, because a bound electron's second spinor is too small to cancel
+the deposit.
+
+**Also from today.** The zitterbewegung frequency was never used as the clock of the phase
+race, only tested and ruled out as one; all the Dirac code uses the standard representation,
+not the Weyl one; and JB's tangent on the light cone is stored as `WICK_ROTATION.md`. Section 10
+of `MODEL_SECTION.md` has the same conclusions with the numbers. Several of my registered
+predictions failed during the day, among them the empty pixel never pairing, the rate of ties
+between two channels, the sign of a mirrored correlation, and one gap threshold, and three
+registered checks failed on their own wording or on a pixel-edge effect. Every one is kept in the
+verification files and named in the results.
