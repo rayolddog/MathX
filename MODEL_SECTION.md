@@ -7,6 +7,10 @@ traceable to a results file named in §9; nothing here is a measurement.
 
 ## 0. Read this first
 
+**Addendum of 2026-09-08 at the end (§10):** the plain-form consequences of the SPAD study, the
+test of L13 and the pair case, answering whether Born selection is reproduced, whether the local
+hidden variable is ruled out, and whether the model implies a violation of detector independence.
+
 **What this section claims.** A single-particle mechanism for the event at a detector: which atom
 takes the quantum, how much of the quantum's energy it takes, how the record forms, and where the
 mechanism differs from the golden rule. The projection of complex vectors enters as a premise in
@@ -174,3 +178,60 @@ begins (L5); the beat frequency of a packet (L6).
 - `sink_field_2d/PREREGISTRATION.md`, `RESULTS.md`: §4.2, §4.5, §4.7, §5 rows 4 and 5, including
   the reversed-sign first run kept in `results/first_run_wrong_sign/`.
 - The framework paper's three steps: JB, 2026-09-07, from the closed record.
+
+## 10. Consequences of the runs of 2026-09-08, in plain form
+
+**Added 2026-09-08 at JB's instruction, after the SPAD study (Parts A to F), the test of L13 and
+the pair case.** Three questions, three answers, then the table. Sources: the study folders named
+in the last column.
+
+**Is Born selection reproduced?** Reproduced, never derived. In every run where the Born share
+appeared, it came from an ingredient that already contained |ψ|². The sampled rule R2 draws an
+atom in proportion to intensity times the phase weight, and the intensity is the square put in by
+hand. The trajectory reading gives arrivals proportional to |ψ|² by Bohm's equivariance before any
+race begins. Every selection dynamics added on top of those two moved the statistics away from
+Born, always toward the brighter site: the deterministic rule gives the brighter lobe every time in
+the field reading, charging races give it first in 95 % of trials, and the empty pixel with no head
+start gives 0.88 against 0.80 or the device's own asymmetry. So the program's original aim, a
+selection dynamics that produces the square, is not met. What the model does is inherit Born and
+then distort it.
+
+**Is the local hidden variable ruled out?** Yes, at both ends, and by different means. As a model
+of the pair it is a local hidden-variable model in Bell's sense, and the run gives Bell's own
+sawtooth with CHSH 2.00. Experiment gives 2.83. The only way the model rises above 2 is by gating
+detection on the hidden phase, which is the detection loophole, and the loophole-free experiments
+of 2015 closed it. That exclusion is the experiments', not the runs'; the runs show the model
+belongs to the class that is excluded. At the single-particle end the hidden variable turned out
+not to be hidden or not to be free. In a bound electron the second spinor's phase is fixed by the
+Dirac equation at ±90°, the same in every atom. In a free electron it is set by the direction of
+motion. In a photon it is the polarization, a measured quantity. In a passive silicon detector the
+phase mechanism has no observable consequence at all, and in a driven one it contradicts coherent
+control in its form.
+
+**Does the model suggest a violation of detector independence?** In one specific way, yes, and
+that is precisely its problem. The weighted deposit makes whether a photon is detected depend on
+its hidden phase relative to the analyzer axis. That is a violation of the fair-sampling
+assumption, detection independent of the hidden variable and the setting, and it is what lets the
+gated model reach 2.83 among coincidences at 83 % conditional efficiency. Two things stand against
+it. The loophole-free experiments were built to work without fair sampling and still found the
+quantum value. And in silicon the gate never acts: with the bound electron's real second-spinor
+amplitude the weight stays above 0.9 and every photon that reaches the gap makes a pair. In the
+other sense of the phrase, the outcome at one detector being independent of the setting at the
+other, the model as built respects it, which is why it cannot exceed 2, and the measured
+correlations say that something must not. The model has no rule that acts across a pair.
+
+| question | answer | where |
+|---|---|---|
+| Born reproduced | yes, from \|ψ\|² put in by the deposit or the trajectory | second study Table 2; SPAD study main run |
+| Born derived | no; every dynamics distorts it toward the brighter site | second study Parts G, H; third study; SPAD study, the empty pixel |
+| one record per quantum | only by assumption (the empty wave deposits nothing) or a stop across pixels | SPAD study L7, L10 |
+| local hidden variable | Bell's sawtooth, CHSH 2.00; excluded by experiment | pair case, L17, L18 |
+| detector independence | violated by the phase gate, which is the closed detection loophole; never in silicon | pair case Table 3; SPAD study Part F |
+| the phase itself | fixed in bound electrons, kinematic in free ones, polarization in photons | SPAD study Parts E and F |
+
+**What this does to §0.** Its three disclaimers stand and are now numbers: Born is inherited
+(§3) and distorted by dynamics (§4.2); the third step is open (§5), closed only by the trajectory
+reading's assumption; and the pair case, no longer "not run" (§6), gives Bell's foil. The one
+thing the runs added that §0 did not foresee is the fate of the phase variable itself: Parts E and
+F show it is not free in the detector, and Part D shows where a driven detector would expose it,
+inside one T2, where the form of the deposit rule then disagrees with coherent control (L14).
