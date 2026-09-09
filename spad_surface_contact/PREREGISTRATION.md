@@ -438,3 +438,76 @@ f_L against the predictions to 10⁻⁴; f₋ to 2 %; V table exact by construct
 **What will be recorded.** `results/bound_spinor.csv`, `results/bound_visibility.csv`,
 `results/verification_bound.txt`, `fig8_bound_spinor.png`; a dated section in `RESULTS.md`;
 ledger L15; a note in `L13_TEST.md`.
+
+---
+
+## Addendum 4, 2026-09-08 (night): Part F, the bulk rebuilt on the slaved second spinor
+
+Written before `slaved_bulk.py` was run, at JB's instruction of 2026-09-08 ("rebuild the bulk on
+Part E's slaved second spinor and run it"), and his question whether the phase difference between
+the first and second spinor within one bound electron is variable or random.
+
+**The answer to the question, from Part E, which fixes the bulk.** Within one bound electron the
+difference is not random and not free. In the standard representation χ = −iφ′/(E_b + m − V),
+and φ is real for the ground state, so χ is in quadrature with φ everywhere: +90° on the side
+where φ falls, −90° on the side where it rises, the sign flipping at the nucleus. In three
+dimensions the same holds with χ = −i σ·r̂ φ′(r)/(E + m − V): the factor −i is intrinsic, and
+the direction of contact decides which spin components carry it, not the phase. So what an
+incident particle meets at atom i is a second spinor of amplitude a(d), set by the distance d
+of the contact from the nucleus, and phase +90° if it touches the atom on the side facing the
+arrival from the left, −90° from the right. The "180° apart" of JB's question is the difference
+between the two sides. All randomness of the earlier bulk is gone; what remains variable is the
+side of contact and the incident particle's own offset.
+
+**The incident particle's own offset, in the same reading.** A free positive-energy plane wave has
+χ = p φ/(E + m) with p real: phase 0° for motion to the right, 180° to the left, amplitude
+b = p/(E + m). A standing wave (total reflection at the surface) has χ ∝ −iφ′ with φ real, so
+its offset is ±90° by position. A photon has no second spinor.
+
+- **D23, the slaved bulk B5.** Atom i at x_i presents to an arrival at x_a the phase
+  δ_i = +90° if x_a > x_i and −90° if x_a < x_i, and the amplitude a. The n = 21 atoms in reach are
+  those of D4; the atoms left of the arrival present +90° and those right of it −90°.
+- **D24, the weight and the choice.** w_i = [a² + b² + 2ab cos(δ_p − δ_i)]/(a + b)² (D22), w = 1
+  for b = 0. Least rotation picks the smaller |δ_p − δ_i|; a tie (δ_p = 0° or 180°, both sides
+  90° away) is broken by the nearest atom. Deposit D4b: pair iff w ≥ θ, θ ∈ {0.45 (500 nm),
+  0.6 (660 nm)}. Breakdown D8. The r = 4 flight of D2, fresh seed.
+- **D25, the grid.** a ∈ {0.064 (Part E's shallow well, the bulk value), 0.0012 (silicon, Part E's
+  extrapolation)}; b ∈ {0 (a photon), 0.025 (an electron at p = 0.05 m), 0.098 (p = 0.2 m), a
+  (equal amplitudes, the second study's A1)}; δ_p ∈ {0° (a running wave), 90° (a standing wave
+  at the matching position), uniform (a partially reflected wave, the sensitivity)}.
+- **D26, recorded.** Rotation used, the chosen atom's w, the side chosen, pair rate, efficiency,
+  share of records at pixel 1 against the arrival share, and a(d) of the shallow well against the
+  contact distance d (from Part E's state, recomputed).
+
+**Predictions (P18, closed forms).**
+
+- The chosen atom's weight is [a² + b² + 2ab |sin δ_p|]/(a + b)²: at δ_p = 0° it is
+  (a² + b²)/(a + b)², which is ≥ ½ for every a, b and equals ½ at a = b: 0.522 (a = 0.064,
+  b = 0.098), 0.500 (b = a), 0.596 (b = 0.025), 1 (b = 0), 0.976 (a = 0.0012, b = 0.098). At
+  δ_p = 90° it is 1 for every a, b. The interference term vanishes identically for a running wave
+  meeting a bound electron: cos(±90°) = 0.
+- Rotation used: 90° exactly at δ_p = 0°, 0° at 90°, uniform on [0°, 90°] with mean 45° for a
+  uniform δ_p. The side chosen at δ_p = 90°: always the atoms left of the arrival.
+- Pair rate at θ = 0.45: 1 in every configuration (the weight never falls below ½). At θ = 0.6
+  with δ_p = 0°: 0 for a = 0.064 with b = 0.098, b = a, and b = 0.025 (0.596 < 0.6); 1 for b = 0
+  and for silicon's a = 0.0012 with b = 0.098. At θ = 0.6 with uniform δ_p: 0.90 (a = 0.064,
+  b = 0.098), 0.87 (b = a), 0.99 (b = 0.025), 1 (b = 0 and silicon).
+- Share: the arrival share (0.80) wherever pairs form, in every configuration; the choice of atom
+  never moves the pixel. Efficiency 0.847 × 0.778 × pair rate = 0.66 × pair rate.
+- a(d) of the shallow well: 0.011 at d = 0.5, 0.022 at 1, 0.043 at 2, 0.078 at 4, 0.100 at 6,
+  0.112 at 8, tending to κ/(E_b + m) = 0.119 in the tail; phase +90° throughout d > 0.
+
+**What the run will show, stated before it (C11).** On the slaved bulk the phase race has nothing
+to select: every atom in reach presents one of two phases and the same amplitude, a running
+incident wave is 90° from both, the weight is equal at every atom, and the record's pixel is the
+arrival's. Randomness enters only through the incident particle's own offset, and then it selects
+a side of the atom, not an atom. The one place the weight bites is a gap ratio above ½ with the
+two amplitudes comparable, where a running wave makes no pair at all; with silicon's amplitudes
+that never happens. Ledger.
+
+**Verification.** Rotation at δ_p = 0° equals 90° and at 90° equals 0° to 10⁻¹²; the chosen weight
+against the closed form to 10⁻¹²; uniform-δ_p rotation mean 45° within 3 s.e.; share against the
+arrival share within 3 s.e. in every configuration with pair rate 1; a(d) against P18 to 0.001.
+
+**What will be recorded.** `results/slaved_bulk.csv`, `results/slaved_a_of_d.csv`,
+`results/verification_slaved.txt`, `fig9_slaved.png`; a dated section in `RESULTS.md`; ledger L16.

@@ -1,0 +1,57 @@
+Verification, Part F (PREREGISTRATION.md, addendum 4)
+
+a = 0.064, b = 0, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 1.0000 against closed form 1.0000 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.025, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.5960 against closed form 0.5960 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.025, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.025, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.098, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.5220 against closed form 0.5220 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.098, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.098, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.064, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.5000 against closed form 0.5000 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.064, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.064, b = 0.064, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 1.0000 against closed form 1.0000 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.025, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.9126 against closed form 0.9126 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.025, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.025, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.098, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.9761 against closed form 0.9761 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.098, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.098, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.0012, δ_p = 0: rotation 90.000000° (90 exactly) -> PASS; w 0.5000 against closed form 0.5000 -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.0012, δ_p = 90: rotation 0.00e+00° (0 exactly) -> PASS; left side chosen 1.000
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a = 0.0012, b = 0.0012, δ_p uniform: rotation mean 44.63° against 45 (s.e. 0.44) -> PASS
+    share 0.8040 against the arrival share 0.8028 (s.e. 0.0078) -> PASS
+a(d = 0.5) = 0.0110 against 0.011, phase 90.0° -> PASS
+a(d = 1) = 0.0219 against 0.022, phase 90.0° -> PASS
+a(d = 2) = 0.0428 against 0.043, phase 90.0° -> PASS
+a(d = 4) = 0.0776 against 0.078, phase 90.0° -> PASS
+a(d = 6) = 0.1003 against 0.100, phase 90.0° -> PASS
+a(d = 8) = 0.1121 against 0.112, phase 90.0° -> PASS
+tail limit κ/(E_b + m) = 0.1189 (predicted 0.119)

@@ -8,3 +8,5 @@ l13_qm_comparison.py, run 2026-09-08 13:16:00, 0.3 s
 verification (L13 test): PASS
 bound_spinor.py, run 2026-09-08 13:46:36, 16.5 s
 verification (Part E): PASS
+slaved_bulk.py, run 2026-09-08 20:55:46, seed 20260911, 4.9 s
+verification (Part F): PASS

@@ -569,3 +569,84 @@ has neither.
   ground state expanded in free spinors has negative-energy content, with a definite but
   momentum-dependent phase, and that content is 10⁻⁶ of the norm at a binding of 0.03 rest
   energies and about 10⁻¹⁶ for silicon.
+
+
+---
+
+# Addendum 4, 2026-09-08 (night): Part F, the bulk rebuilt on the slaved second spinor
+
+Definitions and predictions: addendum 4 of `PREREGISTRATION.md` (D23 to D26, P18, C11). Script:
+`slaved_bulk.py` (seed 20260911, 5 s). Outputs: `results/slaved_bulk.csv`, `results/slaved_a_of_d.csv`,
+`results/verification_slaved.txt`, `fig9_slaved.png`.
+
+## Read this before quoting any number
+
+- Every verification passed and every registered number held (P18). No definition changed.
+- The bulk is now what Part E measured: every atom presents a second spinor of one amplitude a and
+  a phase of +90° or −90° according to the side on which the particle touches it. Nothing in the
+  bulk is random. The incident particle brings its own amplitude b and offset δ_p: 0° for a
+  running wave, ±90° for a standing one, uniform as the sensitivity for a partially reflected wave.
+- Part E's amplitudes are used: a = 0.064 for the shallow well (0.078 at a contact four Compton
+  lengths from the nucleus, 0.119 in the far tail) and a ≈ 0.0012 for a silicon valence electron,
+  an order-of-magnitude extrapolation.
+
+## The answer in one paragraph
+
+On the slaved bulk the phase race has nothing to select. Every atom in reach presents one of two
+phases and the same amplitude; a running incident wave, offset 0°, is 90° from both, so the
+interference term vanishes at every atom and the weight is the same everywhere,
+(a² + b²)/(a + b)², which is never below ½. Least rotation then picks a side of an atom, not an
+atom, and the record's pixel is the arrival's: share 0.804 ± 0.008 against the arrival share
+0.803 in every one of the 48 configurations that record. At the silicon gap ratio 0.45 every
+configuration makes a pair, so the efficiency is 0.653 throughout, the fill factor times the
+breakdown probability. The weight bites only above a gap ratio of ½ with the two amplitudes
+comparable: at 0.6 (660 nm) a running wave meeting a bulk of amplitude 0.064 makes no pair at all
+for b = 0.025, 0.098 or 0.064, while silicon's amplitude 0.0012 against an electron's 0.025 or
+0.098 gives a weight of 0.91 to 0.98 and a pair every time, and a photon (b = 0) a weight of 1
+always. The randomness JB asked about is not in the atom: the rotation used is 90° for every
+running wave, 0° for a standing wave at the matching position, and uniform on 0° to 90° only if
+the incident wave's own offset is uniform.
+
+## Table 14. The slaved bulk (D23 to D25; `slaved_bulk.csv`), r = 4, least rotation, 21 atoms in reach
+
+| a | b | δ_p | rotation used | chosen weight | pair rate, θ = 0.45 | pair rate, θ = 0.6 | efficiency (0.45) | share pixel 1 |
+|---|---|---|---|---|---|---|---|---|
+| 0.064 | 0 (photon) | any | 90° / 0° / 44.6° | 1.000 | 1 | 1 | 0.653 | 0.804 |
+| 0.064 | 0.025 | 0° | 90° | 0.596 | 1 | **0** | 0.653 | 0.804 |
+| 0.064 | 0.098 | 0° | 90° | 0.522 | 1 | **0** | 0.653 | 0.804 |
+| 0.064 | 0.064 | 0° | 90° | 0.500 | 1 | **0** | 0.653 | 0.804 |
+| 0.064 | 0.025, 0.098, 0.064 | 90° | 0° | 1.000 | 1 | 1 | 0.653 | 0.804 |
+| 0.064 | 0.025 | uniform | 44.6° | 0.856 | 1 | 0.994 | 0.653 | 0.804 |
+| 0.064 | 0.098 | uniform | 44.6° | 0.829 | 1 | 0.904 | 0.653 | 0.804 |
+| 0.064 | 0.064 | uniform | 44.6° | 0.821 | 1 | 0.883 | 0.653 | 0.804 |
+| 0.0012 (silicon) | 0.025 | 0° | 90° | 0.913 | 1 | 1 | 0.653 | 0.804 |
+| 0.0012 | 0.098 | 0° | 90° | 0.976 | 1 | 1 | 0.653 | 0.804 |
+| 0.0012 | 0.0012 | 0° | 90° | 0.500 | 1 | **0** | 0.653 | 0.804 |
+| 0.0012 | 0.025, 0.098 | uniform | 44.6° | 0.97, 0.99 | 1 | 1 | 0.653 | 0.804 |
+
+Predicted (P18): weights 0.522, 0.500, 0.596, 1, 0.976 at δ_p = 0; pair rates at θ = 0.6 of 0 for
+the three a = 0.064 rows and 0.90, 0.87, 0.99 for the uniform ones; rotation 90°, 0°, mean 45°
+(got 44.63° ± 0.44°); share the arrival share throughout. All held. The side chosen at δ_p = 90°
+is the atoms left of the arrival in every case; at δ_p = 0° the nearest atom, left in 0.503.
+
+## Table 15. The amplitude the atom presents at the contact (`slaved_a_of_d.csv`, Part E's shallow well)
+
+| contact distance d (Compton lengths) | 0.5 | 1 | 2 | 4 | 6 | 8 | 12 | 16 | tail limit κ/(E_b + m) |
+|---|---|---|---|---|---|---|---|---|---|
+| a(d) = \|χ\|/\|φ\| | 0.011 | 0.022 | 0.043 | 0.078 | 0.100 | 0.112 | 0.118 | 0.116 | 0.119 |
+| phase of χ against φ | +90° throughout d > 0 (−90° for d < 0) |
+
+## What Part F says
+
+- **The phase race is gone.** Once the bulk's second spinor is what a Dirac bound state has, no
+  atom differs from another in phase except by the side of contact, and a running incident wave
+  is in quadrature with both sides. The which-atom selection reduces to the nearest atom, the
+  which-pixel statistics to the arrival's, Born by the trajectory reading as in every earlier run.
+- **What is left of the mechanism is a threshold.** For gap ratios above ½ and comparable
+  amplitudes a running wave deposits too little to make a pair, a detector blind to running waves
+  and open to standing ones. With silicon's amplitude against any electron or photon the weight
+  stays above 0.9 and the threshold never acts. Ledger L16.
+- **On JB's question.** Within one bound electron the first-to-second-spinor phase difference is
+  fixed at ±90° by the side, not random; in three dimensions it is −i times a direction-dependent
+  spin factor. The only random phase in the rebuilt model is the incident particle's own, and
+  that exists for a partially reflected wave and not for a photon.
