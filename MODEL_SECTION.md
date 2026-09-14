@@ -324,7 +324,12 @@ not do stated with it. Every number is from `vacuum_race/results/`.
 2. Every atom of the bulk carries a vacuum term that multiplies its deposit, drawn independently
    of every other atom's and of the number of atoms in reach, from the Gumbel distribution on the
    logarithm of the deposit at unit scale. Equivalently, each atom has an exponential waiting
-   time with rate proportional to E_i.
+   time with rate proportional to E_i. *(Amended 2026-09-14, night, after the staggered-arrival
+   addenda: the deposit in the rate is that of the normalized conditional state. A port's branch
+   weight is consumed by its own no-fire absorption, so that its integrated hazard is its share,
+   and a null at one port renormalizes the others. Without this the race gives the click to
+   whichever port the wave reaches first; with a local version of it, 0.952 instead of 0.800.
+   `vacuum_race/RESULTS.md` Table 8; L28.)*
 3. The term is renewed for every arrival: its correlation time is shorter than the interval
    between quanta.
 
@@ -359,8 +364,13 @@ atom by atom (0.702, 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800
   single-photon coincidence data; independent clocks that keep running give two records at a
   balanced split. The vacuum race assumes it by taking the maximum over both pixels at once, and
   derives it no more than the readings of §10 did. (An earlier wording of this item, "no stop
-  across pixels", was wrong and is corrected 2026-09-14.) With that assumed, the third step
-  closes in the sense of §8: the
+  across pixels", was wrong and is corrected 2026-09-14.) The stop acts twice: it cancels the
+  losing clocks when one fires, and it renormalizes the surviving branches when none does, so
+  that under staggered arrival a null at the near port raises the far port's rate; a version
+  with the cancellation only gives 0.952 at r = 4, and the survival hazard of the first draft
+  gives the nearer port every record (`vacuum_race/RESULTS.md` Table 8, L28). Under staggered
+  arrival the share between ports is the branch weight put in as an initial condition, decided by
+  no race. With that assumed, the third step closes in the sense of §8: the
   cluster, the sink and the channel of §4.5 are then what happens after the winner is chosen, and
   none of them has to choose.
 - *One detector's counting statistics.* The split of M quanta between two pixels is binomial:

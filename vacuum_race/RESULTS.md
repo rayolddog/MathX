@@ -257,3 +257,84 @@ Tippett (1928).
   Processing Systems* 27.
 - McFadden, D. (1974). Conditional logit analysis of qualitative choice behavior. In P. Zarembka
   (ed.), *Frontiers in Econometrics*, Academic Press, 105–142.
+
+---
+
+## Addendum 2 and 2b: staggered arrival (`staggered_arrival.py`, seed 20260916, 14 s; `staggered_conditional.py`, seed 20260917, 195 s)
+
+Definitions D13 to D18 and predictions P13 to P18 in the pre-registration's addenda 2 and 2b,
+each written before its run. Source: `results/staggered.csv` (readings S and C),
+`results/staggered_conditional.csv` (reading C′), the two verification files, and
+`fig3_staggered.png` (S against C′; the addendum-2 figure with reading C is kept as
+`fig3_staggered_local.png`). One parameter changed from the registered value for runtime: the
+time grid of D17 is 1000 points, not 4000; the trial count and every definition are as registered.
+
+**One registered prediction failed, and the failure is the result of this addendum.** P14 said
+reading C, each port's branch decaying on its own with the ports coupled only by the stop on
+firing, would give the Born share at every stagger. It gave 0.857 at Δ = 0 and 0.952 from
+Δ = T/2 at κ ≥ 10, with P(fired) = 0.84 (`verification_staggered.txt`, six FAIL lines kept).
+The cause is in the definition D15, not the code: the second port then fires with its share times
+the probability that the first port did not, P(B) = (1 − s_A η_A) s_B η_B, and the share among
+records is 0.8/(0.8 + 0.04) = 0.952 at η = 1, which is the number the run gave. Addendum 2b
+registered the corrected reading C′, the rates taken on the *normalized* conditional state, and
+it passed every check. One reading-S cell (κ = 100, Δ = 0) missed its closed form by 3.0 s.e.
+(0.7973 against 0.8000); re-drawn once with a fresh seed as a labelled diagnostic it gave 0.8005.
+
+### Table 8. Share of records at the nearer, brighter pixel, r = 4, no phase weight
+
+Reading S: the survival hazard (the main run's rule extended in time). Reading C: local
+conditional branches, ports coupled by the stop only. Reading C′: the normalized conditional
+state. Born 0.800. s.e. ≤ 0.001.
+
+| Δ/T | 0 | 0.1 | 0.5 | 1 | 2 | P(fired) |
+|---|---|---|---|---|---|---|
+| S, κ = 1 | 0.800 | 0.867 | 0.971 | 0.988 | 0.988 | 0.993 |
+| S, κ = 10 | 0.799 | 0.997 | 1.000 | 1.000 | 1.000 | 1.000 |
+| S, κ = 100 | 0.797 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| S, closed form, κ = 10 | 0.800 | 0.996 | 1.000 | 1.000 | 1.000 | |
+| C, κ = 10 (**P14 missed**) | 0.857 | 0.918 | 0.952 | 0.952 | 0.952 | 0.841 |
+| C, closed form at Δ ≥ T | | | | 0.952 | 0.952 | 0.840 |
+| C′, κ = 1 | 0.799 | 0.798 | 0.801 | 0.798 | 0.798 | 0.631 |
+| C′, κ = 10 | 0.800 | 0.799 | 0.800 | 0.800 | 0.801 | 1.000 |
+| C′, κ = 100 | 0.802 | 0.800 | 0.800 | 0.800 | 0.800 | 1.000 |
+
+With the phase weight, reading S at κ = 10 gives 0.795, 0.966, 1.000, 1.000, 1.000 and reading C′
+gives 0.800 at every Δ/T and κ (0.798 to 0.802; P(fired) 0.39, 0.99, 1.00 at κ = 1, 10, 100). At
+r = 2, C′ gives 0.666 at Δ = T, κ = 10, against 0.667.
+
+### Predictions against outcome
+
+- **P13**, reading S gives the nearer pixel: as registered, to the closed form at every cell but
+  one (the 3.0 s.e. cell, a fluctuation by the diagnostic). A tenth of a packet length of stagger
+  at κ = 10 gives the nearer pixel 0.997 of the records against Born's 0.800.
+- **P14**, reading C removes it: **missed**. Reading C gives 0.952, not 0.800; see above.
+- **P15**, the cost: as registered, and sharpened by the miss (item 9 below).
+- **P16**, reading C′ gives the share at every stagger: as registered, at all 30 cells within
+  3 s.e., with the registered efficiencies (0.631, 1.000, 1.000; 0.39, 0.99, 1.00).
+- **P17**, the closed forms of reading C: 0.952 and 0.841 against the run's 0.952 and 0.841.
+- **P18**, the diagnostic: within 3 s.e. on a fresh seed.
+
+### What the addenda say, in plain form
+
+9. **The race as first written gives the click to whichever pixel the wave reaches first.** With
+   the rates running while the wave is present, the nearer pixel takes essentially every record
+   from a tenth of a packet length of stagger at any physical coupling. This is the failure the
+   Dirac–Kuramoto record's September round found for its selection postulate (its finding N1), and
+   the anticipated-findings ledger for the Paper 1 v0.10 round predicted the race would inherit it.
+   It does.
+10. **Removing it takes both faces of P5, not one.** A reading in which each port's branch is
+    consumed by its own absorption, with the ports coupled only by the stop when one fires, does
+    not give Born; it gives 0.952, the far port firing only in the fraction of events the near
+    port left. The reading that gives Born at every stagger and every coupling takes the rates on
+    the normalized conditional state: the stop cancels the losing clocks when one fires, and the
+    null renormalizes the survivors when none does, so that a null at the near port raises the far
+    port's rate. That is the quantum-jump unravelling's structure, and both halves of it act across
+    the port separation.
+11. **Under staggered arrival the share between ports is not decided by any race.** The ports are
+    never in the race at the same time; the share is the branch weight put in as the initial
+    condition of each port's no-fire decay, and the integrated hazard of a port equals that
+    weight. The race decides which atom within a port, and P5 decides that only one port records.
+    So the fresh-vacuum reading's premise 2 has to read: the rate is proportional to the
+    conditional-state deposit, a port's integrated hazard is its share, and the conditional state
+    is normalized across ports. Born is inherited twice, in the rate law and in the branch weights,
+    and the reading derives neither (L28).

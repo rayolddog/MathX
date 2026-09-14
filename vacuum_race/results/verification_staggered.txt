@@ -1,0 +1,24 @@
+Verification (PREREGISTRATION.md addendum 2)
+
+S, no phase, kappa =     1, Δ/T = 0.0: share 0.7997 against closed form 0.8000 (s.e. 0.0009) -> PASS
+C, no phase, kappa = 1: P(fired) = 0.5679 against 1 - e^-1 = 0.6321 (s.e. 0.0011) -> FAIL
+S, no phase, kappa =     1, Δ/T = 0.1: share 0.8670 against closed form 0.8658 (s.e. 0.0008) -> PASS
+S, no phase, kappa =     1, Δ/T = 0.5: share 0.9711 against closed form 0.9706 (s.e. 0.0004) -> PASS
+S, no phase, kappa =     1, Δ/T = 1.0: share 0.9885 against closed form 0.9883 (s.e. 0.0002) -> PASS
+S, no phase, kappa =     1, Δ/T = 2.0: share 0.9882 against closed form 0.9883 (s.e. 0.0002) -> PASS
+S, no phase, kappa =    10, Δ/T = 0.0: share 0.7994 against closed form 0.8000 (s.e. 0.0009) -> PASS
+C, no phase, kappa = 10, Δ/T = 0.0: share 0.8573 against 0.800 (s.e. 0.0009), P(fired) = 0.8414 >= 0.999 -> FAIL
+S, no phase, kappa =    10, Δ/T = 0.1: share 0.9965 against closed form 0.9963 (s.e. 0.0001) -> PASS
+C, no phase, kappa = 10, Δ/T = 0.1: share 0.9177 against 0.800 (s.e. 0.0007), P(fired) = 0.8403 >= 0.999 -> FAIL
+S, no phase, kappa =    10, Δ/T = 0.5: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+C, no phase, kappa = 10, Δ/T = 0.5: share 0.9516 against 0.800 (s.e. 0.0005), P(fired) = 0.8405 >= 0.999 -> FAIL
+S, no phase, kappa =    10, Δ/T = 1.0: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+S, no phase, kappa = 10, Δ = T: P(A) = 1.0000 >= 0.999 -> PASS
+C, no phase, kappa = 10, Δ/T = 1.0: share 0.9522 against 0.800 (s.e. 0.0005), P(fired) = 0.8384 >= 0.999 -> FAIL
+S, no phase, kappa =    10, Δ/T = 2.0: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+C, no phase, kappa = 10, Δ/T = 2.0: share 0.9524 against 0.800 (s.e. 0.0005), P(fired) = 0.8398 >= 0.999 -> FAIL
+S, no phase, kappa =   100, Δ/T = 0.0: share 0.7973 against closed form 0.8000 (s.e. 0.0009) -> FAIL
+S, no phase, kappa =   100, Δ/T = 0.1: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+S, no phase, kappa =   100, Δ/T = 0.5: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+S, no phase, kappa =   100, Δ/T = 1.0: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS
+S, no phase, kappa =   100, Δ/T = 2.0: share 1.0000 against closed form 1.0000 (s.e. 0.0000) -> PASS

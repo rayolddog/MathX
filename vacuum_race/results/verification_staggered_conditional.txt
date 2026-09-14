@@ -1,0 +1,10 @@
+Verification (PREREGISTRATION.md addendum 2b)
+
+C', no phase, kappa = 1: P(fired) = 0.6313 against 1 - e^-1 = 0.6321 (s.e. 0.0011) -> PASS
+C', no phase, kappa = 10, r = 4, Δ/T = 0.0: share 0.8004 against 0.800 (s.e. 0.0009), P(fired) = 1.0000 >= 0.999 -> PASS
+C', no phase, kappa = 10, r = 4, Δ/T = 0.1: share 0.7986 against 0.800 (s.e. 0.0009), P(fired) = 1.0000 >= 0.999 -> PASS
+C', no phase, kappa = 10, r = 4, Δ/T = 0.5: share 0.8000 against 0.800 (s.e. 0.0009), P(fired) = 1.0000 >= 0.999 -> PASS
+C', no phase, kappa = 10, r = 4, Δ/T = 1.0: share 0.8001 against 0.800 (s.e. 0.0009), P(fired) = 1.0000 >= 0.999 -> PASS
+C', no phase, kappa = 10, r = 4, Δ/T = 2.0: share 0.8008 against 0.800 (s.e. 0.0009), P(fired) = 1.0000 >= 0.999 -> PASS
+C', no phase, kappa = 10, r = 2, Δ = T: share 0.6657 against 0.667 (s.e. 0.0011) -> PASS
+    diagnostic, not registered (P18): reading S, kappa = 100, Δ = 0, fresh seed: share 0.8005 against 0.8000 (s.e. 0.0009) -> within 3 s.e.

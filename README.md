@@ -79,6 +79,8 @@ question.
     cd ../vacuum_race
     python3 vacuum_race.py            # highest deposit wins with six forms of the per-atom vacuum term; share, exponent, scaling, best atom; about 55 s
     python3 frozen_fresh.py           # addendum: the vacuum term frozen per detector, refreshed every τ events, or fresh; one detector's counting statistics; about 10 s
+    python3 staggered_arrival.py      # addendum 2: the packet reaching the two pixels at different times; the survival hazard against a local conditional reading; about 15 s
+    python3 staggered_conditional.py  # addendum 2b: the rates on the normalized conditional state; about 200 s
 
 Python 3.13 with numpy, scipy, matplotlib. Outputs go to each folder's `results/`.
 
@@ -225,7 +227,21 @@ atom per pixel every rule sits within a few percent of Born, and from ten atoms 
 many draws climbs to its ceiling and the brighter pixel takes everything unless the vacuum term
 is exponential.
 
-**Also from today.** Two registered predictions missed in their wording and are kept: the additive
+**Later the same night: when the wave reaches the two pixels at different times.** The review
+ledger written for the Born Selection paper predicted that the race would give the click to
+whichever pixel the wave reaches first, a failure the Dirac–Kuramoto record had already found for
+its own postulate. It does: a tenth of a packet length of stagger hands the nearer pixel nearly
+every record. JB said the failure could be removed, and it can, at a price the runs made exact.
+Letting each pixel consume its own share of the wave, with the pixels tied only by the rule that
+the first to fire stops the other, gives 0.95 instead of 0.80; my registered prediction that it
+would give 0.80 was wrong and is kept. What gives 0.80 at every stagger is the rule quantum
+mechanics uses for photodetection: when one pixel fires the other's clocks stop, and when one
+pixel finishes without firing the other pixel's rate is raised to compensate. Both halves act
+across the gap between the pixels. So under staggered arrival the split between pixels is not
+decided by any race at all; it is the share of the wave each pixel was given, and the race only
+picks the atom within the pixel.
+
+**Also from today.** Three registered predictions missed and are kept: the local conditional reading above, and two in their wording: the additive
 Gaussian noise approaches the brighter-pixel-always limit more slowly than registered, and the
 excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
 interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
