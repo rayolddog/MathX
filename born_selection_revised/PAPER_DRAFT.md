@@ -2,7 +2,7 @@
 
 **John M. Bramble, MD, and Claude (Anthropic)**
 
-*Draft v0.2, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run). Written in `rayolddog/MathX` on a clean slate at the sponsor's
+*Draft v0.4, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run; v0.3 fixes the terms intensity, modulus squared and projection and says where interference lives; v0.4 adds where the two values of a measurement come from, with Stern–Gerlach as the worked case). Written in `rayolddog/MathX` on a clean slate at the sponsor's
 instruction, as the second of three shapes offered after the internal review round of the
 Dirac–Kuramoto record's Paper 1 (v0.10; `born_selection_AI_review_2026-09/`). Every number is in a
 `results/` folder of this repository with its prediction written before the run and its misses
@@ -73,7 +73,13 @@ port holds $N$ atoms. An atom $i$ has a deposit $d_i = I_P\,w_i$, the port's int
 phase weight $w_i = \cos^2(\Delta\varphi_i/2)$ that the sponsor's model attaches to the mismatch
 between the incident particle's second spinor and the atom's; over a random bulk the phase weight
 is uniform on $[0,1]$ with mean one half, and the runs are also done with $w_i = 1$ to isolate it.
-A selection rule picks one atom. The quantities recorded are the port share $P(A)$, the exponent
+A selection rule picks one atom. Three terms are used in one sense only. *Intensity* means the modulus squared of the complex amplitude at a site, $|\psi(x_i)|^2$, never the modulus itself, since the two readings that differ by that power give Born and its square root (§3). *Projection* is used in its Hilbert-space sense only: the amplitude at a port is the projection of the incident state onto the mode that port resolves, a complex component, one per port, and the *projection postulate* is the update of the state at a detection, whose probability is the modulus squared of the projected component. The word is never used for a projection onto the real axis of the complex plane, and not for the model's phase weight, which is the modulus squared of a normalized sum of two phasors. *Interference* means the cross terms that appear when a sum of complex amplitudes is squared; where it enters the specification is stated in §3.
+
+Where the two values of a measurement come from is fixed by these terms. The amplitude at a port is the projection of the incident state onto the mode that port resolves: a complex component, one per port. Its modulus squared is the port's intensity, and the number of values a measurement can give is the number of modes the apparatus resolves, two for a polarizer or a beam splitter. Projection sets the weights; the absorption at one port, at a rate proportional to its intensity, is the event. No phase is forced to one of two angles, and no component is made real; the two values are the two modes, and which of them occurs is the jump of clause 5.
+
+The Stern–Gerlach experiment is the cleanest case, because there the projection is implemented by a field. The magnet's gradient sets the axis and separates the two spin components in space, so that after the magnet the atom is a superposition of two packets, each tied to a spin state along that axis. That step is unitary: bring the beams back together with a reversed gradient before any detector and the original spin state returns, as the full-loop Stern–Gerlach interferometers show. The magnet chooses what the alternatives are and where they will land; it does not choose which one happens. The screen does that. Each of the two regions sees an intensity equal to the modulus squared of its packet, one site somewhere absorbs the atom at a rate proportional to that intensity, and the first absorption anywhere ends every other clock across the separation of the two regions, which is clause 5 with the two spots as the two ports. The detector never touches the spin. It registers a position, which means spin only because the gradient tied the two together upstream: the apparatus converts a two-valued spin question into a two-region position question, and the detector answers the position question by the ordinary rule.
+
+The quantities recorded are the port share $P(A)$, the exponent
 $\gamma$ in $P(A)/P(B) = (\sqrt r)^\gamma$ (Born gives 2), and, where a single detector's statistics
 are at issue, the Fano factor of the split of $M$ events in one detector against the binomial
 value, $F = \mathrm{Var}(s)/[p(1-p)/M]$, which is 1 when events are independent Bernoulli trials.
@@ -85,9 +91,24 @@ text is left as written and a dated note follows it.
 
 ## 3. Clause 1: the hazard is proportional to the local intensity, and interference with the amplitude is not enough
 
-**The clause.** The rate at which site $i$ takes the quantum is proportional to $|\psi(x_i)|^2$.
-This is the Born rule as a rate law, and the specification puts it first because everything
-after it presupposes it.
+**The clause.** The rate at which site $i$ takes the quantum is proportional to the local
+intensity, the modulus squared of the complex amplitude at the site, $|\psi(x_i)|^2$. This is the
+Born rule as a rate law, and the specification puts it first because everything after it
+presupposes it.
+
+Where that amplitude is a sum of components — one packet split between two ports, or one wave
+arriving at a site by several paths — the modulus squared already contains their interference, and
+the selection inherits it through the square. A cross term between two components of the same
+wave is a product of two amplitudes each proportional to the incident one, so it scales with the
+intensity and survives in the rate; that is single-particle interference, and it lives upstream
+of selection, inside the intensity. No further interference enters the selection: not between the
+incident wave and the vacuum, which a photon-counting detector does not see, since Glauber's
+counting rate is normally ordered and the vacuum contributes nothing to it; and not through a
+per-site phase factor, which averages out from about ten sites (§5) and has nothing to select in a
+passive detector (§9). A cross term between the incident wave and an external field, the vacuum
+included, is a product of one amplitude proportional to the incident one and one that is not, so
+it scales with the amplitude rather than the intensity; that is the reading of §3's run that gives
+the square root of Born.
 
 **The run.** `vacuum_race/` (Table 1) attached a random per-atom factor to the deposit in six
 forms and selected the atom with the largest result. Two forms bear on the clause. When the factor
