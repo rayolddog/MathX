@@ -330,3 +330,53 @@ within 3 s.e. of 0.667.
 **Recorded.** `results/staggered_conditional.csv`, `results/verification_staggered_conditional.txt`,
 `results/fig3_staggered.png` (regenerated with reading C′ replacing reading C; the addendum-2
 figure is kept as `fig3_staggered_local.png`); a section in `RESULTS.md`; ledger L28.
+
+---
+
+## Addendum 3, 2026-09-14 (night): frozen multipliers with light tails
+
+Written before `frozen_multipliers.py` was run, after the Born Selection paper's internal review
+round (its R1 M4(a)) showed that the frozen-vacuum result of addendum 1 — the per-detector share
+"does not average out with N" — is an artefact of the frozen factor e^G having infinite mean, and
+that a frozen multiplier with a light tail self-averages by the law of large numbers. R1 gave
+scratch numbers; this addendum registers them and runs them in the record. Owed by the authors'
+response and by the specification paper (`born_selection_revised/`).
+
+- **D19, the detector.** N atoms per pixel, N ∈ {10, 100, 1000}; r = 4; each atom carries a
+  multiplier m_i drawn **once per detector** from one of: (a) e^G, G standard Gumbel (addendum 1's
+  frozen case; infinite mean); (b) lognormal with log-standard-deviation 0.5; (c) uniform on
+  [0.5, 1.5]; (d) exponential with mean 1; (e) none, m = 1. K = 300 detectors (200 at N = 1000),
+  M = 1000 events each.
+- **D20, the selection.** First to fire, with fresh exponential clocks at every event: atom i of
+  pixel P has rate I_P w_i m_i, so pixel P fires first with probability Λ_P/(Λ_A + Λ_B),
+  Λ_P = I_P Σ_i w_i m_i, sampled exactly per event. Phase weight w_i = 1 (primary) and fresh
+  cos²(Δφ_i/2) per event (sensitivity). This is the amended reading's rule at simultaneous
+  arrival; the frozen multiplier is the only memory across events.
+- **D21, recorded.** Per detector the share s_k; across detectors the mean, the Fano factor
+  F = Var(s_k)/[p(1 − p)/M], and the step fraction (D11).
+
+**Predictions (R1's scratch numbers, registered with a tolerance of ±50 % because the
+heavy-tailed cells have large sampling variance at K = 300).**
+
+- **P19, light tails self-average.** Without the phase weight, F at N = 10, 100, 1000: lognormal
+  8.5, 1.8, 1.3; uniform 3.5, 1.2, 0.9; exponential 29, 4.8, 1.3. The trend is F → 1 as N grows for
+  every finite-mean multiplier, and the rate is set by the multiplier's variance.
+- **P20, the infinite-mean case does not.** e^G frozen: F about 239, 142, 119, not falling toward 1;
+  the largest term dominates the sum at every N.
+- **P21, the ensemble is Born throughout.** Mean share 0.800 ± 0.02 for every multiplier and N,
+  since the multipliers are symmetric between pixels.
+- **P22, no multiplier, F = 1** (0.8 to 1.2) at every N. With the phase weight, F is about the
+  same as without at N = 100 and 1000 (the fresh phase weight adds only per-event variance,
+  which the binomial normalization absorbs).
+
+**What it settles.** The addendum-1 clause "any site-specific random factor in the commitment
+hazard must decorrelate between arrivals" is replaced by: a frozen multiplier on the hazard must
+have a light enough tail for the pixel's rate-sum to self-average, which any bounded physical
+multiplier does; the frozen-vacuum reading of the model was excluded by its infinite-mean factor,
+not by its being frozen. L26 and MODEL_SECTION §12.5 are corrected accordingly (L30).
+
+**Verification.** (e) F within [0.8, 1.2] at N = 10 without the phase weight; (c) F within [0.7, 1.3]
+at N = 1000; (a) F above 50 at N = 1000; mean share within 0.02 of 0.800 for (b) at N = 100.
+
+**Recorded.** `results/frozen_multipliers.csv`, `results/verification_multipliers.txt`,
+`results/fig4_frozen_multipliers.png`; a section in `RESULTS.md`; ledger L30.

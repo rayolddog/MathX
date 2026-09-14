@@ -344,3 +344,49 @@ r = 2, C′ gives 0.666 at Δ = T, κ = 10, against 0.667.
     conditional-state deposit, a port's integrated hazard is its share, and the conditional state
     is normalized across ports. Born is inherited twice, in the rate law and in the branch weights,
     and the reading derives neither (L28).
+
+---
+
+## Addendum 3: frozen multipliers with light tails (`frozen_multipliers.py`, seed 20260918, 64 s)
+
+Definitions D19 to D21 and predictions P19 to P22 in the pre-registration's addendum 3, written
+before the run, with the review round's R1 M4(a) scratch numbers as the registered predictions.
+Source: `results/frozen_multipliers.csv`, `results/verification_multipliers.txt`,
+`fig4_frozen_multipliers.png`. All four registered verifications passed.
+
+**One registered prediction missed.** P21 said the ensemble mean share would be 0.800 ± 0.02 for
+every multiplier. For the infinite-mean multiplier e^G it is 0.756 to 0.767 at every N (s.e. about
+0.01): with heavy-tailed sums in numerator and denominator the expectation of the ratio is not the
+ratio of expectations, and the ensemble of detectors is not Born either. Addendum 1's frozen case,
+which gave 0.810 ± 0.023, was a different rule (a frozen argmax with all-or-nothing detectors, where
+the difference of two Gumbel maxima is logistic and the mean is exactly Born). Kept as a miss; the
+finite-mean multipliers all gave 0.79 to 0.80.
+
+### Table 9. Fano factor of one detector's split, frozen per-atom multiplier, fresh exponential clocks, r = 4, no phase weight
+
+| multiplier, frozen per detector | N = 10 | N = 100 | N = 1000 | registered (R1) |
+|---|---|---|---|---|
+| none | 1.1 | 1.0 | 1.1 | 1 |
+| uniform on [0.5, 1.5] | 3.4 | 1.3 | 1.0 | 3.5, 1.2, 0.9 |
+| lognormal, log-s.d. 0.5 | 9.6 | 2.1 | 1.2 | 8.5, 1.8, 1.3 |
+| exponential, mean 1 | 36.8 | 4.2 | 1.4 | 29, 4.8, 1.3 |
+| e^G, G standard Gumbel (infinite mean) | 194 | 140 | 136 | 239, 142, 119 |
+
+With the fresh phase weight the same to within the sampling scatter (e.g. lognormal 10.2, 1.9,
+1.2; e^G 156, 91, 85). Mean share 0.79 to 0.80 for every finite-mean multiplier; 0.75 to 0.77 for e^G.
+
+### What it says, in plain form
+
+12. **A frozen factor on the hazard is harmless if its tail is light.** The uniform, lognormal
+    and exponential multipliers all fall to a Fano factor near 1 by a thousand atoms per pixel,
+    because the pixel's rate-sum self-averages by the law of large numbers. The exponential of a
+    Gumbel has infinite mean, so its sum is dominated by its largest term at every N and never
+    self-averages: F stays above a hundred. That, not "a maximum can single out one site", is why
+    addendum 1's frozen vacuum did not average out.
+13. **The clause of addendum 1 is replaced.** "Any site-specific random factor must decorrelate
+    between arrivals" was wrong. The correct condition: a frozen multiplier on the hazard must have
+    a light enough tail for the pixel's rate-sum to self-average, which any bounded physical
+    multiplier does. The frozen-vacuum reading of the model was excluded by its infinite-mean
+    factor, not by its being frozen; and with 10¹⁰ sites in a real pixel the Fano factor of the
+    split bounds nothing about frozen structure. MODEL_SECTION §12.5's "the one test the model
+    passes for a reason it supplies itself" is withdrawn with the clause (L30).

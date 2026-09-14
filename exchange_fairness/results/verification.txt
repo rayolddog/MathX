@@ -1,0 +1,9 @@
+Verification (PREREGISTRATION.md §3)
+
+A, two sites: P(site 1) = 0.8007 against 0.800 (s.e. 0.0028) -> PASS
+    A survivor energy: median 0.719, below 0.5 in 0.341, above 1.5 in 0.160 (registered about 0.7, 0.34, 0.15)
+B, two sites: P(site 1) = 0.7990 against 0.800, max |E-1| = 2.2e-14, terminated 0.9956 -> FAIL
+C1, two sites, rate-linear commit: P(site 1) = 0.8006 against 0.800 -> PASS
+    C2, threshold 0.95: P(site 1) = 0.8303 against closed form 0.8333 (registered ±0.010), cap reached 0.0000
+D, three sites: P = (0.425, 0.298, 0.278) against Born (0.64, 0.29, 0.07), Paper 1's (0.46, 0.27, 0.26); P(site 1) < 0.54 -> PASS
+    D, two sites: P(site 1) = 0.7984 (registered below 0.75)

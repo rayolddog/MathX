@@ -1,0 +1,9 @@
+config,model,P_site1,P_site2,P_site3,esurv_above_1p5,esurv_below_half,esurv_median,max_energy_deviation,reached_cap,undecided
+two,A independent CIR,0.8007,0.19885,,0.1597,0.34065,0.71949,,,0.00045
+three,A independent CIR,0.6383,0.29345,0.06715,,,,,,0.0011
+two,B geometric-mean kernel,0.79895,0.19665,,,,,2.1538e-14,,0.0044
+three,B geometric-mean kernel,0.63505,0.28865,0.0696,,,,,,0.0067
+two,"C multiplicative kernel, rate-linear commit",0.8006,0.1994,,,,,7.1054e-15,,0
+two,"C multiplicative kernel, threshold 0.95",0.83025,0.16975,,,,,,0,0
+three,"D fixed parcels, reflecting zero",0.42475,0.29755,0.2777,,,,,,0
+two,"D fixed parcels, reflecting zero",0.7984,0.2016,,,,,,,0

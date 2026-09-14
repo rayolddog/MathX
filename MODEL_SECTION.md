@@ -414,7 +414,7 @@ each detector all or nothing with Born only across an ensemble of detectors (Tab
 Experiment has F = 1 at every counting rate used, so τ is below one arrival interval, under about
 10 ns at the fastest SPAD rates. Any vacuum timescale in silicon, 10 to 100 fs, is five orders of
 magnitude inside that bound. The reading passes this test without adjustment, and it is the only
-test in this program that the model passes for a reason it supplies itself rather than inherits.
+test in this program that the model passes for a reason it supplies itself rather than inherits. *(Withdrawn 2026-09-14, after the review round and `vacuum_race/` addendum 3: a frozen multiplier with a light tail self-averages over a pixel's sites, so the Fano factor of a real pixel's split, with 10¹⁰ sites, bounds nothing about frozen structure; the frozen-vacuum reading was excluded by its infinite-mean factor, not by its being frozen. The test has no power in a device. L30.)*
 The same bound excludes the alternative: a standing per-atom property, the SPAD study's fixed
 resistances or any lattice disorder, cannot be the vacuum term.
 

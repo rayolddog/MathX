@@ -1,0 +1,2 @@
+exchange_fairness.py, run 2026-09-14 18:26:38, seed 20260919, 20000 trials per cell, 1158.2 s, numpy 2.4.6
+verification: FAIL
