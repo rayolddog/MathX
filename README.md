@@ -13,6 +13,7 @@ the uncertainty and the assumptions before the tables.
 | `sink_field_2d/` | A transport model with no physics labels: density spread by diffusion, atoms with random phases, the deposit race as the seed, charging and latching at every atom, a screened field from the charges, a conductance tensor that grows with flow. Does one record form per quantum, and is the path a channel or a patch | Run 2026-09-07; see its `RESULTS.md` (most registered predictions missed; the misses are the result) |
 | `spad_surface_contact/` | Two silicon SPAD pixels: the packet carried by its own Dirac current to the surface, contact with the bound electron of least rotation among the atoms in reach, the record as an induced current down a lattice of random resistances (greedy least resistance against a dielectric-breakdown split and diffusion), a Galton–Watson avalanche. Which pixel, how much rotation, whether a pair forms, what the record looks like; the field reading beside it as the cost case. Addendum the same day: the empty pixel given the same contact and current (it does not stay silent), the SPAD's field as a lateral penalty on the channel, and ordered, locked and periodic phase distributions for the bulk. Addendum 2 (Part D): the bulk as a driven transition coherence dephasing by T2 and T2*, in MRI language; the phase trace lives one T2. `L13_TEST.md`: that trace tested against quantum mechanics for a driven absorber (coherent control decides against the deposit rule as written; ledger L14). Part E: a Dirac electron bound in a well, its second spinor measured in both readings (slaved, in quadrature, identical across atoms; negative-energy content 10⁻⁶ to 10⁻¹⁶), and the deposit weight with unequal amplitudes (visibility 2ab/(a² + b²); ledger L15). Part F: the bulk rebuilt on that slaved spinor, ±90° by side of contact: the phase race has nothing to select, a running wave is in quadrature with every atom, Born by the arrival; a threshold survives only above a gap ratio of ½ with comparable amplitudes (ledger L16). Part G: release and retry at the excited electron, the energy tracked to closure: with divisible shares, one record per quantum by energy conservation above θ = ½ but a step share and sub-quantum records (L21); with the indivisible quantum, everything at once and nothing derived (L22); with re-emitted photons leaving, as they physically do, the divisible reading registers nothing at a balanced split (L23) | Run 2026-09-08; see its `RESULTS.md` and `LEDGER.md` |
 | `pair_case/` | JB's model at two analyzers: two photons sharing a hidden polarization, read by his projection rule (least rotation) or by Malus's law at each polarizer; the quantum comparator; the model's phase-dependent efficiency as a detection gate. What correlation function, what CHSH value, and the one route above Bell's bound | Run 2026-09-08; see its `RESULTS.md` and `LEDGER.md` (Bell's sawtooth, CHSH 2.00; the gate rides the Garg–Mermin line, the detection loophole). Addendum: JB's two options, a synchronized bulk phase shared by both detectors (a common cause, S = 2.00) against particle 2 set by A's outcome (the projection postulate, S = 2.83) |
+| `vacuum_race/` | JB's rule of 2026-09-14: among the atoms of both pixels the one with the highest interference-weighted deposit takes the quantum, each atom carrying its own vacuum term, one random number per atom independent of the number of atoms. Which distribution of the vacuum term gives Born between the pixels, whether the term must multiply the intensity or may add to the amplitude, and whether the best phase-matched atom wins within a pixel | Run 2026-09-14; see its `RESULTS.md` and `LEDGER.md` (only a Gumbel term on the deposit gives Born, and with it the rule is R2, the golden rule as a race; Gaussian and bounded terms give the brighter pixel every time; a term on the amplitude gives the square root of Born). Addendum: the term frozen per atom against redrawn per arrival (a frozen term gives each detector all or nothing and Born only across detectors; the Fano factor of one detector's split reads the vacuum's correlation time, F = τ, against F = 1 in experiment) |
 | `dk_origin/` | The two record scripts this work reuses, copied unchanged, with `PROVENANCE.md` | Copies, not run here |
 
 `MODEL_SECTION.md` (2026-09-07) is a draft of the model section a rewritten Born Selection paper
@@ -74,6 +75,10 @@ question.
     cd ../pair_case
     python3 pair_case.py              # the pair case: shared hidden polarization, two analyzers, CHSH, gated detection; about 2 s
     python3 pair_options.py           # addendum: JB's two options, the synchronized bulk (local, S = 2) and the update by A's outcome (S = 2.83); about 3 s
+
+    cd ../vacuum_race
+    python3 vacuum_race.py            # highest deposit wins with six forms of the per-atom vacuum term; share, exponent, scaling, best atom; about 55 s
+    python3 frozen_fresh.py           # addendum: the vacuum term frozen per detector, refreshed every τ events, or fresh; one detector's counting statistics; about 10 s
 
 Python 3.13 with numpy, scipy, matplotlib. Outputs go to each folder's `results/`.
 
@@ -143,3 +148,66 @@ predictions failed during the day, among them the empty pixel never pairing, the
 between two channels, the sign of a mirrored correlation, and one gap threshold, and three
 registered checks failed on their own wording or on a pixel-edge effect. Every one is kept in the
 verification files and named in the results.
+
+## The session of 2026-09-14, in plain language
+
+The day began with a question of arithmetic. JB asked whether the projection of an amplitude onto
+the real axis is the same thing as Born's rule. It is not: the projection is one leg of the
+triangle and Born's rule is the square of the hypotenuse, and the two agree only after the angle
+has been averaged away. That averaging is exactly why the earlier studies reproduced Born without
+deriving it. What JB had in mind, the square root of the amplitude times its conjugate, is the
+modulus, and its formula is a two-line identity. Born's rule, that the modulus squared is a
+probability, is the postulate, and no algebra reaches it.
+
+From there JB proposed a mechanism. Within a detector's aperture there are many atoms with
+different phases; the atom whose interference with the incoming particle is strongest takes the
+quantum; and each atom carries its own vacuum term, a random contribution that belongs to the atom
+and knows nothing about how many atoms are in the aperture. The question put to the computer,
+written down before it was run, was which kind of vacuum term makes that rule give Born's share
+between two pixels.
+
+**What came out.**
+
+- *Only one kind of vacuum term works, and it is the golden rule in disguise.* If each atom's term
+  is drawn from the one distribution that mathematicians call Gumbel, applied to the logarithm of
+  the deposit, then "highest wins" is exactly the same as "first to fire," with each atom firing at
+  a rate proportional to its share of the light. The share between two pixels comes out at Born's
+  value, whatever the number of atoms and whatever the brightness. This is the first mechanism in
+  the whole program that gives one record per quantum and the Born share at once, with no rule
+  reaching across the two pixels. But the square of the amplitude was written into the rate, which
+  is Fermi's golden rule, so Born is put in, not derived. The scale of the vacuum term is also a
+  free knob, and Born is one setting of it.
+- *Every ordinary kind of noise fails.* Gaussian or bounded vacuum terms, whether they multiply the
+  deposit or add to it, give the brighter pixel every single time once the aperture holds a hundred
+  atoms. The reason is not the vacuum but the word "highest": the largest of many draws crowds up
+  against its ceiling, and the brighter pixel's ceiling is higher. Additive noise fails a second
+  way too, by reading the difference in brightness where Born reads the ratio.
+- *The vacuum must multiply the intensity, not add to the amplitude.* A vacuum contribution that
+  interferes with the particle's wave, the natural picture of an added amplitude, selects in
+  proportion to the amplitude rather than its square and gives the square root of Born.
+- *The vacuum term must be fresh for every arrival.* JB then asked whether the vacuum acts on the
+  bound electron first, before the free particle arrives, so that the atom is already dressed. The
+  order matters and the runs pick his order. But a term that is a fixed property of the atom makes
+  every single detector give all its counts to one pixel or the other, with Born appearing only as
+  an average over many detectors. Real detectors show Born's split inside one device, with the
+  plain binomial scatter of independent coin tosses. That scatter is the model's own observable:
+  it reads how long the vacuum term stays put between arrivals, and experiment says under ten
+  nanoseconds. Any vacuum timescale in silicon is a hundred thousand times shorter, so the model
+  passes this test, and it is the one test in the program it passes for a reason it supplies
+  itself. "Dressed first" has to mean dressed afresh each time.
+
+**Where this leaves the model.** Section 12 of `MODEL_SECTION.md` states it as the fresh vacuum
+reading: three premises, of which two are the golden rule's rate law and its lack of memory; a
+detector mechanism that then computes which pixel, which atom, one whole record per quantum, and
+binomial counting statistics; and the same disclaimer as before, that Born is inherited. The open
+question is now sharper than it was. Whatever the vacuum is, in JB's picture a four-dimensional
+thing projected onto three dimensions and time, it has to act on a bound electron as an
+exponential clock at one particular scale, and not as an amplitude in the electron's state. The
+Wick rotation stored in `WICK_ROTATION.md` is where standard theory gets exponential clocks from,
+and it delivers their shape but not their rate.
+
+**Also from today.** Two registered predictions missed in their wording and are kept: the additive
+Gaussian noise approaches the brighter-pixel-always limit more slowly than registered, and the
+excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
+interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
+check passed. Ledger entries L24 to L26 record the departures.

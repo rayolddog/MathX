@@ -1,0 +1,77 @@
+form,r,phase_weight,N,P_A,se,born,gamma
+V0 none,4,True,1,0.79025,0.0012875,0.8,1.9136
+V0 none,4,True,10,1,3.1623e-09,0.8,inf
+V0 none,4,True,100,1,3.1623e-09,0.8,inf
+V0 none,4,True,1000,1,7.0711e-09,0.8,inf
+V0 none,4,False,1,1,3.1623e-09,0.8,inf
+V0 none,4,False,10,1,3.1623e-09,0.8,inf
+V0 none,4,False,100,1,3.1623e-09,0.8,inf
+V0 none,4,False,1000,1,7.0711e-09,0.8,inf
+V0 none,2,True,1,0.69191,0.00146,0.66667,2.3345
+V0 none,2,True,10,0.99912,9.3767e-05,0.66667,20.298
+V0 none,2,True,100,1,3.1623e-09,0.66667,inf
+V0 none,2,True,1000,1,7.0711e-09,0.66667,inf
+V1 Gumbel on deposit,4,True,1,0.70245,0.0014457,0.8,1.2393
+V1 Gumbel on deposit,4,True,10,0.79433,0.0012782,0.8,1.9494
+V1 Gumbel on deposit,4,True,100,0.8006,0.0012635,0.8,2.0054
+V1 Gumbel on deposit,4,True,1000,0.80205,0.0028175,0.8,2.0186
+V1 Gumbel on deposit,4,False,1,0.80016,0.0012645,0.8,2.0014
+V1 Gumbel on deposit,4,False,10,0.80069,0.0012633,0.8,2.0062
+V1 Gumbel on deposit,4,False,100,0.79882,0.0012677,0.8,1.9894
+V1 Gumbel on deposit,4,False,1000,0.79735,0.0028424,0.8,1.9762
+V1 Gumbel on deposit,2,True,1,0.60707,0.0015445,0.66667,1.2552
+V1 Gumbel on deposit,2,True,10,0.66087,0.0014971,0.66667,1.9251
+V1 Gumbel on deposit,2,True,100,0.66632,0.0014911,0.66667,1.9955
+V1 Gumbel on deposit,2,True,1000,0.66865,0.0033283,0.66667,2.0258
+V1 Gumbel on deposit,2,False,1,0.66791,0.0014893,0.66667,2.0162
+V1 Gumbel on deposit,2,False,10,0.66281,0.001495,0.66667,1.9501
+V1 Gumbel on deposit,2,False,100,0.66556,0.0014919,0.66667,1.9856
+V1 Gumbel on deposit,2,False,1000,0.661,0.0033472,0.66667,1.9267
+V2 Gumbel on amplitude,4,True,1,0.64092,0.001517,0.8,0.83584
+V2 Gumbel on amplitude,4,True,10,0.66319,0.0014946,0.8,0.97749
+V2 Gumbel on amplitude,4,True,100,0.66762,0.0014896,0.8,1.0062
+V2 Gumbel on amplitude,4,True,1000,0.66805,0.0033299,0.8,1.009
+V2 Gumbel on amplitude,4,False,1,0.66724,0.0014901,0.8,1.0037
+V2 Gumbel on amplitude,4,False,10,0.66528,0.0014923,0.8,0.99101
+V2 Gumbel on amplitude,4,False,100,0.66662,0.0014908,0.8,0.9997
+V2 Gumbel on amplitude,4,False,1000,0.6627,0.0033431,0.8,0.97432
+V2 Gumbel on amplitude,2,True,1,0.56972,0.0015657,0.66667,0.80995
+V2 Gumbel on amplitude,2,True,10,0.58598,0.0015576,0.66667,1.0023
+V2 Gumbel on amplitude,2,True,100,0.58499,0.0015581,0.66667,0.99053
+V2 Gumbel on amplitude,2,True,1000,0.5882,0.0034801,0.66667,1.0287
+V3 mult Gaussian,4,True,1,0.75142,0.0013667,0.8,1.5959
+V3 mult Gaussian,4,True,10,0.99896,0.00010193,0.8,9.9077
+V3 mult Gaussian,4,True,100,1,3.1623e-09,0.8,inf
+V3 mult Gaussian,4,True,1000,1,7.0711e-09,0.8,inf
+V3 mult Gaussian,4,False,1,0.92711,0.00082205,0.8,3.6689
+V3 mult Gaussian,4,False,10,1,3.1623e-09,0.8,inf
+V3 mult Gaussian,4,False,100,1,3.1623e-09,0.8,inf
+V3 mult Gaussian,4,False,1000,1,7.0711e-09,0.8,inf
+V3 mult Gaussian,2,True,1,0.64569,0.0015125,0.66667,1.7317
+V3 mult Gaussian,2,True,10,0.96002,0.00061953,0.66667,9.1714
+V3 mult Gaussian,2,True,100,0.99996,2e-05,0.66667,29.219
+V3 mult Gaussian,2,True,1000,1,7.0711e-09,0.66667,inf
+V4 add Gaussian,4,True,1,0.67847,0.001477,0.8,1.0773
+V4 add Gaussian,4,True,10,0.88203,0.0010201,0.8,2.9024
+V4 add Gaussian,4,True,100,0.96634,0.00057032,0.8,4.8434
+V4 add Gaussian,4,True,1000,0.9897,0.00071393,0.8,6.5863
+V4 add Gaussian,4,False,1,0.85695,0.0011072,0.8,2.5827
+V4 add Gaussian,4,False,10,0.9634,0.00059381,0.8,4.7182
+V4 add Gaussian,4,False,100,0.99145,0.00029115,0.8,6.8575
+V4 add Gaussian,4,False,1000,0.99725,0.0003703,0.8,8.5024
+V4 add Gaussian,2,True,1,0.56682,0.001567,0.66667,0.77585
+V4 add Gaussian,2,True,10,0.64746,0.0015108,0.66667,1.754
+V4 add Gaussian,2,True,100,0.72309,0.001415,0.66667,2.7695
+V4 add Gaussian,2,True,1000,0.78405,0.0029096,0.66667,3.7205
+V5 add uniform,4,True,1,0.74153,0.0013844,0.8,1.5205
+V5 add uniform,4,True,10,0.99388,0.00024663,0.8,7.3434
+V5 add uniform,4,True,100,1,3.1623e-09,0.8,inf
+V5 add uniform,4,True,1000,1,7.0711e-09,0.8,inf
+V5 add uniform,4,False,1,0.96828,0.0005542,0.8,4.932
+V5 add uniform,4,False,10,1,3.1623e-09,0.8,inf
+V5 add uniform,4,False,100,1,3.1623e-09,0.8,inf
+V5 add uniform,4,False,1000,1,7.0711e-09,0.8,inf
+V5 add uniform,2,True,1,0.60218,0.0015478,0.66667,1.1962
+V5 add uniform,2,True,10,0.8521,0.0011226,0.66667,5.0528
+V5 add uniform,2,True,100,0.99996,2e-05,0.66667,29.219
+V5 add uniform,2,True,1000,1,7.0711e-09,0.66667,inf

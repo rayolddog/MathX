@@ -1,0 +1,4 @@
+vacuum_race.py, run 2026-09-14 05:16:45, seed 20260914, 53.3 s, numpy 2.4.6
+verification: PASS
+frozen_fresh.py, run 2026-09-14 05:30:39, seed 20260915, 10.1 s, numpy 2.4.6
+verification (frozen): PASS

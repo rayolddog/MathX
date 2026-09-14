@@ -266,3 +266,133 @@ inside one T2, where the form of the deposit rule then disagrees with coherent c
 shape of the third step's closure: energy conservation can supply exclusivity, but only in the reading
 that loses Born and the whole-quantum record, so that the model's choice is between assuming the
 quantum and assuming the stop.
+
+## 11. Addendum of 2026-09-14: the vacuum race
+
+**Added at JB's instruction after `vacuum_race/`.** JB's rule: within the aperture the atom with the
+highest interference term with the incident particle is selected, each atom carrying its own vacuum
+term, independent of the number of atoms. The run varies only the distribution of that term and how
+it enters the deposit.
+
+*What it adds to §5.* One dynamics that closes the third step with the Born share and one record per
+quantum at once: a per-atom vacuum term that is a Gumbel draw on the logarithm of the deposit, or
+equivalently an exponential waiting time with rate proportional to |ψ|² cos²(Δφ/2), the first atom
+to fire taking the quantum. Under it "highest wins" is exactly rule R2 of §3, atom by atom (0.702,
+0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800 at N = 1, 10, 100, 1000), independent
+of N and of the absolute intensity, with the best phase-matched atom the most likely winner in 2/N
+of trials and never certain. It needs no stop across pixels and does not assume the empty pixel
+silent; exclusivity is by construction of the maximum, which the run assumes and does not test.
+
+*What it does to §0.* Nothing. The rate proportional to |ψ|² is Fermi's golden rule, and the
+square sits in the vacuum's distribution. Every other form of the term tried, Gaussian or bounded,
+multiplicative or additive, gives the brighter pixel every time once the aperture holds a hundred
+atoms, because the maximum of N draws concentrates while the per-atom term does not; additive forms
+also read the intensity difference rather than the ratio. A term that enters by interference with
+the amplitude, linear in |ψ|, gives √r/(√r + 1), the square root of Born. And the scale of the
+Gumbel term is free, the share being r^β/(r^β + 1), so Born is the point β = 1 and nothing in the
+model fixes it (L24, L25). The model can carry this race as its detector mechanism given Born. It
+is not a source of Born, and disclaimer 1 of §0 stands.
+
+*Added later the same day, after the frozen-against-fresh addendum.* The vacuum term has to be a
+fluctuation faster than the arrivals. Frozen per atom it gives each detector an all-or-nothing split
+and Born only across an ensemble of detectors; refreshed every τ arrivals it gives one detector a
+Fano factor F = τ for its split, against F = 1 in every SPAD experiment. JB's ordering, the vacuum
+acting on the fermion before the free particle arrives, is the ordering the run favors (V1 against
+V2), but only with the dressing renewed for each arrival; a standing property of the atom, such as
+the SPAD study's fixed resistances, cannot play the part (L26).
+
+## 12. The fresh vacuum reading
+
+**Added 2026-09-14 at JB's instruction, after §11.** This section states the model as it stands
+once the vacuum race and its addendum are taken as the detector mechanism: the fresh vacuum
+reading. It is written as the model section a rewritten paper would carry for step 2 and step 3 of
+§8, in the same form as §1 to §5: premises first, what is computed after, and what the reading does
+not do stated with it. Every number is from `vacuum_race/results/`.
+
+**12.1 The premises, stated as premises.** Three, and the reading rests on all three.
+
+1. The deposit at atom i is E_i ∝ |ψ(x_i)|² cos²(Δφ_i/2), the two projections of §2: the
+   intensity at the atom and the squared overlap of the two second-spinor phasors.
+2. Every atom of the bulk carries a vacuum term that multiplies its deposit, drawn independently
+   of every other atom's and of the number of atoms in reach, from the Gumbel distribution on the
+   logarithm of the deposit at unit scale. Equivalently, each atom has an exponential waiting
+   time with rate proportional to E_i.
+3. The term is renewed for every arrival: its correlation time is shorter than the interval
+   between quanta.
+
+The first premise was already §2's. The second and third are new and are what §11 found the race
+needs. Premise 2 is the golden rule's rate law, and it is where Born sits in this reading; premise 3
+is the golden rule's memorylessness. Neither is derived here (L24, L26).
+
+**12.2 The rule.** The atom with the highest vacuum-weighted deposit takes the quantum. Under
+premise 2 that is the same statement as: the first atom to fire takes the quantum, and atom i fires
+first with probability E_i / Σ_j E_j. So the rule of this reading is rule R2 of §3, now as a
+dynamics with a clock rather than a sampling instruction. The identity is exact and was verified
+atom by atom (0.702, 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800 for N = 1, 10, 100,
+1000 at r = 4; 0.800 at every N without the phase weight).
+
+**12.3 What the reading computes.** Given the three premises, without further choices:
+
+- *Which pixel.* The intensity share times the ratio of phase sums, Born once a pixel holds about
+  ten atoms, and independent of N and of the absolute intensity (unchanged at ten times the light,
+  Table 4 of the study). This is the one selection dynamics in the program that does not distort
+  Born toward the brighter site (§4.2), because a proportion, not a maximum, decides.
+- *Which atom.* The best phase-matched atom of the winning pixel is the single most likely winner
+  and wins in about 2/N of arrivals; it is never certain. The winner's phase mismatch has the
+  cos² density of §4.1, 53.5° on average.
+- *One record per quantum.* One atom fires first; no second record, no stop across pixels, no
+  assumption that the empty pixel is silent. The whole quantum goes to that atom. The empty
+  pixel's atoms are in the race with their own deposits and lose in proportion, which is the
+  Born share seen from the other side. This closes the third step of §5 in the sense of §8: the
+  cluster, the sink and the channel of §4.5 are then what happens after the winner is chosen, and
+  none of them has to choose.
+- *One detector's counting statistics.* The split of M quanta between two pixels is binomial:
+  Fano factor 1 (0.9 measured against binomial in the run), the same in every detector. This is
+  premise 3's content and it is the reading's own observable (12.5).
+
+**12.4 What the reading does not do.**
+
+- It does not derive Born. The square is premise 2's distribution, and the scale of that
+  distribution is a free parameter: a Gumbel term at scale 1/β gives the share r^β/(r^β + 1), so
+  Born is the point β = 1 and nothing in the model selects it (Table 3, L24). Disclaimer 1 of §0
+  stands in this reading exactly as before.
+- It does not fix the form of the vacuum term from anything else in the model. Every other form
+  tried, Gaussian or bounded, multiplying the deposit or adding to it, gives the brighter pixel
+  every time once the aperture is full, and the additive forms read the intensity difference
+  rather than the ratio (Tables 1, 2, 4). A term that enters by interference with the particle's
+  amplitude, which is what a vacuum amplitude added to the atom's wave packet would do, gives
+  √r/(√r + 1), the square root of Born (L25). So the vacuum of this reading is not an amplitude in
+  the atom's state; it is a rate. What in the vacuum's geometry makes it a rate at unit Gumbel
+  scale is the open question of this reading, and JB's four-dimensional vacuum is recorded as a
+  candidate, not modeled (study §0, C4).
+- It does not make the phase mechanism observable. The phase weight enters the rate and averages
+  to one half over a random bulk, as in §3; the reading inherits §4.3's ordered-detector prediction
+  and §10's finding that the bound electron's second spinor is not free, unchanged.
+- It does not reach the pair. The rate at each detector is local, so §6 and §10 stand: Bell's
+  sawtooth and CHSH 2.00.
+
+**12.5 Where the reading would be tested, and where it already passes.** Premise 3 makes the
+correlation time of the vacuum term an observable: refreshed every τ arrivals, the term gives one
+detector a Fano factor F = τ for its split (about τ/2 with the phase mechanism), and frozen it gives
+each detector all or nothing with Born only across an ensemble of detectors (Tables 6 and 7).
+Experiment has F = 1 at every counting rate used, so τ is below one arrival interval, under about
+10 ns at the fastest SPAD rates. Any vacuum timescale in silicon, 10 to 100 fs, is five orders of
+magnitude inside that bound. The reading passes this test without adjustment, and it is the only
+test in this program that the model passes for a reason it supplies itself rather than inherits.
+The same bound excludes the alternative: a standing per-atom property, the SPAD study's fixed
+resistances or any lattice disorder, cannot be the vacuum term.
+
+**12.6 The order of the three interactions.** JB's proposal that the vacuum acts on the fermion
+before the free particle arrives is the order this reading uses, in a definite sense: the term
+attaches to the atom's deposit (form V1) and not to the particle's amplitude (form V2), and the
+two orders give different statistics, Born against its square root. The order is not commutative
+in the model. But "before" means before this arrival and after the last, by premise 3; the atom is
+dressed afresh each time. In quantum mechanics this is the dressed-atom picture with the Markov
+property of the coupling to the vacuum's continuum of modes, and that is the standard origin of the
+exponential clock (L26). The reading therefore has the same content as the golden rule at this
+step, with the Born share carried in the rate and the exclusivity in the memorylessness.
+
+**12.7 Summary line for §8.** Step 2 and step 3 in the fresh vacuum reading: computed, given the
+rate law; the third step closes with one record per quantum, the whole quantum, the Born share and
+binomial counting statistics at once, with nothing across pixels; and it derives nothing that the
+rate law does not already contain.
