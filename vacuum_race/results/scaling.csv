@@ -1,0 +1,17 @@
+form,phase_weight,N,P_A_at_4_1,P_A_at_40_10,change,se_change
+V1 Gumbel on deposit,True,1,0.70455,0.70555,0.001,0.0020394
+V1 Gumbel on deposit,True,10,0.79409,0.79576,0.00167,0.0018056
+V1 Gumbel on deposit,False,1,0.79848,0.79883,0.00035,0.0017933
+V1 Gumbel on deposit,False,10,0.79876,0.80042,0.00166,0.0017902
+V3 mult Gaussian,True,1,0.75062,0.75244,0.00182,0.0019325
+V3 mult Gaussian,True,10,0.99904,0.99888,-0.00016,0.00014415
+V3 mult Gaussian,False,1,0.92724,0.92779,0.00055,0.0011596
+V3 mult Gaussian,False,10,1,1,0,4.4721e-09
+V4 add Gaussian,True,1,0.67946,0.79069,0.11123,0.0019578
+V4 add Gaussian,True,10,0.88201,1,0.11799,0.0010201
+V4 add Gaussian,False,1,0.85687,1,0.14313,0.0011074
+V4 add Gaussian,False,10,0.96441,1,0.03559,0.00058586
+V5 add uniform,True,1,0.74233,0.79021,0.04788,0.0018896
+V5 add uniform,True,10,0.9944,0.99994,0.00554,0.00023725
+V5 add uniform,False,1,0.96844,1,0.03156,0.00055285
+V5 add uniform,False,10,1,1,0,4.4721e-09

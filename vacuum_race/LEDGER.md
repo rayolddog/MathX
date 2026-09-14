@@ -1,0 +1,10 @@
+# Side ledger: departures from quantum mechanics or experiment, the vacuum race
+
+Kept per JB's instruction of 2026-09-06 ("bear me out"). Numbering continues the pair case's
+`LEDGER.md` (L17 to L20) and the SPAD study's (L21 to L23). Nothing here changes a definition in
+`PREREGISTRATION.md` or a number in `RESULTS.md`.
+
+| # | Date | Item | Where it touches the study |
+|---|---|---|---|
+| L24 | 2026-09-14 | "Highest interference term wins" with a per-atom vacuum term reproduces Born only when the vacuum term is a Gumbel draw on the logarithm of the deposit at unit scale, and that rule is identical to the sampled rule R2 (second study) and to a first-passage race among exponential clocks with rates proportional to \|ψ\|² cos²(Δφ/2): Fermi's golden rule as a race. The square is in the vacuum's distribution, not derived from the race. Quantum mechanics has the rate law as a postulate and no vacuum term selecting among atoms; the model has the same postulate under another name. The scale of the term is free (share r^β/(r^β + 1)) and Born is the point β = 1, a tuning quantum mechanics does not need. | D4 V1, P2, P3, Tables 1 to 3, C1, C2 |
+| L25 | 2026-09-14 | A vacuum term that enters by interference with the particle's amplitude, so that its random part is linear in \|ψ\| as the cross term 2\|ψ_p\|\|ψ_v\| cos(φ_p − φ_v) is, selects in proportion to \|ψ\| and gives √r/(√r + 1) (0.667 at r = 4, 0.586 at r = 2): the square root of Born. Gaussian and bounded vacuum terms, multiplicative or additive, give the brighter pixel every time once the aperture holds a hundred atoms, and additive ones read the intensity difference rather than the ratio. Experiment gives the ratio at every intensity (the Born share of counts between two ports is the same at single-photon and classical intensities). So JB's vacuum term, if it is to give Born, cannot be an amplitude added to the atom's wave packet and cannot be Gaussian; it has to act on the intensity as an exponential clock. | D4 V2 to V5, P4 to P6, Tables 1, 2, 4, C3 |

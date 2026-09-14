@@ -266,3 +266,29 @@ inside one T2, where the form of the deposit rule then disagrees with coherent c
 shape of the third step's closure: energy conservation can supply exclusivity, but only in the reading
 that loses Born and the whole-quantum record, so that the model's choice is between assuming the
 quantum and assuming the stop.
+
+## 11. Addendum of 2026-09-14: the vacuum race
+
+**Added at JB's instruction after `vacuum_race/`.** JB's rule: within the aperture the atom with the
+highest interference term with the incident particle is selected, each atom carrying its own vacuum
+term, independent of the number of atoms. The run varies only the distribution of that term and how
+it enters the deposit.
+
+*What it adds to §5.* One dynamics that closes the third step with the Born share and one record per
+quantum at once: a per-atom vacuum term that is a Gumbel draw on the logarithm of the deposit, or
+equivalently an exponential waiting time with rate proportional to |ψ|² cos²(Δφ/2), the first atom
+to fire taking the quantum. Under it "highest wins" is exactly rule R2 of §3, atom by atom (0.702,
+0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800 at N = 1, 10, 100, 1000), independent
+of N and of the absolute intensity, with the best phase-matched atom the most likely winner in 2/N
+of trials and never certain. It needs no stop across pixels and does not assume the empty pixel
+silent; exclusivity is by construction of the maximum, which the run assumes and does not test.
+
+*What it does to §0.* Nothing. The rate proportional to |ψ|² is Fermi's golden rule, and the
+square sits in the vacuum's distribution. Every other form of the term tried, Gaussian or bounded,
+multiplicative or additive, gives the brighter pixel every time once the aperture holds a hundred
+atoms, because the maximum of N draws concentrates while the per-atom term does not; additive forms
+also read the intensity difference rather than the ratio. A term that enters by interference with
+the amplitude, linear in |ψ|, gives √r/(√r + 1), the square root of Born. And the scale of the
+Gumbel term is free, the share being r^β/(r^β + 1), so Born is the point β = 1 and nothing in the
+model fixes it (L24, L25). The model can carry this race as its detector mechanism given Born. It
+is not a source of Born, and disclaimer 1 of §0 stands.
