@@ -266,3 +266,80 @@ Gaussian noise approaches the brighter-pixel-always limit more slowly than regis
 excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
 interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
 check passed. Ledger entries L24 to L28 record the departures.
+
+## The session of 2026-09-14, the evening and night, in plain language
+
+The day's work was reviewed and then rebuilt. JB asked for a multi-agent critical review of the
+Born Selection paper with its evidence spread across this repository and the Dirac–Kuramoto
+record. Five reviewers were run under the program's own instrument, each with a different
+specialism and none able to see the others or the list of findings written in advance: a
+probability theorist, a detector experimentalist, a philosopher of physics, a scholarship checker,
+and an auditor who re-ran every script here and checked 294 numbers. The reviewers did not pass
+the paper. Every number in it reproduced, and the failures were in what the numbers were said to
+show: the paper had come to hold two different selection mechanisms at once; the vacuum race, once
+amended, is the standard quantum description of photodetection and had to be called that; the
+claim that a frozen per-atom factor "does not average out" was an artefact of a factor with
+infinite mean; the wavelength lines in the energy study were an artefact of the toy's pixels
+catching only 85 % of the wave; a citation for a beam-splitter experiment applied silicon's gap to
+photomultipliers; and the earlier record's own corrections had not been carried through. Two of
+those were errors I introduced that same day while correcting other errors. All of it is in the
+review folder of the record, and the corrections that were matters of consistency were applied
+the same night, with the sessions here as the guide where documents disagreed.
+
+Then JB made three decisions in a row. That the vacuum does not interfere with the incident
+packet at a photon-counting detector, only with the atom, which is the textbook position and
+settles on physical grounds why the vacuum has to multiply the atom's rate rather than add to the
+wave. That the new version of the paper should be written on a clean slate here, in MathX, rather
+than patched onto the old one. And that it should be a specification: not a mechanism and not a
+bare negative result, but the list of what any microscopic account of detection must supply to
+reproduce Born's rule and one record per quantum, each item with a run showing what goes wrong
+without it.
+
+**Two runs the specification needed, both registered before they were run.**
+
+- *A frozen per-atom factor with an ordinary distribution.* Uniform, lognormal and exponential
+  factors all wash out by a thousand atoms per pixel, so a single detector shows the plain
+  binomial split; only the infinite-mean factor of the earlier run does not, and even its average
+  over many detectors is not Born. The clause from the afternoon, that the factor must be redrawn
+  for every arrival, was wrong and is replaced: a frozen factor is harmless if its tail is light,
+  which any bounded physical factor is. My prediction that the infinite-mean case would still
+  average to Born across detectors missed and is kept.
+- *Fairness when energy is exchanged among sites before one commits.* In a pot closed to one
+  quantum, any symmetric zero-mean exchange is fair, whatever its dependence on the energies, so
+  the square-root noise scaling the old paper called the unique fair point is neither necessary
+  nor unique there, and the old paper's own noise model turns out not to close the pot at all: its
+  winner ends with a median 0.72 of a quantum. What does spoil fairness is a floor a depleted site
+  can bounce off, and what spoils Born is stopping the exchange short of the full share. My
+  prediction that the floor would bias a two-site game missed: with two sites a depleted site
+  means the other has everything and the game is over, so the bias needs three sites. Kept.
+
+**The draft.** `born_selection_revised/PAPER_DRAFT.md`, six clauses each tied to a run: the rate
+is proportional to the intensity, the modulus squared of the amplitude, never the modulus, and
+interference lives inside that square, upstream of selection; selection is a race and not a
+maximum; a port needs about ten sites for the phase factor to average; the clock is memoryless and
+a frozen factor must be light-tailed; the rates are those of the normalized conditional state, so
+that under staggered arrival the share between ports is the branch weight and no race decides it;
+and an exchange stage, if there is one, needs a closed pot, a symmetric zero-mean kernel, an
+absorbing floor and a termination at the full share or by a rate linear in the share. The worked
+example is JB's model under its right name, the quantum-jump description of photodetection with
+the vacuum as the name of each atom's clock. JB is first on the byline; the three ideas were his
+and the formalization and runs were mine.
+
+**Three questions of JB's, answered in the draft's second section.** Whether the phase of the
+amplitude could be what locks, or what projects onto the real axis, to give two values instead of
+a continuum: no, on the record's evidence, since a bound site has no free phase to lock, a
+real-axis projection gives fifty-fifty whatever the amplitude, and two values come from the
+apparatus resolving two modes and the exchange coming in units. Whether it is better to say the
+amplitude projects onto the axis of the measurement setup: yes, in the Hilbert-space sense, one
+complex component per mode, its modulus squared the intensity, with the absorption at one port as
+the event; the word "projection" is now used in that sense only. And whether in Stern–Gerlach the
+magnet selects: no, the gradient sets the axis and separates the components reversibly, as
+recombination shows, and the screen selects by absorbing the atom in one of the two regions; the
+detector registers a position that means spin only because the gradient tied the two together.
+
+**What is left for JB.** A reading of the draft's last two sections; a check of the references,
+which are from memory; whether the two predictions of his model that experiment excludes stay in
+as the model's or go out with the phase weight; the three decisions in the authors' response in the
+record, whether the old paper is retired or rebuilt, whether its clause on frozen factors is
+reduced or deleted, and which ontology it holds; and whether this repository becomes public, since
+the draft cannot be checked from its pointers otherwise.
