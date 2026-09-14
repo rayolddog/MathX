@@ -210,6 +210,21 @@ exponential clock at one particular scale, and not as an amplitude in the electr
 Wick rotation stored in `WICK_ROTATION.md` is where standard theory gets exponential clocks from,
 and it delivers their shape but not their rate.
 
+**Where the ideas came from.** Three of JB's ideas drove today's results; the formalization and
+the runs were Claude's. First, that the quantum vacuum interacts with the individual atoms of the
+detector's bulk, one term per atom. That turned selection into a race with a clock at every atom
+and made the distribution of the per-atom term the question, which is what found the one family
+that gives Born and, when JB asked whether the atom is dressed before the particle arrives, gave
+the frozen-versus-fresh test and the counting-statistics bound. Second, that the order of the
+three interactions, vacuum, bound electron, free particle, does not commute. That separated the
+vacuum multiplying the atom's rate, which gives Born, from the vacuum adding to the particle's
+amplitude, which gives the square root of Born, and fixed the ordering the numbers pick. Third,
+from the session of 2026-09-07, that the aperture holds many atoms with varying phases. That is
+what makes the difference between "highest wins" and "first to fire" visible at all: with one
+atom per pixel every rule sits within a few percent of Born, and from ten atoms the largest of
+many draws climbs to its ceiling and the brighter pixel takes everything unless the vacuum term
+is exponential.
+
 **Also from today.** Two registered predictions missed in their wording and are kept: the additive
 Gaussian noise approaches the brighter-pixel-always limit more slowly than registered, and the
 excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
