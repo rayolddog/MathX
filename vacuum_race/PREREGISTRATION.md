@@ -117,3 +117,79 @@ without the phase weight: within 3 s.e. of r²/(r² + 1) = 0.941.
 `results/share.csv` (every form, N, r, with and without the phase weight), `results/beta.csv`,
 `results/scaling.csv`, `results/best_atom.csv`, `results/verification.txt`, `results/run_info.txt`,
 `results/fig1_vacuum_race.png`; `RESULTS.md` with the uncertainty first; `LEDGER.md`.
+
+---
+
+## Addendum, 2026-09-14 (later): frozen against fresh vacuum draws
+
+Written before `frozen_fresh.py` was run, at JB's instruction, after his proposal that the
+vacuum acts on the fermion first, so that the atom is already dressed when the free particle
+arrives. The main run drew the vacuum term fresh at every event. This addendum asks what happens
+when the atom's vacuum term is a fixed property of the atom (frozen for the life of the detector),
+or refreshes on a correlation time of τ events, and what a single detector's counting statistics
+would show in each case.
+
+- **D8, the detector realization.** N = 10 atoms per pixel (primary; N = 100 as sensitivity),
+  r = 4, V1 with β = 1. A realization is one detector: its atoms, their phase weights, and their
+  vacuum terms. M = 1000 events per realization, K = 300 realizations (200 at N = 100).
+- **D9, the vacuum's correlation time.** The Gumbel term of each atom is redrawn every τ events:
+  τ = 1 (fresh, the main run), 10, 100, and frozen (drawn once per realization, never redrawn).
+- **D10, the phase weight.** Fresh per event (primary, as the main run); frozen per realization
+  (sensitivity: the bulk's second-spinor phases as a fixed property of the detector); and absent,
+  w = 1 (the clean case).
+- **D11, what is recorded.** For each realization the share s_k of events at pixel A. Across
+  realizations: the mean, the standard deviation, the Fano factor F = Var(s_k)/[p(1 − p)/M] with p
+  the mean (F = 1 is the binomial split of independent events, what a Bernoulli trial per photon
+  gives), and the step fraction, the fraction of realizations with s_k < 0.05 or > 0.95.
+- **D12, the physical reading.** A single detector's split of M photons between two pixels is
+  binomial with F = 1 in every SPAD experiment at every intensity ratio. The model must give F ≈ 1
+  for a single detector, so the vacuum term must decorrelate between arrivals. At single-photon
+  counting rates the arrivals are about a microsecond apart; any vacuum timescale in silicon
+  (10 to 100 fs) is eight orders of magnitude shorter, so τ ≪ 1 event is the physical case, and
+  "the atom is dressed before the particle arrives" has to mean dressed afresh for each arrival.
+  Frozen terms are the signature of static disorder (the SPAD study's fixed resistances), not of a
+  vacuum.
+
+**Predictions (from scratch).**
+
+- **P8, fresh (τ = 1).** Mean 0.795 (R2 at N = 10), F = 1.0 ± 0.1, step fraction 0. Without the
+  phase weight: mean 0.800, F = 1.
+- **P9, frozen, no phase weight.** Each realization's share is exactly 0 or 1 (step fraction
+  1.000, F = M = 1000), and the mean across realizations is 0.800 to within 3 s.e. (0.023): the
+  difference of the two pixels' largest Gumbel terms is logistic, so the ensemble of detectors
+  still gives Born while every single detector gives all or nothing.
+- **P10, frozen, fresh phase weight.** The frozen term acts as a fixed gain per atom; the fresh
+  phase weight smooths the step. Mean 0.79, standard deviation about 0.28, F about 470, step
+  fraction about 0.49. At N = 100 the same (0.80, 0.28, 470, 0.48): the frozen vacuum does not
+  average out with N, because the maximum picks one atom per pixel whatever N.
+- **P11, the correlation time sets the Fano factor.** Without the phase weight F = τ (blocks of τ
+  identical outcomes): 9 ± 2 at τ = 10, 100 ± 20 at τ = 100. With the fresh phase weight about
+  τ/2: 5 ± 1 and 48 ± 10. Step fraction 0 at τ = 10, 0.02 to 0.11 at τ = 100.
+- **P12, frozen phase weight, fresh vacuum.** The detector's fixed phase sums bias each
+  realization by W_A/W_B: mean 0.794, F = 18 ± 4 at N = 10, 2.5 ± 0.7 at N = 100, 1.2 ± 0.3 at
+  N = 1000. A frozen bulk phase distribution is a second source of excess variance that a
+  single detector would show at small N and lose at large N; the frozen vacuum's excess (P10)
+  does not go away with N.
+
+**The cases that cost the model.**
+
+- **C5**, a frozen vacuum term gives every single detector an all-or-nothing split and Born only
+  across an ensemble of detectors (P9, P10). Every SPAD pair shows the Born split within one
+  detector with binomial statistics (D12). So the vacuum term of the model must be redrawn between
+  arrivals, which is a fluctuation, not a dressing fixed in advance; the physical timescales make
+  this automatic (τ about 10⁻⁸ events) and leave no room for "dressed first, then the particle"
+  to mean a standing property of the atom.
+- **C6**, the Fano factor of a single detector's split is the model's own observable for the
+  vacuum's correlation time in units of the arrival interval (P11). It is F = 1 in experiment at
+  every counting rate used, which bounds τ below one arrival interval at the highest rates
+  (about 10⁸ per second in fast SPADs), i.e. the vacuum term decorrelates in under 10 ns, which
+  is consistent with, and far weaker than, any vacuum timescale.
+
+**Verification.** τ = 1 without the phase weight: mean within 3 s.e. of 0.800, F within
+[0.7, 1.3]. Frozen without the phase weight: step fraction 1.000 exactly, F = 1000 within 1 %,
+mean within 3 s.e. of 0.800 (s.e. 0.4/√300 = 0.023). τ = 10 without the phase weight: F within
+[7, 13].
+
+**Recorded.** `results/frozen_fresh.csv`, `results/frozen_fresh_shares.csv` (every realization's
+share), `results/verification_frozen.txt`, `results/fig2_frozen_fresh.png`; a section in
+`RESULTS.md`; ledger L26.

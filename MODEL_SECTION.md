@@ -292,3 +292,11 @@ the amplitude, linear in |ψ|, gives √r/(√r + 1), the square root of Born. A
 Gumbel term is free, the share being r^β/(r^β + 1), so Born is the point β = 1 and nothing in the
 model fixes it (L24, L25). The model can carry this race as its detector mechanism given Born. It
 is not a source of Born, and disclaimer 1 of §0 stands.
+
+*Added later the same day, after the frozen-against-fresh addendum.* The vacuum term has to be a
+fluctuation faster than the arrivals. Frozen per atom it gives each detector an all-or-nothing split
+and Born only across an ensemble of detectors; refreshed every τ arrivals it gives one detector a
+Fano factor F = τ for its split, against F = 1 in every SPAD experiment. JB's ordering, the vacuum
+acting on the fermion before the free particle arrives, is the ordering the run favors (V1 against
+V2), but only with the dressing renewed for each arrival; a standing property of the atom, such as
+the SPAD study's fixed resistances, cannot play the part (L26).

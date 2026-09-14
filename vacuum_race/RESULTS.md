@@ -150,3 +150,81 @@ atom; it is certain only without a vacuum term.
    It costs the derivation: a rate proportional to |ψ|² is the golden rule, and the square enters
    in the vacuum's distribution. The model can adopt it as a mechanism for the detector given
    Born; it cannot present it as a source of Born (L24).
+
+---
+
+## Addendum: frozen against fresh vacuum draws (`frozen_fresh.py`, seed 20260915, 10 s)
+
+Definitions D8 to D12 and predictions P8 to P12 in the pre-registration's addendum, written
+before the run. Source: `results/frozen_fresh.csv` (one row per cell) and
+`results/frozen_fresh_shares.csv` (every detector's share). All three registered verifications
+passed (`results/verification_frozen.txt`).
+
+**One prediction missed.** P12 registered a Fano factor of 18 ± 4 for frozen phase weights with a
+fresh vacuum at N = 10; the run gave 25.6. The scratch estimate (17.7) and the run are both from
+300 detectors, and the per-detector share in this cell has a heavy tail (a pixel whose ten frozen
+phases all sit near the antinode has a tiny phase sum), so the variance estimate itself
+fluctuates by more than the interval I registered. The interval was too narrow for the quantity;
+the direction (a frozen bulk phase distribution adds excess variance that disappears with N: 2.7
+at N = 100, 1.1 at N = 1000) is as registered. The miss is kept.
+
+### Table 6. One detector's split of 1000 events, across 300 detectors (r = 4, N = 10)
+
+Fano factor F = Var(share)/[p(1 − p)/M]; F = 1 is the binomial split of independent events, what
+every SPAD pair shows. Step fraction: detectors with a share below 0.05 or above 0.95.
+
+| vacuum correlation time τ (events) | 1 (fresh) | 10 | 100 | frozen |
+|---|---|---|---|---|
+| no phase weight: mean | 0.801 | 0.802 | 0.797 | 0.810 (s.e. 0.023) |
+| no phase weight: F | 0.9 | 10.3 | 103 | 1003 |
+| no phase weight: step fraction | 0 | 0 | 0.093 | 1.000 |
+| fresh phase weight: mean | 0.795 | 0.795 | 0.792 | 0.821 (s.e. 0.015) |
+| fresh phase weight: F | 0.9 | 5.6 | 46 | 439 |
+| fresh phase weight: step fraction | 0 | 0 | 0.020 | 0.517 |
+| registered F | 1 | 9 ± 2, 5 ± 1 | 100 ± 20, 48 ± 10 | 1000, about 470 |
+
+At N = 100 with the fresh phase weight and a frozen vacuum: mean 0.783, F = 511, step fraction
+0.525. The frozen vacuum's excess variance does not average out with N (P10 as registered),
+because the maximum picks one atom per pixel however many there are.
+
+### Table 7. Frozen bulk phases with a fresh vacuum
+
+| N | 10 | 100 | 1000 |
+|---|---|---|---|
+| mean | 0.793 | 0.799 | 0.798 |
+| F | 25.6 | 2.7 | 1.1 |
+| registered F | **18 ± 4** | 2.5 ± 0.7 | 1.2 ± 0.3 |
+
+### Predictions against outcome
+
+- **P8**, fresh: 0.795, F = 0.9, step 0. As registered.
+- **P9**, frozen without the phase weight: every detector 0 or 1 (step 1.000), F = 1003, mean
+  0.810 ± 0.023 against 0.800. As registered: the ensemble is Born, each detector is all or
+  nothing.
+- **P10**, frozen with the fresh phase weight: sd 0.25 and 0.30, F = 439 and 511, step 0.52 and
+  0.53 at N = 10 and 100, against about 0.28, 470, 0.49. As registered within the "about".
+- **P11**, F = τ without the phase weight (10.3, 103) and about τ/2 with it (5.6, 46). As registered.
+- **P12**, frozen phases: **missed at N = 10** (25.6 against 18 ± 4), as registered at 100 and 1000.
+
+### What the addendum says, in plain form
+
+6. **The vacuum term must be redrawn between arrivals.** A term fixed for the life of the atom
+   gives every single detector an all-or-nothing split, or, with the phase mechanism smoothing it,
+   a share spread from 0 to 1 across detectors with half of them at the extremes, and it gives
+   Born only as an average over an ensemble of detectors. Every SPAD pair shows the Born split
+   inside one detector with binomial statistics. So "the atom is dressed by the vacuum before the
+   particle arrives" can only mean dressed afresh for each arrival: the term is a fluctuation
+   with a correlation time shorter than the interval between photons, not a standing property of
+   the atom. Static per-atom properties, the SPAD study's fixed resistances for instance, are
+   exactly what the frozen case describes, and they cannot play the vacuum's part.
+7. **The correlation time is an observable of the model, and experiment bounds it.** The Fano
+   factor of one detector's split reads τ directly, F = τ in events without the phase mechanism
+   and about τ/2 with it. Experiment has F = 1 at every counting rate used, so τ is below one
+   arrival interval at the fastest rates, under about 10 ns. Any vacuum timescale in silicon,
+   10 to 100 fs, satisfies that by five orders of magnitude, so the model passes this test
+   without adjustment; but it passes it only in the fresh reading (L26).
+8. **A frozen bulk phase distribution is a separate, smaller effect that averages out.** With the
+   detector's second-spinor phases fixed and the vacuum fresh, small pixels show excess variance
+   from their fixed phase sums (F = 26 at ten atoms), which is gone by a thousand atoms (F = 1.1).
+   A real pixel holds far more than a thousand atoms in reach, so this is invisible; it is noted
+   because it is the one place the model's bulk phases would leave a counting-statistics trace.
