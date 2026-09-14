@@ -2,7 +2,7 @@
 
 **John M. Bramble, MD, and Claude (Anthropic)**
 
-*Draft v0.1, 2026-09-14. Written in `rayolddog/MathX` on a clean slate at the sponsor's
+*Draft v0.2, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run). Written in `rayolddog/MathX` on a clean slate at the sponsor's
 instruction, as the second of three shapes offered after the internal review round of the
 Dirac–Kuramoto record's Paper 1 (v0.10; `born_selection_AI_review_2026-09/`). Every number is in a
 `results/` folder of this repository with its prediction written before the run and its misses
@@ -230,20 +230,27 @@ which favours the rich; a termination by absorption at the full share, or by a c
 in the share, does not.
 
 **The run.** `exchange_fairness/`, pre-registered with Paper 1's own closed forms and the review
-round's scratch numbers as predictions. Four models on the two-site pot (0.8, 0.2). *(Numbers to be
-entered from `results/fairness.csv` when the run completes; the registered predictions are: model A,
-independent noise $de_i = \sigma\sqrt{e_i}\,dW_i$, fair at 0.800 but with the survivor holding a
-median 0.7 of a quantum, below half in a third of runs; model B, the conserving geometric-mean
-kernel, fair at 0.800 with the pot exactly closed; model C, a conserving multiplicative kernel
-whose sites are never absorbed, fair at 0.800 under a rate-linear commit and biased to 0.833 under
-a threshold of 0.95, Paper 1's closed form $(s_0 - (1-t))/(2t-1)$; model D, fixed parcels with a
-reflecting zero on three sites, biased toward the poor, below Born by more than 0.10 at the bright
-site.)*
+round's scratch numbers as predictions, on the two-site pot (0.8, 0.2) and the three-site pot
+(0.64, 0.29, 0.07). Model A, the independent noise $de_i = \sigma\sqrt{e_i}\,dW_i$ of Paper 1's
+Theorem 1, is fair — 0.801 — but the survivor's energy at absorption has median 0.72 of a quantum,
+is below half in a third of runs and above one and a half in a sixth: the pot is not closed, and
+the exclusivity arguments that rest on a closed pot do not describe this model. Model B, a
+conserving exchange with the geometric-mean kernel $\sqrt{e_ie_j}$, is fair (0.799) with the pot
+closed to $10^{-14}$; a registered claim that every trial terminates missed by 0.4 % at the time
+cap. Model C, a conserving exchange with the multiplicative kernel $e_ie_j$, which under
+independent noise would drift toward equality by Theorem 1's own computation, is exactly fair here
+(0.801) under a commit rate linear in the share, and biased to 0.830 under a threshold of 0.95,
+against the closed form $(s_0 - (1-t))/(2t-1) = 0.833$. Model D, fixed parcels with a reflecting
+zero, gives (0.425, 0.298, 0.278) on three sites against Born's (0.64, 0.29, 0.07), reproducing
+Paper 1's (0.46, 0.27, 0.26); on two sites it gives 0.798, where a bias below 0.75 was registered.
+That miss is the finding: with two sites a depleted site means the other holds everything and the
+game ends, so the reflecting boundary never acts. The bias toward the poor is a three-body effect.
 
 **What it means.** In the closed pot the share is $e_i/E$ with $E$ constant, so its drift is the
 drift of $e_i$, and any symmetric zero-mean exchange has none. Fairness in this class is not a
-knife-edge and needs no particular noise scaling; the two things that spoil it are boundaries,
-and the specification names them. What the clause does not do is supply the square: the initial
+knife-edge and needs no particular noise scaling; the two things that spoil it are a reflecting
+boundary, which needs three or more sites to act, and a termination short of the full share, and
+the specification names both. What the clause does not do is supply the square: the initial
 shares are the intensities, put in.
 
 ## 9. Clauses that concern the sponsor's model in particular

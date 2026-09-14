@@ -25,7 +25,7 @@ Dirac–Kuramoto record (`rayolddog/DiracKuramotoFramework`) is cited as the rec
 | 3 many sites | the phase factor of the deposit averages out only from about ten sites per port; at one site the model predicts a 12 % departure | second study Table 2; vacuum race N = 1 | `second_spinor_phase_race/`, `vacuum_race/` |
 | 4 memorylessness | the clock is renewed per arrival; a frozen factor is harmless only if light-tailed; the Fano factor of the split reads a correlation time in the model but has no power in a device | frozen/fresh addenda 1 and 3 | `vacuum_race/` Tables 6, 7, 9 |
 | 5 the conditional state | under staggered arrival the port share is the branch weight; rates on the survival of the whole quantum give the nearer port; a local repair gives 0.952; only the normalized conditional state gives Born; P5 acts twice | staggered addenda 2, 2b | `vacuum_race/` Table 8 |
-| 6 fairness in the exchange class | in a closed pot any symmetric zero-mean kernel with absorbing zero is fair; the √e scaling is neither necessary nor unique; a reflecting zero biases toward the poor; a threshold biases toward the rich; a rate-linear commit does not | exchange fairness A–D | `exchange_fairness/` |
+| 6 fairness in the exchange class | in a closed pot any symmetric zero-mean kernel with absorbing zero is fair; the √e scaling is neither necessary nor unique; a reflecting zero biases toward the poor from three sites up; a threshold biases toward the rich; a rate-linear commit does not | exchange fairness A–D | `exchange_fairness/` |
 | 7 the bound site's phase | a bound Dirac electron's lower spinor is slaved; the phase mechanism has nothing to select in a passive detector; a driven absorber shows coherent control, which quantum mechanics predicts and the deposit rule as written does not | SPAD study Parts D, E, F; L13, L14 | `spad_surface_contact/` |
 | 8 the record | downstream of the vertex the record copies the selection and adds an efficiency; the SPAD toy shows the placement and establishes nothing about a device | SPAD study Parts A–C | `spad_surface_contact/` |
 | 9 energy | a divisible deposit with escape registers nothing at a balanced split; the indivisible quantum keeps Born, exclusivity, whole records and closure at once, and is the postulate | Part G | `spad_surface_contact/` L21–L23 |
@@ -51,5 +51,11 @@ of clause 3, and the driven-detector phase dependence of clause 7 in its registe
 ## Owed before drafting
 
 - [x] `vacuum_race/` addendum 3, frozen light-tailed multipliers (clause 4).
-- [ ] `exchange_fairness/` (clause 6) — running.
-- [ ] `PAPER_DRAFT.md`.
+- [x] `exchange_fairness/` (clause 6): run; two registered misses kept (termination at the cap; the two-site parcel model is fair because the reflecting zero is a three-body effect).
+- [x] `PAPER_DRAFT.md` v0.2.
+
+## Owed before circulation
+
+- The references marked [verify] checked against the sources.
+- JB's reading of the draft, in particular §10's naming of the worked example and §11's list of what remains.
+- Whether the two model predictions that experiment excludes (§5, §9) should be stated as the model's or dropped with the phase weight.
