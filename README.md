@@ -1,8 +1,9 @@
 # MathX
 
 Mathematical explorations that sit beside the Dirac–Kuramoto record
-(`Projects/Physics/DiracKuramotoFramework`, closed at commit `c9bbf12`). The record is not
-reopened by anything here. Each exploration is one folder with a `PREREGISTRATION.md`
+(`Projects/Physics/DiracKuramotoFramework`, closed at commit `c9bbf12`). The record itself
+is not edited by anything here; it was reopened on 2026-09-14 by Paper 1 v0.10's Addendum A, at
+JB's instruction, which cites these folders. Each exploration is one folder with a `PREREGISTRATION.md`
 written before any run, the scripts, a `results/` folder, and a `RESULTS.md` that states
 the uncertainty and the assumptions before the tables.
 
@@ -223,7 +224,8 @@ vacuum multiplying the atom's rate, which gives Born, from the vacuum adding to 
 amplitude, which gives the square root of Born, and fixed the ordering the numbers pick. Third,
 from the session of 2026-09-07, that the aperture holds many atoms with varying phases. That is
 what makes the difference between "highest wins" and "first to fire" visible at all: with one
-atom per pixel every rule sits within a few percent of Born, and from ten atoms the largest of
+atom per pixel the rule without a vacuum term sits within a percent of Born and the others
+within twenty, and from ten atoms the largest of
 many draws climbs to its ceiling and the brighter pixel takes everything unless the vacuum term
 is exponential.
 
@@ -241,8 +243,20 @@ across the gap between the pixels. So under staggered arrival the split between 
 decided by any race at all; it is the share of the wave each pixel was given, and the race only
 picks the atom within the pixel.
 
+**Consistency pass, later the same night.** The internal review round of the Born Selection paper
+(its `born_selection_AI_review_2026-09/findings_classification.md`) found statements here that
+disagreed with each other or with the record. Corrected in this pass, with the sessions of
+2026-09-08 and 2026-09-14 deciding: the "within a thousandth of the commitment time" figure is
+withdrawn as an established number in `MODEL_SECTION.md` §12.3 and `vacuum_race/RESULTS.md`, since
+the staggered-arrival addendum itself showed the stop to be the conditional-state update, with no
+delay and no speed, which is what *One World, One Cut* v1.5 had said; the claim that Gaussian and
+bounded vacuum terms give the brighter pixel every time from a hundred atoms is restated with the
+additive-Gaussian miss (0.966 and 0.990) in `MODEL_SECTION.md` §11 and §12.4; §12.3's "a proportion,
+not a maximum, decides" is qualified to simultaneous arrival; and this README's ledger range and
+provenance sentence are corrected. Ledger L29.
+
 **Also from today.** Three registered predictions missed and are kept: the local conditional reading above, and two in their wording: the additive
 Gaussian noise approaches the brighter-pixel-always limit more slowly than registered, and the
 excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
 interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
-check passed. Ledger entries L24 to L26 record the departures.
+check passed. Ledger entries L24 to L28 record the departures.
