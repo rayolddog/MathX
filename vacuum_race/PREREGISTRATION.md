@@ -207,3 +207,126 @@ which independent site clocks do not supply (they give coincidences at a balance
 must act faster than light across separated arms. D5's "one winner per trial by construction" was
 already the same admission; C1's clause contradicted it. No definition, prediction or number
 changes. Ledger L27.
+
+---
+
+## Addendum 2, 2026-09-14 (night): staggered arrival, the survival hazard against the conditional-state hazard
+
+Written before `staggered_arrival.py` was run, after the anticipated-findings ledger for the
+Paper 1 v0.10 round (Dirac–Kuramoto record, `born_selection_AI_review_2026-09/`) predicted that
+the fresh-vacuum race inherits the failure that record found for its selection postulate in
+September: a hazard that runs while the wave is present gives the click to the nearer detector
+whenever the arms are unequal. JB's instruction: the failure can be removed. This addendum tests
+the two readings of the race's rate under staggered arrival, with the fix the record adopted (the
+hazard acts on the conditional state, in the quantum-jump unravelling) as the second reading.
+
+- **D13, the arrival.** The packet occupies pixel A during [0, T] and pixel B during [Δ, Δ + T],
+  with Δ/T ∈ {0, 0.1, 0.5, 1, 2}. Two pixels, N = 10 atoms each, intensities I_A = r, I_B = 1,
+  r = 4 (shares s_A = 0.8, s_B = 0.2) and r = 2 (sensitivity). Phase weights w_i = cos²(Δφ_i/2)
+  fresh per event (primary) and absent, w = 1 (the clean case). W_P = Σ_i w_i over pixel P.
+- **D14, reading S, the survival hazard.** While the packet is at pixel P and nothing has fired
+  anywhere, atom i of P fires at rate λ I_P w_i. The first atom to fire anywhere takes the quantum
+  and every other clock stops (P5). This is the race of the main run, extended in time; at Δ = 0
+  it is that run. The coupling is set by κ = λ N T, the integrated per-atom hazard scale over one
+  passage at unit intensity: κ ∈ {1, 10, 100}.
+- **D15, reading C, the conditional-state hazard.** Atom i of P fires at rate λ w_i a_P²(t), where
+  a_P² is the unnormalized amplitude-squared of the wave's P-branch: a_P²(t_P) = s_P at the packet's
+  arrival at P, and da_P²/dt = −λ W_P a_P² while the packet is at P, the branch being consumed by
+  the port's own no-fire absorption. The integrated hazard of port P is then s_P (1 − e^{−λ W_P T}):
+  the port's share times its efficiency, whatever the other port does and whenever it is reached.
+  The first fire anywhere still stops every clock (P5). This is the quantum-jump unravelling's
+  structure for a single-photon packet at two absorbers, imported as a premise, and it is reading
+  B's bookkeeping: nothing is deposited unless a fire occurs. Sampling is exact in both readings
+  (exponential first-passage within each window; no time stepping).
+- **D16, recorded.** P(A fires), P(B fires), P(no fire); the share among fired events
+  P(A)/(P(A) + P(B)), against Δ/T and κ; T = 2 × 10⁵ trials per cell (s.e. ≤ 0.001 on a share).
+
+**Predictions (closed forms; the script computes them beside the samples).**
+
+- **P13, reading S gives the nearer pixel.** Without the phase weight, with λ_A = κr/T and
+  λ_B = κ/T: at Δ = 0 the share is r/(r + 1) = 0.800 for every κ (competing exponentials over a
+  common window). At Δ ≥ T, P(A) = 1 − e^{−κr}: the share is 1.000 at κ = 10 and 100, and 0.988 at
+  κ = 1. For 0 < Δ < T, P(A) = (1 − e^{−λ_A Δ}) + e^{−λ_A Δ} [λ_A/(λ_A + λ_B)] (1 − e^{−(λ_A+λ_B)(T−Δ)}).
+  At κ = 10 the share is 0.800, 0.996, 1.000, 1.000, 1.000 at Δ/T = 0, 0.1, 0.5, 1, 2; at κ = 1 it is
+  0.800, 0.866, 0.971, 0.988, 0.988. A tenth of a packet length of stagger at physical coupling
+  (κ ≥ 10) gives the nearer pixel every record. With the phase weight the same with κ W_P/N in
+  place of κ, so slightly slower. This is the September round's finding N1, reproduced in the race.
+- **P14, reading C removes it.** The share is s_A = 0.800 (r = 4) and 0.667 (r = 2) at every Δ/T
+  and every κ, within 3 s.e.; the efficiency P(fired) is 1 − e^{−κ} without the phase weight
+  (0.632, 1.000, 1.000 at κ = 1, 10, 100) and about 1 − e^{−κ/2} with it (0.39, 0.99, 1.00). At
+  κ = 1 with the phase weight the share may deviate from 0.800 by up to 0.01, because the two
+  ports' efficiencies differ trial by trial.
+- **P15, what it costs.** Reading C's integrated hazard equals the port's share by construction:
+  the amplitude-squared, put in as the initial condition of the no-fire decay, is the Born weight
+  once more, now as the *total* probability that a port ever fires. The race decides which atom
+  within a port and, through P5, that only one port records; it does not decide the share between
+  ports under staggered arrival, and could not, since the ports are never in the race at the same
+  time. So the fresh-vacuum reading's premise 2 (MODEL_SECTION §12.1) has to read: the rate is
+  proportional to the conditional-state deposit, and a port's integrated hazard is its share. The
+  Born share is then inherited twice over, and the ledger entry (L28) says so.
+
+**Verification.** Reading S, no phase weight, κ = 10: share at Δ = 0 within 3 s.e. of 0.800; P(A) at
+Δ = T ≥ 0.999; every sampled share within 3 s.e. of its closed form at all five Δ/T and three κ.
+Reading C, no phase weight, κ = 10: share within 3 s.e. of 0.800 at all five Δ/T; P(fired) ≥ 0.999.
+Reading C, κ = 1, no phase weight: P(fired) within 3 s.e. of 1 − e⁻¹ = 0.632.
+
+**Recorded.** `results/staggered.csv`, `results/verification_staggered.txt`,
+`results/fig3_staggered.png`; a section in `RESULTS.md`; ledger L28.
+
+---
+
+## Addendum 2b, 2026-09-14 (night, after addendum 2 was run): the normalized conditional state
+
+Written after `staggered_arrival.py` and before `staggered_conditional.py`. **P14 failed as
+registered** (`results/verification_staggered.txt`): reading C gave a share of 0.857 at Δ = 0 and
+0.952 from Δ = T/2 at κ ≥ 10, against the registered 0.800, with P(fired) = 0.84 against 1.000.
+The cause is in D15, not in the code. D15 let each port's branch decay on its own and coupled the
+ports only by the stop on firing. Then P(B fires) = (1 − s_A η_A) s_B η_B: the second port fires
+with its share times the probability that the first did not, and the share among records is
+s_A η_A / (s_A η_A + (1 − s_A η_A) s_B η_B) = 0.8/(0.8 + 0.04) = 0.952 at η = 1, which is the number
+the run gave. D15's sentence "whatever the other port does" was wrong: it holds for the
+unconditional probabilities only if a null at one port raises the rate at the other. That is
+what the quantum-jump unravelling does through the normalization of the conditional state, and
+it is the second face of P5: the stop cancels the losing clocks when one fires, and the null
+renormalizes the survivors when none does. A reading that is local port by port does not remove
+the staggered-arrival failure; it replaces one wrong share (the nearer port's 1.000) with another
+(0.952).
+
+- **D17, reading C′.** As D15, with the rates taken on the *normalized* conditional state: at time
+  t the unnormalized branch weights are a_P²(t) = s_P e^{−λ W_P τ_P(t)}, τ_P the exposure so far at
+  P, and n(t) = a_A²(t) + a_B²(t) the survival norm. The probability that the first fire anywhere
+  occurs in [t, t + dt] given none before is −dn/n, and the port is P with probability
+  proportional to λ W_P a_P²(t) [P exposed at t]. Sampled exactly by inverting n(t) on a grid of
+  4000 times (n is monotone) and drawing the port at the crossing.
+- **D18, everything else as D13, D14, D16.** The same κ, Δ/T, r, phase settings, T = 2 × 10⁵
+  trials. Reading S is not rerun. One labelled diagnostic, not a registered check: the reading-S
+  cell (κ = 100, Δ = 0, no phase weight), which failed its closed form by 3.0 s.e. in addendum 2
+  (0.7973 against 0.8000), re-drawn once with a fresh seed.
+
+**Predictions.**
+
+- **P16, reading C′ gives the share at every stagger.** Without the phase weight: share = s_A
+  = 0.800 (r = 4) and 0.667 (r = 2) at all five Δ/T and all three κ, within 3 s.e.; P(fired) =
+  1 − e^{−κ} = 0.632, 1.000, 1.000. With the phase weight: the same shares within 0.01 at κ ≥ 10
+  (efficiencies about 1 − e^{−κ/2} = 0.993, 1.000); at κ = 1 the share is s_A η_A/(s_A η_A + s_B η_B)
+  averaged over the ports' unequal efficiencies, predicted 0.80 ± 0.02 with P(fired) about 0.39.
+- **P17, the closed forms of reading C, for the record.** P(A) = s_A η_A; P(B) = (1 − s_A η_A) s_B η_B
+  for Δ ≥ T; the run's 0.952 and 0.841 are these at η = 1 − e^{−10}. Not rerun.
+- **P18, the diagnostic.** The κ = 100, Δ = 0 reading-S cell lands within 3 s.e. of 0.800 on a
+  fresh seed; if it does not, the sampling of very short exponential times is suspect and is to
+  be examined.
+
+**What it means, stated before the run.** If P16 holds, the staggered-arrival failure is removed
+from the fresh-vacuum race at a stated price: the race's rates are those of the normalized
+conditional state, so P5 acts twice, cancelling on a fire and renormalizing on a null, and the
+share between ports under staggered arrival is not decided by any race but by the branch weights
+put in as initial conditions. MODEL_SECTION §12.1 premise 2 and the Paper 1 v0.10 Addendum A.7 are
+to be amended accordingly, and the review ledger's item 3 marked removed before the freeze.
+
+**Verification.** Reading C′, no phase weight, κ = 10: share within 3 s.e. of 0.800 at all five
+Δ/T and P(fired) ≥ 0.999; κ = 1: P(fired) within 3 s.e. of 0.632; r = 2, κ = 10, Δ = T: share
+within 3 s.e. of 0.667.
+
+**Recorded.** `results/staggered_conditional.csv`, `results/verification_staggered_conditional.txt`,
+`results/fig3_staggered.png` (regenerated with reading C′ replacing reading C; the addendum-2
+figure is kept as `fig3_staggered_local.png`); a section in `RESULTS.md`; ledger L28.
