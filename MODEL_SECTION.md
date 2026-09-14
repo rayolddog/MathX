@@ -2,7 +2,8 @@
 
 **Date:** 2026-09-07. Written at JB's instruction as a draft of the model section a rewritten
 Born Selection paper would need. It is a record of the mechanism as computed in MathX, with
-Born's rule assumed, and it is not part of the closed Dirac–Kuramoto record. Every number is
+Born's rule assumed, and it is not part of the Dirac–Kuramoto record (closed 2026-09-05; reopened by
+Paper 1 v0.10 on 2026-09-14, which cites this file). Every number is
 traceable to a results file named in §9; nothing here is a measurement.
 
 ## 0. Read this first
@@ -293,8 +294,11 @@ faster than light crosses the pixel separation; see §12.3.)
 
 *What it does to §0.* Nothing. The rate proportional to |ψ|² is Fermi's golden rule, and the
 square sits in the vacuum's distribution. Every other form of the term tried, Gaussian or bounded,
-multiplicative or additive, gives the brighter pixel every time once the aperture holds a hundred
-atoms, because the maximum of N draws concentrates while the per-atom term does not; additive forms
+multiplicative or additive, concentrates toward the brighter pixel as the aperture fills (the
+multiplicative Gaussian and the bounded uniform give it every record from a hundred atoms; the
+additive Gaussian 0.966 at a hundred and 0.990 at a thousand, a registered miss; consistency pass
+2026-09-14, "every time once the aperture holds a hundred atoms" stood here for all three), because
+the maximum of N draws concentrates while the per-atom term does not; additive forms
 also read the intensity difference rather than the ratio. A term that enters by interference with
 the amplitude, linear in |ψ|, gives √r/(√r + 1), the square root of Born. And the scale of the
 Gumbel term is free, the share being r^β/(r^β + 1), so Born is the point β = 1 and nothing in the
@@ -349,7 +353,9 @@ atom by atom (0.702, 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800
 - *Which pixel.* The intensity share times the ratio of phase sums, Born once a pixel holds about
   ten atoms, and independent of N and of the absolute intensity (unchanged at ten times the light,
   Table 4 of the study). This is the one selection dynamics in the program that does not distort
-  Born toward the brighter site (§4.2), because a proportion, not a maximum, decides.
+  Born toward the brighter site (§4.2), because a proportion, not a maximum, decides. (Consistency
+  pass 2026-09-14: at simultaneous arrival. Under staggered arrival the between-port share is the
+  branch weight put in as an initial condition and is decided by no race; see the third item.)
 - *Which atom.* The best phase-matched atom of the winning pixel is the single most likely winner
   and wins in about 2/N of arrivals; it is never certain. The winner's phase mismatch has the
   cos² density of §4.1, 53.5° on average.
@@ -360,8 +366,11 @@ atom by atom (0.702, 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800
   clock is cancelled the instant the first fires, and for pixels or beam-splitter arms that are
   separated, that cancellation acts across the separation faster than light. It is the stop
   across pixels, the record's premise P5 (Paper 1 §2, third remark; NEGATIVE_RESULT.md), which the
-  record established must act within about a thousandth of the commitment time to match
-  single-photon coincidence data; independent clocks that keep running give two records at a
+  record once put at within about a thousandth of the commitment time to match single-photon
+  coincidence data (consistency pass 2026-09-14: that figure is a bound from the discarded race
+  model on a dynamical stop the projection does not have, as *One World, One Cut* v1.5 §5.1 says,
+  and the staggered-arrival addendum found the same: with the rates on the normalized conditional
+  state the stop is the conditional-state update, with no delay and no speed; L29); independent clocks that keep running give two records at a
   balanced split. The vacuum race assumes it by taking the maximum over both pixels at once, and
   derives it no more than the readings of §10 did. (An earlier wording of this item, "no stop
   across pixels", was wrong and is corrected 2026-09-14.) The stop acts twice: it cancels the

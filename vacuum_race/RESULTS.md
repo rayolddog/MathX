@@ -22,6 +22,12 @@ case's numbering (L24 onward). Every number below is in `results/`.
   forms gave 1.000 as registered. The miss is kept.
 - The Born values quoted (0.800 at r = 4, 0.667 at r = 2) are the intensity share, put in by hand
   through D3. Nothing here derives them (C1).
+- Two notes from the review round of 2026-09-14 (reproducibility auditor). The verification of V1
+  against the second study's R2 row uses a uniform s.e. of 0.0014 for that row; the row's per-cell
+  s.e. is 0.0010, 0.0009, 0.0020 and 0.0063 at N = 1, 10, 100, 1000, so the N = 1000 check is against
+  a number known to ±0.006. No verdict changes. And the "exact" sampling of reading C′ (addendum 2b)
+  is a grid inversion: at the run's 1000 points it biases the share by −0.0012 at (κ = 10, Δ/T = 0.1),
+  within the tolerance; at the registered 4000 points the largest bias is −0.0002.
 
 ## Table 1. The pixel share at r = 4 with the phase weight (Born 0.800)
 
@@ -149,8 +155,8 @@ atom; it is certain only without a vacuum term.
    Born share at once, without assuming the empty pixel silent. It does not remove the stop
    across pixels: the single winner exists because every other atom's clock is cancelled the
    instant the first fires, in the other pixel too, and that cancellation is the one-quantum stop
-   the Dirac–Kuramoto record names as premise P5 and found must act within about a thousandth of
-   the commitment time (its `NEGATIVE_RESULT.md`). The maximum over both pixels assumes it. (An
+   the Dirac–Kuramoto record names as premise P5 (its `NEGATIVE_RESULT.md`; the figure of "within
+   about a thousandth of the commitment time" that stood here is withdrawn as established, L29). The maximum over both pixels assumes it. (An
    earlier wording of this item, "without a stop across pixels", was wrong; corrected 2026-09-14,
    ledger L27.) It costs the derivation: a rate proportional to |ψ|² is the golden rule, and the square enters
    in the vacuum's distribution. The model can adopt it as a mechanism for the detector given
