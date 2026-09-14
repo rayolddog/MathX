@@ -280,8 +280,12 @@ equivalently an exponential waiting time with rate proportional to |ψ|² cos²(
 to fire taking the quantum. Under it "highest wins" is exactly rule R2 of §3, atom by atom (0.702,
 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800 at N = 1, 10, 100, 1000), independent
 of N and of the absolute intensity, with the best phase-matched atom the most likely winner in 2/N
-of trials and never certain. It needs no stop across pixels and does not assume the empty pixel
-silent; exclusivity is by construction of the maximum, which the run assumes and does not test.
+of trials and never certain. It does not assume the empty pixel silent; its exclusivity is by
+construction of the maximum, which the run assumes and does not test. (Corrected 2026-09-14,
+later: an earlier wording here said the race "needs no stop across pixels". It does. The first
+atom to fire takes the quantum only because every other atom's clock, in the other pixel included,
+is cancelled at that instant, and that cancellation is the stop, the record's premise P5, acting
+faster than light crosses the pixel separation; see §12.3.)
 
 *What it does to §0.* Nothing. The rate proportional to |ψ|² is Fermi's golden rule, and the
 square sits in the vacuum's distribution. Every other form of the term tried, Gaussian or bounded,
@@ -340,10 +344,19 @@ atom by atom (0.702, 0.794, 0.801, 0.802 against R2's 0.704, 0.794, 0.800, 0.800
 - *Which atom.* The best phase-matched atom of the winning pixel is the single most likely winner
   and wins in about 2/N of arrivals; it is never certain. The winner's phase mismatch has the
   cos² density of §4.1, 53.5° on average.
-- *One record per quantum.* One atom fires first; no second record, no stop across pixels, no
-  assumption that the empty pixel is silent. The whole quantum goes to that atom. The empty
-  pixel's atoms are in the race with their own deposits and lose in proportion, which is the
-  Born share seen from the other side. This closes the third step of §5 in the sense of §8: the
+- *One record per quantum.* One atom fires first; no second record, and no assumption that the
+  empty pixel is silent. The whole quantum goes to that atom. The empty pixel's atoms are in the
+  race with their own deposits and lose in proportion, which is the Born share seen from the
+  other side. But the single winner is not free: the race has one winner because every other
+  clock is cancelled the instant the first fires, and for pixels or beam-splitter arms that are
+  separated, that cancellation acts across the separation faster than light. It is the stop
+  across pixels, the record's premise P5 (Paper 1 §2, third remark; NEGATIVE_RESULT.md), which the
+  record established must act within about a thousandth of the commitment time to match
+  single-photon coincidence data; independent clocks that keep running give two records at a
+  balanced split. The vacuum race assumes it by taking the maximum over both pixels at once, and
+  derives it no more than the readings of §10 did. (An earlier wording of this item, "no stop
+  across pixels", was wrong and is corrected 2026-09-14.) With that assumed, the third step
+  closes in the sense of §8: the
   cluster, the sink and the channel of §4.5 are then what happens after the winner is chosen, and
   none of them has to choose.
 - *One detector's counting statistics.* The split of M quanta between two pixels is binomial:
@@ -394,5 +407,5 @@ step, with the Born share carried in the rate and the exclusivity in the memoryl
 
 **12.7 Summary line for §8.** Step 2 and step 3 in the fresh vacuum reading: computed, given the
 rate law; the third step closes with one record per quantum, the whole quantum, the Born share and
-binomial counting statistics at once, with nothing across pixels; and it derives nothing that the
-rate law does not already contain.
+binomial counting statistics at once, given the one-quantum stop across pixels (P5); and it
+derives nothing that the rate law and the stop do not already contain.

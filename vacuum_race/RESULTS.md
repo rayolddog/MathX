@@ -146,8 +146,13 @@ atom; it is certain only without a vacuum term.
    r^β/(r^β + 1) for a Gumbel term of scale 1/β. β = 1 is Born; nothing in the rule fixes it.
 5. **What this buys the model, and what it costs.** It is the first selection dynamics in this
    program that keeps one record per quantum (by construction here), the whole quantum, and the
-   Born share at once, without a stop across pixels and without assuming the empty pixel silent.
-   It costs the derivation: a rate proportional to |ψ|² is the golden rule, and the square enters
+   Born share at once, without assuming the empty pixel silent. It does not remove the stop
+   across pixels: the single winner exists because every other atom's clock is cancelled the
+   instant the first fires, in the other pixel too, and that cancellation is the one-quantum stop
+   the Dirac–Kuramoto record names as premise P5 and found must act within about a thousandth of
+   the commitment time (its `NEGATIVE_RESULT.md`). The maximum over both pixels assumes it. (An
+   earlier wording of this item, "without a stop across pixels", was wrong; corrected 2026-09-14,
+   ledger L27.) It costs the derivation: a rate proportional to |ψ|² is the golden rule, and the square enters
    in the vacuum's distribution. The model can adopt it as a mechanism for the detector given
    Born; it cannot present it as a source of Born (L24).
 
@@ -228,3 +233,27 @@ because the maximum picks one atom per pixel however many there are.
    from their fixed phase sums (F = 26 at ten atoms), which is gone by a thousand atoms (F = 1.1).
    A real pixel holds far more than a thousand atoms in reach, so this is invisible; it is noted
    because it is the one place the model's bulk phases would leave a counting-statistics trace.
+
+
+---
+
+## References for the identity the study rests on
+
+The statement that the largest of {log d_i + G_i} with independent standard Gumbel draws G_i
+selects index i with probability d_i / Σ_j d_j is standard and is not the study's. It is the
+random-utility form of the multinomial logit (McFadden 1974) and is known in machine learning as
+the Gumbel-max trick (Maddison, Tarlow and Minka 2014). Its equivalence to the first-passage race
+among exponential clocks with rates d_i is the memoryless property of the exponential distribution,
+used as the stochastic simulation algorithm of Gillespie (1977). The Gumbel distribution itself
+and the concentration of maxima of light-tailed draws are Gumbel (1958), building on Fisher and
+Tippett (1928).
+
+- Fisher, R. A. and Tippett, L. H. C. (1928). Limiting forms of the frequency distribution of the
+  largest or smallest member of a sample. *Proc. Cambridge Philos. Soc.* 24, 180–190.
+- Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. *J. Phys.
+  Chem.* 81, 2340–2361.
+- Gumbel, E. J. (1958). *Statistics of Extremes.* Columbia University Press.
+- Maddison, C. J., Tarlow, D. and Minka, T. (2014). A* sampling. *Advances in Neural Information
+  Processing Systems* 27.
+- McFadden, D. (1974). Conditional logit analysis of qualitative choice behavior. In P. Zarembka
+  (ed.), *Frontiers in Econometrics*, Academic Press, 105–142.
