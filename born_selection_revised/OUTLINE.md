@@ -56,6 +56,6 @@ of clause 3, and the driven-detector phase dependence of clause 7 in its registe
 
 ## Owed before circulation
 
-- The references marked [verify] checked against the sources.
+- [x] The references checked against their records (2026-09-14; Wiseman and Milburn corrected to 2009; Maddison et al. given its pages; Garg and Mermin 1987 and Margalit et al. 2021 added for citations the text already made).
 - JB's reading of the draft, in particular §10's naming of the worked example and §11's list of what remains.
 - Whether the two model predictions that experiment excludes (§5, §9) should be stated as the model's or dropped with the phase weight.

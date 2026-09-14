@@ -2,7 +2,7 @@
 
 **John M. Bramble, MD, and Claude (Anthropic)**
 
-*Draft v0.4, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run; v0.3 fixes the terms intensity, modulus squared and projection and says where interference lives; v0.4 adds where the two values of a measurement come from, with Stern–Gerlach as the worked case). Written in `rayolddog/MathX` on a clean slate at the sponsor's
+*Draft v0.5, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run; v0.3 fixes the terms intensity, modulus squared and projection and says where interference lives; v0.4 adds where the two values of a measurement come from, with Stern–Gerlach as the worked case; v0.5 has every reference checked against its record, two added, one year corrected). Written in `rayolddog/MathX` on a clean slate at the sponsor's
 instruction, as the second of three shapes offered after the internal review round of the
 Dirac–Kuramoto record's Paper 1 (v0.10; `born_selection_AI_review_2026-09/`). Every number is in a
 `results/` folder of this repository with its prediction written before the run and its misses
@@ -77,7 +77,7 @@ A selection rule picks one atom. Three terms are used in one sense only. *Intens
 
 Where the two values of a measurement come from is fixed by these terms. The amplitude at a port is the projection of the incident state onto the mode that port resolves: a complex component, one per port. Its modulus squared is the port's intensity, and the number of values a measurement can give is the number of modes the apparatus resolves, two for a polarizer or a beam splitter. Projection sets the weights; the absorption at one port, at a rate proportional to its intensity, is the event. No phase is forced to one of two angles, and no component is made real; the two values are the two modes, and which of them occurs is the jump of clause 5.
 
-The Stern–Gerlach experiment is the cleanest case, because there the projection is implemented by a field. The magnet's gradient sets the axis and separates the two spin components in space, so that after the magnet the atom is a superposition of two packets, each tied to a spin state along that axis. That step is unitary: bring the beams back together with a reversed gradient before any detector and the original spin state returns, as the full-loop Stern–Gerlach interferometers show. The magnet chooses what the alternatives are and where they will land; it does not choose which one happens. The screen does that. Each of the two regions sees an intensity equal to the modulus squared of its packet, one site somewhere absorbs the atom at a rate proportional to that intensity, and the first absorption anywhere ends every other clock across the separation of the two regions, which is clause 5 with the two spots as the two ports. The detector never touches the spin. It registers a position, which means spin only because the gradient tied the two together upstream: the apparatus converts a two-valued spin question into a two-region position question, and the detector answers the position question by the ordinary rule.
+The Stern–Gerlach experiment is the cleanest case, because there the projection is implemented by a field. The magnet's gradient sets the axis and separates the two spin components in space, so that after the magnet the atom is a superposition of two packets, each tied to a spin state along that axis. That step is unitary: bring the beams back together with a reversed gradient before any detector and the original spin state returns, as the full-loop Stern–Gerlach interferometers show [Margalit et al. 2021]. The magnet chooses what the alternatives are and where they will land; it does not choose which one happens. The screen does that. Each of the two regions sees an intensity equal to the modulus squared of its packet, one site somewhere absorbs the atom at a rate proportional to that intensity, and the first absorption anywhere ends every other clock across the separation of the two regions, which is clause 5 with the two spots as the two ports. The detector never touches the spin. It registers a position, which means spin only because the gradient tied the two together upstream: the apparatus converts a two-valued spin question into a two-region position question, and the detector answers the position question by the ordinary rule.
 
 The quantities recorded are the port share $P(A)$, the exponent
 $\gamma$ in $P(A)/P(B) = (\sqrt r)^\gamma$ (Born gives 2), and, where a single detector's statistics
@@ -232,7 +232,7 @@ probability of ever firing is its branch weight by construction.
 site within a port. The one-quantum constraint acts twice, cancelling the losing clocks when one
 fires and renormalizing the survivors when none does, and both halves act across the port
 separation. That is the quantum-jump unravelling of photodetection [Srinivas and Davies 1981;
-Dalibard, Castin and Mølmer 1992; Carmichael 1993; Wiseman and Milburn 2010], and any mechanism
+Dalibard, Castin and Mølmer 1992; Carmichael 1993; Wiseman and Milburn 2009], and any mechanism
 meeting this clause is that unravelling under another name. A "stop" with a speed or a delay is
 not what the clause requires; the earlier figure in the record of "within a thousandth of the
 commitment time" was a bound from a discarded race on a dynamical stop the conditional-state
@@ -311,7 +311,7 @@ closure at once, and is the postulate. The wavelength lines are the toy's and ar
 **The pair (clause 10).** `pair_case/`: the sponsor's model at two analyzers, a shared hidden
 polarization read locally, gives Bell's sawtooth and CHSH 2.00; a shared bulk phase is a common
 cause and changes nothing; the model's phase-dependent efficiency as a detection gate rides the
-Garg–Mermin line to 2.83 at a conditional efficiency of 0.828, the detection loophole closed in
+Garg–Mermin line [Garg and Mermin 1987] to 2.83 at a conditional efficiency of 0.828, the detection loophole closed in
 2015 [Hensen et al. 2015; Giustina et al. 2015; Shalm et al. 2015]; the conditional update of
 particle 2 by A's outcome gives 2.83 with a rate-linear reading at B and 4.00 with a deterministic
 one. All of this is Bell's theorem, and it is reported only because the sponsor's model proposed
@@ -366,22 +366,23 @@ here as corrections rather than hidden: the frozen-factor clause of §6, and the
 
 ## References
 
-*(Author–year; entries marked [verify] are from memory and are to be checked against the sources
-before any circulation.)*
+*(Author–year. Every entry was checked on 2026-09-14 against the publisher's or an indexing record; DOIs given where the record supplies one.)*
 
-- Carmichael, H. J. (1993). *An Open Systems Approach to Quantum Optics.* Springer. [verify]
-- Dalibard, J., Castin, Y., & Mølmer, K. (1992). Wave-function approach to dissipative processes in quantum optics. *Phys. Rev. Lett.* **68**, 580–583. [verify]
-- Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. *J. Phys. Chem.* **81**, 2340–2361. [verify]
-- Giustina, M., et al. (2015). Significant-loophole-free test of Bell's theorem with entangled photons. *Phys. Rev. Lett.* **115**, 250401. [verify]
-- Glauber, R. J. (1963). The quantum theory of optical coherence. *Phys. Rev.* **130**, 2529–2539. [verify]
-- Grangier, P., Roger, G., & Aspect, A. (1986). Experimental evidence for a photon anticorrelation effect on a beam splitter. *Europhys. Lett.* **1**, 173–179. [verify]
+- Carmichael, H. J. (1993). *An Open Systems Approach to Quantum Optics.* Lecture Notes in Physics Monographs, vol. 18. Springer.
+- Dalibard, J., Castin, Y., & Mølmer, K. (1992). Wave-function approach to dissipative processes in quantum optics. *Phys. Rev. Lett.* **68**, 580–583. doi:10.1103/PhysRevLett.68.580
+- Garg, A., & Mermin, N. D. (1987). Detector inefficiencies in the Einstein–Podolsky–Rosen experiment. *Phys. Rev. D* **35**, 3831–3835. doi:10.1103/PhysRevD.35.3831
+- Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. *J. Phys. Chem.* **81**, 2340–2361. doi:10.1021/j100540a008
+- Giustina, M., et al. (2015). Significant-loophole-free test of Bell's theorem with entangled photons. *Phys. Rev. Lett.* **115**, 250401. doi:10.1103/PhysRevLett.115.250401
+- Glauber, R. J. (1963). The quantum theory of optical coherence. *Phys. Rev.* **130**, 2529–2539. doi:10.1103/PhysRev.130.2529
+- Grangier, P., Roger, G., & Aspect, A. (1986). Experimental evidence for a photon anticorrelation effect on a beam splitter: a new light on single-photon interferences. *Europhys. Lett.* **1**, 173–179. doi:10.1209/0295-5075/1/4/004
 - Gumbel, E. J. (1958). *Statistics of Extremes.* Columbia University Press.
-- Heberle, A. P., Baumberg, J. J., & Köhler, K. (1995). Ultrafast coherent control and destruction of excitons in quantum wells. *Phys. Rev. Lett.* **75**, 2598–2601. [verify]
-- Hensen, B., et al. (2015). Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres. *Nature* **526**, 682–686. [verify]
-- Maddison, C. J., Tarlow, D., & Minka, T. (2014). A* sampling. *Advances in Neural Information Processing Systems* **27**. [verify]
-- McFadden, D. (1974). Conditional logit analysis of qualitative choice behavior. In P. Zarembka (ed.), *Frontiers in Econometrics*, Academic Press, 105–142. [verify]
-- Shalm, L. K., et al. (2015). Strong loophole-free test of local realism. *Phys. Rev. Lett.* **115**, 250402. [verify]
-- Srinivas, M. D., & Davies, E. B. (1981). Photon counting probabilities in quantum optics. *Optica Acta* **28**, 981–996. [verify]
-- Wiseman, H. M., & Milburn, G. J. (2010). *Quantum Measurement and Control.* Cambridge University Press. [verify]
-- Yellott, J. I. (1977). The relationship between Luce's choice axiom, Thurstone's theory of comparative judgment, and the double exponential distribution. *J. Math. Psychol.* **15**, 109–144. [verify]
+- Heberle, A. P., Baumberg, J. J., & Köhler, K. (1995). Ultrafast coherent control and destruction of excitons in quantum wells. *Phys. Rev. Lett.* **75**, 2598–2601. doi:10.1103/PhysRevLett.75.2598
+- Hensen, B., et al. (2015). Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres. *Nature* **526**, 682–686.
+- Maddison, C. J., Tarlow, D., & Minka, T. (2014). A* sampling. *Advances in Neural Information Processing Systems* **27**, 3086–3094.
+- Margalit, Y., et al. (2021). Realization of a complete Stern–Gerlach interferometer: toward a test of quantum gravity. *Science Advances* **7**, eabg2879. doi:10.1126/sciadv.abg2879
+- McFadden, D. (1974). Conditional logit analysis of qualitative choice behavior. In P. Zarembka (ed.), *Frontiers in Econometrics*, Academic Press, 105–142. (Some sources give 1973 for the volume; the author's own reprint gives 1974.)
+- Shalm, L. K., et al. (2015). Strong loophole-free test of local realism. *Phys. Rev. Lett.* **115**, 250402. doi:10.1103/PhysRevLett.115.250402
+- Srinivas, M. D., & Davies, E. B. (1981). Photon counting probabilities in quantum optics. *Optica Acta* **28**, 981–996. doi:10.1080/713820643
+- Wiseman, H. M., & Milburn, G. J. (2009). *Quantum Measurement and Control.* Cambridge University Press. (Often cited as 2010; the publisher's date is 2009.)
+- Yellott, J. I. (1977). The relationship between Luce's choice axiom, Thurstone's theory of comparative judgment, and the double exponential distribution. *J. Math. Psychol.* **15**, 109–144.
 - [DK record] Bramble, J. M., & Claude (Anthropic). *DiracKuramotoFramework*, https://github.com/rayolddog/DiracKuramotoFramework: `NEGATIVE_RESULT.md`; `drafts/PAPER1_DRAFT_born_selection.md` v0.11; `born_selection_AI_review_2026-09/`.
