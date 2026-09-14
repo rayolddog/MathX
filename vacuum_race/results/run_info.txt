@@ -6,3 +6,5 @@ staggered_arrival.py, run 2026-09-14 06:35:03, seed 20260916, 14.2 s, numpy 2.4.
 verification (staggered): FAIL
 staggered_conditional.py, run 2026-09-14 06:51:25, seed 20260917, 195.4 s, numpy 2.4.6
 verification (staggered, conditional): PASS
+frozen_multipliers.py, run 2026-09-14 18:05:30, seed 20260918, 63.8 s, numpy 2.4.6
+verification (multipliers): PASS
