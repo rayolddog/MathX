@@ -173,9 +173,13 @@ between two pixels.
   the deposit, then "highest wins" is exactly the same as "first to fire," with each atom firing at
   a rate proportional to its share of the light. The share between two pixels comes out at Born's
   value, whatever the number of atoms and whatever the brightness. This is the first mechanism in
-  the whole program that gives one record per quantum and the Born share at once, with no rule
-  reaching across the two pixels. But the square of the amplitude was written into the rate, which
-  is Fermi's golden rule, so Born is put in, not derived. The scale of the vacuum term is also a
+  the whole program that gives one record per quantum and the Born share at once. But two things
+  were put in. The square of the amplitude was written into the rate, which is Fermi's golden
+  rule, so Born is put in, not derived. And the single winner exists only because every other
+  atom's clock stops the instant the first one fires, in the other pixel too, which is the
+  one-quantum stop across pixels that the Dirac–Kuramoto record names as its premise P5. An
+  earlier version of this summary said the race needed no such stop; that was wrong and is
+  corrected. The scale of the vacuum term is also a
   free knob, and Born is one setting of it.
 - *Every ordinary kind of noise fails.* Gaussian or bounded vacuum terms, whether they multiply the
   deposit or add to it, give the brighter pixel every single time once the aperture holds a hundred

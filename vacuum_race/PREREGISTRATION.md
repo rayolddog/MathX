@@ -193,3 +193,17 @@ mean within 3 s.e. of 0.800 (s.e. 0.4/√300 = 0.023). τ = 10 without the phase
 **Recorded.** `results/frozen_fresh.csv`, `results/frozen_fresh_shares.csv` (every realization's
 share), `results/verification_frozen.txt`, `results/fig2_frozen_fresh.png`; a section in
 `RESULTS.md`; ledger L26.
+
+---
+
+## Correction note, 2026-09-14 (later still)
+
+Written after both runs, on reading the Dirac–Kuramoto record's `NEGATIVE_RESULT.md` and Paper 1
+§2 against this file. C1 above says the race gives one record per quantum "without a stop across
+pixels". That clause is withdrawn; the text is left as written so the error stays on record. The
+first-passage race has one winner because every other clock is cancelled when the first fires, the
+losing pixel's included, and that cancellation is the one-quantum stop, the record's premise P5,
+which independent site clocks do not supply (they give coincidences at a balanced split) and which
+must act faster than light across separated arms. D5's "one winner per trial by construction" was
+already the same admission; C1's clause contradicted it. No definition, prediction or number
+changes. Ledger L27.
