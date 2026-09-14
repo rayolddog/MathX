@@ -233,9 +233,13 @@ correlations say that something must not. The model has no rule that acts across
 
 *The third step, once more.* JB's release cycle at the excited electron, ejection above the gap,
 re-emission, phonon loss, with the quantum's energy tracked to closure, is the first dynamics in
-this program that keeps one record per quantum without a stop across pixels and without
-assuming the empty pixel silent: energy conservation does it whenever the gap exceeds half the
-photon energy. It does so only in the reading where the deposit is divisible, and that reading
+this program that keeps one record per quantum without assuming the empty pixel silent: energy
+conservation does it whenever the gap exceeds half the photon energy. (Corrected 2026-09-14: this
+sentence originally read "without a stop across pixels". Energy conservation over one quantum
+shared by two separated pixels is a ledger closed across the separation, which is the stop under
+another name, the Dirac–Kuramoto record's premise P5 and Paper 1 §2 there; the paragraph's own
+last sentence already said as much of the divisible-to-whole draw. Ledger L27.) It does so only
+in the reading where the deposit is divisible, and that reading
 pays twice, with a share that is a step in the intensity ratio (the brighter pixel takes every
 record at r = 4) and with records that carry 0.45 to 0.72 of the quantum where calorimeters
 measure the whole. When the re-emitted photon is allowed to leave, as it physically must below
