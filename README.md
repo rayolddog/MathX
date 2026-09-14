@@ -148,3 +148,66 @@ predictions failed during the day, among them the empty pixel never pairing, the
 between two channels, the sign of a mirrored correlation, and one gap threshold, and three
 registered checks failed on their own wording or on a pixel-edge effect. Every one is kept in the
 verification files and named in the results.
+
+## The session of 2026-09-14, in plain language
+
+The day began with a question of arithmetic. JB asked whether the projection of an amplitude onto
+the real axis is the same thing as Born's rule. It is not: the projection is one leg of the
+triangle and Born's rule is the square of the hypotenuse, and the two agree only after the angle
+has been averaged away. That averaging is exactly why the earlier studies reproduced Born without
+deriving it. What JB had in mind, the square root of the amplitude times its conjugate, is the
+modulus, and its formula is a two-line identity. Born's rule, that the modulus squared is a
+probability, is the postulate, and no algebra reaches it.
+
+From there JB proposed a mechanism. Within a detector's aperture there are many atoms with
+different phases; the atom whose interference with the incoming particle is strongest takes the
+quantum; and each atom carries its own vacuum term, a random contribution that belongs to the atom
+and knows nothing about how many atoms are in the aperture. The question put to the computer,
+written down before it was run, was which kind of vacuum term makes that rule give Born's share
+between two pixels.
+
+**What came out.**
+
+- *Only one kind of vacuum term works, and it is the golden rule in disguise.* If each atom's term
+  is drawn from the one distribution that mathematicians call Gumbel, applied to the logarithm of
+  the deposit, then "highest wins" is exactly the same as "first to fire," with each atom firing at
+  a rate proportional to its share of the light. The share between two pixels comes out at Born's
+  value, whatever the number of atoms and whatever the brightness. This is the first mechanism in
+  the whole program that gives one record per quantum and the Born share at once, with no rule
+  reaching across the two pixels. But the square of the amplitude was written into the rate, which
+  is Fermi's golden rule, so Born is put in, not derived. The scale of the vacuum term is also a
+  free knob, and Born is one setting of it.
+- *Every ordinary kind of noise fails.* Gaussian or bounded vacuum terms, whether they multiply the
+  deposit or add to it, give the brighter pixel every single time once the aperture holds a hundred
+  atoms. The reason is not the vacuum but the word "highest": the largest of many draws crowds up
+  against its ceiling, and the brighter pixel's ceiling is higher. Additive noise fails a second
+  way too, by reading the difference in brightness where Born reads the ratio.
+- *The vacuum must multiply the intensity, not add to the amplitude.* A vacuum contribution that
+  interferes with the particle's wave, the natural picture of an added amplitude, selects in
+  proportion to the amplitude rather than its square and gives the square root of Born.
+- *The vacuum term must be fresh for every arrival.* JB then asked whether the vacuum acts on the
+  bound electron first, before the free particle arrives, so that the atom is already dressed. The
+  order matters and the runs pick his order. But a term that is a fixed property of the atom makes
+  every single detector give all its counts to one pixel or the other, with Born appearing only as
+  an average over many detectors. Real detectors show Born's split inside one device, with the
+  plain binomial scatter of independent coin tosses. That scatter is the model's own observable:
+  it reads how long the vacuum term stays put between arrivals, and experiment says under ten
+  nanoseconds. Any vacuum timescale in silicon is a hundred thousand times shorter, so the model
+  passes this test, and it is the one test in the program it passes for a reason it supplies
+  itself. "Dressed first" has to mean dressed afresh each time.
+
+**Where this leaves the model.** Section 12 of `MODEL_SECTION.md` states it as the fresh vacuum
+reading: three premises, of which two are the golden rule's rate law and its lack of memory; a
+detector mechanism that then computes which pixel, which atom, one whole record per quantum, and
+binomial counting statistics; and the same disclaimer as before, that Born is inherited. The open
+question is now sharper than it was. Whatever the vacuum is, in JB's picture a four-dimensional
+thing projected onto three dimensions and time, it has to act on a bound electron as an
+exponential clock at one particular scale, and not as an amplitude in the electron's state. The
+Wick rotation stored in `WICK_ROTATION.md` is where standard theory gets exponential clocks from,
+and it delivers their shape but not their rate.
+
+**Also from today.** Two registered predictions missed in their wording and are kept: the additive
+Gaussian noise approaches the brighter-pixel-always limit more slowly than registered, and the
+excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
+interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
+check passed. Ledger entries L24 to L26 record the departures.
