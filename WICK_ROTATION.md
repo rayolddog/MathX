@@ -52,6 +52,38 @@ spacetime? Maybe 4D to 3D+spacetime creates the light cone?"
   that the record's 4D-to-3D+spacetime paper in the closed Dirac–Kuramoto repository would be the
   place to take up. That paper was not reopened for this note.
 
+## Addendum, 2026-09-15: reflection positivity, or the modulus as a fold
+
+Added at JB's request after his question of that night: could Hilbert space be more like a
+four-dimensional space, with a measurement the modulus taken in three dimensions plus time.
+The literal version fails on counting: Hilbert space is the space of functions on ordinary space
+for one particle and on 3N-dimensional configuration space for N, and that growth with N is what
+holds entanglement, which no fixed four-space can. But the question has a precise version, and
+it is a theorem, in the Euclidean four-space of this note.
+
+- Build the theory in Euclidean signature, with the real positive weight e^(−S_E/ħ) of the
+  section above. Choose a three-dimensional hyperplane τ = 0 and call it "now." A state is a
+  configuration of the field on one side of it, τ > 0.
+- The inner product of a state with itself is the Euclidean weight of that configuration glued
+  to its own mirror image across the plane, τ → −τ, with complex conjugation. The modulus squared
+  is therefore what a four-dimensional object gives when it is folded onto a three-dimensional
+  slice. The condition that this fold gives a non-negative number for every configuration is
+  *reflection positivity*, and it is the axiom that lets a Hilbert space, a Hamiltonian bounded
+  below, and the Minkowski theory be reconstructed from the Euclidean one (Osterwalder and
+  Schrader, Commun. Math. Phys. 31, 83, 1973, and 42, 281, 1975 [verify]).
+- So the square of the norm has a geometric origin: it is the reflection. This is more than the
+  rotation gave for the exponential above, where the shape came out but not the rate.
+
+What it does not give, in the same spirit as the section above: it delivers the square as the
+positive quantity, not the Born rule as a probability of one outcome. It says why the norm is a
+modulus squared. It does not say why a measurement yields one result with that frequency, nor
+anything about the one-quantum stop across sites (clause 5 of `born_selection_revised/`). The
+geometry supplies the form of the square; the event is still the postulate.
+
+Pointers: Osterwalder and Schrader, above; Glimm and Jaffe, *Quantum Physics: A Functional
+Integral Point of View*, 2nd ed., Springer 1987, the chapter on reflection positivity [verify];
+for a general reader, the "imaginary time" chapters of Hawking already listed below.
+
 ## Pointers for the revisit
 
 - Wick 1954, the original; any QFT text's chapter on Euclidean methods.
