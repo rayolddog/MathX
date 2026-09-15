@@ -16,7 +16,7 @@ the uncertainty and the assumptions before the tables.
 | `pair_case/` | JB's model at two analyzers: two photons sharing a hidden polarization, read by his projection rule (least rotation) or by Malus's law at each polarizer; the quantum comparator; the model's phase-dependent efficiency as a detection gate. What correlation function, what CHSH value, and the one route above Bell's bound | Run 2026-09-08; see its `RESULTS.md` and `LEDGER.md` (Bell's sawtooth, CHSH 2.00; the gate rides the Garg–Mermin line, the detection loophole). Addendum: JB's two options, a synchronized bulk phase shared by both detectors (a common cause, S = 2.00) against particle 2 set by A's outcome (the projection postulate, S = 2.83) |
 | `vacuum_race/` | JB's rule of 2026-09-14: among the atoms of both pixels the one with the highest interference-weighted deposit takes the quantum, each atom carrying its own vacuum term, one random number per atom independent of the number of atoms. Which distribution of the vacuum term gives Born between the pixels, whether the term must multiply the intensity or may add to the amplitude, and whether the best phase-matched atom wins within a pixel | Run 2026-09-14; see its `RESULTS.md` and `LEDGER.md` (only a Gumbel term on the deposit gives Born, and with it the rule is R2, the golden rule as a race; Gaussian and bounded terms give the brighter pixel every time; a term on the amplitude gives the square root of Born). Addendum: the term frozen per atom against redrawn per arrival (a frozen term gives each detector all or nothing and Born only across detectors; the Fano factor of one detector's split reads the vacuum's correlation time, F = τ, against F = 1 in experiment) |
 | `exchange_fairness/` | Fairness in the conserving exchange class: whether the √e noise scaling that the record's Paper 1 called the unique fair point is needed once the pot is closed; independent noise against two conserving kernels, with absorption, rate-linear and threshold terminations, and fixed parcels with a reflecting zero | Run 2026-09-14; see its `RESULTS.md` (in a closed pot any symmetric zero-mean exchange is fair; Paper 1's √e model does not close the pot; a reflecting zero biases toward the poor from three sites up; a threshold biases toward the rich; two registered misses kept) |
-| `born_selection_revised/` | The specification paper: what a microscopic selection mechanism must supply to reproduce Born and one record per quantum, six clauses each with a registered run, and the fresh vacuum reading as the worked example under its right name | Draft v0.2, 2026-09-14; `OUTLINE.md`, `PAPER_DRAFT.md` |
+| `born_selection_revised/` | The specification paper: what a microscopic selection mechanism must supply to reproduce Born and one record per quantum, six clauses each with a registered run, and the fresh vacuum reading as the worked example under its right name | Draft v0.5, 2026-09-15 (§10 states what the vacuum does to the atom and what it does not); `OUTLINE.md`, `PAPER_DRAFT.md` |
 | `dk_origin/` | The two record scripts this work reuses, copied unchanged, with `PROVENANCE.md` | Copies, not run here |
 
 `MODEL_SECTION.md` (2026-09-07) is a draft of the model section a rewritten Born Selection paper
@@ -266,3 +266,69 @@ Gaussian noise approaches the brighter-pixel-always limit more slowly than regis
 excess scatter from a detector with frozen bulk phases at ten atoms per pixel came out above the
 interval registered for it, which was too narrow for a heavy-tailed quantity. Every other registered
 check passed. Ledger entries L24 to L28 record the departures.
+
+## The session of 2026-09-15, in plain language
+
+No new run today. JB read the paper and the results and put a series of mechanisms for one
+record per quantum to the record, one after another, each answered from runs already made. Two
+documents changed: the paper draft went to v0.5, and the Wick rotation note gained an addendum.
+
+**The mechanisms tried, and where each one lands.**
+
+- *The absorbing atom as a drain that quenches the packet's spread.* Already run as Part F of the
+  phase-race study (2026-09-07), where a growing absorber at the winning atom ate only what the
+  packet's own spreading carried into it and the far lobe followed the free run. A drain is a
+  local term in a local wave equation; it cannot reach amplitude that is already at the other
+  pixel, and it cannot raise the far pixel's rate on a null, which the staggered-arrival addendum
+  showed the stop must also do. The only drain that emptied the far lobe was one that grew over
+  it, and the empty-pixel addendum had already named the instantaneous drain as the projection
+  postulate.
+- *A localized piece of the packet absorbed, the tails turned to heat.* This is reading A of the
+  SPAD study's Part G with the loss moved to the tails, and it fails on the energy ledger before
+  any dynamics: if the atom takes the whole quantum the tails carry nothing to dissipate, and if
+  the tails carry energy the record is less than a quantum and the empty arm receives heat, both
+  against measurement. Heat at the far pixel is still a local process there, which would have to
+  know the near pixel had fired.
+- *The tails become virtual particles.* Correct as a description and not a mechanism: in field
+  theory a one-photon packet is one excitation of one mode spanning both pixels, and absorption
+  at one atom leaves the vacuum everywhere. That is the jump, said in field language. Virtual
+  processes conserve energy at every vertex and are unitary, so they cannot be a permanent sink
+  and cannot annihilate amplitude at a distance; collapse models are the honest realist route
+  and carry a new nonlocal, non-unitary term with experimental bounds on it.
+- *The vacuum's annihilation of the tails offsetting the creation of the atom's dressing.* Written
+  out this is the Jaynes–Cummings coupling used in the L13 test: unitary, energy-conserving, and
+  acting on the whole mode at once, so that it produces a superposition of "A excited" and "B
+  excited" with Born weights and never chooses between them. It is the unitary half of
+  photodetection; the choice is the other half.
+
+**The language that came out of it, now in the paper.** JB corrected his own wording: the vacuum's
+virtual quanta are not absorbed by the electron; their exchange changes the electron's coupling,
+as vacuum birefringence changes a photon's polarization without absorbing it. That is the dressed
+atom of quantum electrodynamics, and it matches what the vacuum race found, a factor on the rate
+and not a term in the amplitude. §10 of `born_selection_revised/PAPER_DRAFT.md` (v0.5) now states
+it: the factor's deterministic part is identical across atoms and cancels between ports, its
+fluctuating part is the exponential clock from the continuum of vacuum modes, both act at the atom
+they dress, so the vacuum term bears on which atom fires and at what rate and not on the stop.
+Field strength against gradient: the vacuum polarizes in proportion to the potential drop across a
+Compton wavelength, so a nucleus's field, a thousand times Schwinger over femtometers, does less
+than a neutron star's fifth of Schwinger held uniform; curvature of the potential decides which
+orbitals feel it. The nucleus itself was discussed for JB's understanding and is not part of the
+model: its electrodynamic vacuum coupling is suppressed by its mass and its internal fluctuations
+belong to the strong interaction.
+
+**Two questions beyond the model.** Whether the interaction of a particle with the vacuum could
+be Bohm's guiding wave: as the dressed packet, it already is, and the SPAD main run used it; as a
+wave the vacuum generates for each particle, it is stochastic electrodynamics or the bouncing
+droplet, both of which fail for interference and entanglement because such a wave lives in
+ordinary space and Bohm's lives in configuration space. Whether Hilbert space could be
+four-dimensional with measurement the modulus in three dimensions plus time: not literally, since
+Hilbert space grows with the number of particles, but precisely in Euclidean four-space, where the
+norm of a state is the weight of a configuration glued to its mirror image across the "now"
+hyperplane. That is reflection positivity, the Osterwalder–Schrader construction, and it is stored
+as an addendum to `WICK_ROTATION.md`: the square as the norm from geometry, the Born probability
+of one outcome and the stop still the postulate.
+
+**Where the record stands.** Every mechanism proposed today for the disappearance of the far
+amplitude was either a local dynamics the runs had already falsified or a restatement of the
+projection in another vocabulary. The clarified vacuum language is a gain for clauses 1 and 2 and
+leaves clause 5 where the paper puts it.

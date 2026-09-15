@@ -2,7 +2,7 @@
 
 **John M. Bramble, MD, and Claude (Anthropic)**
 
-*Draft v0.4, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run; v0.3 fixes the terms intensity, modulus squared and projection and says where interference lives; v0.4 adds where the two values of a measurement come from, with Stern–Gerlach as the worked case). Written in `rayolddog/MathX` on a clean slate at the sponsor's
+*Draft v0.4, 2026-09-14 (v0.1 carried clause 6 on its registered predictions; v0.2 carries the run; v0.3 fixes the terms intensity, modulus squared and projection and says where interference lives; v0.4 adds where the two values of a measurement come from, with Stern–Gerlach as the worked case; v0.5, 2026-09-15, states in §10 what the vacuum does to the atom and what it does not, at the sponsor's instruction). Written in `rayolddog/MathX` on a clean slate at the sponsor's
 instruction, as the second of three shapes offered after the internal review round of the
 Dirac–Kuramoto record's Paper 1 (v0.10; `born_selection_AI_review_2026-09/`). Every number is in a
 `results/` folder of this repository with its prediction written before the run and its misses
@@ -326,6 +326,34 @@ arrival, with rate proportional to that deposit in the normalized conditional st
 fire anywhere ending every clock. In the sponsor's vocabulary the clock is the quantum vacuum
 acting on the bound electron before the free particle arrives, and the order of the three
 interactions is what makes the vacuum a factor on the rate rather than a term in the amplitude.
+
+What "the vacuum acting on the bound electron" means is stated here in the language the runs
+settled on, since earlier wordings in this repository left it open. The vacuum's virtual quanta
+are not absorbed by the electron. Their exchange changes the electron's coupling — its
+transition amplitude, its level positions, its magnetic moment — which is the dressed atom of
+quantum electrodynamics: the Lamb shift and the anomalous moment are this, a real photon's
+interaction altered by virtual ones with no quantum taken from the vacuum. The nearest analogue
+on the photon's side is vacuum birefringence: in a strong magnetic field the vacuum's virtual
+pairs rotate a passing photon's polarization with nothing absorbed [Heisenberg and Euler 1936;
+observed in the light of the neutron star RX J1856.5−3754, Mignani et al. 2017]; near a nucleus
+the same physics is the Uehling term of the Lamb shift [Uehling 1935]. So the vacuum term of the
+worked example is a modification of the atom's coupling, and it enters the rate as a factor, as
+clause 1 requires. That factor has two parts, and the specification treats them differently. The
+part that is the same at every identical atom — the deterministic dressing, which §9 found fixed
+to $10^{-8}$ degrees across atoms — cancels in the ratio between ports and selects nothing; it is
+a light-tailed frozen factor in the sense of clause 4. The part that fluctuates from atom to atom
+and from arrival to arrival is the clock, and in quantum electrodynamics it comes from the
+continuum of vacuum modes, which is why the golden rule's rate is exponential and memoryless.
+Two consequences fix the language. The interference the term names is between the electron's own
+vacuum-dressed transition paths, the vertex correction, which multiplies the rate; it is not an
+interference between the vacuum's amplitude and the photon's, which is the additive form of §3
+and gives the square root of Born. And both parts of the factor act at the atom they dress: a
+dressed coupling at one port changes the rate at that port and leaves the amplitude at the other
+port untouched, so the vacuum term bears on clauses 1 and 2, which site fires and at what rate,
+and not on clause 5. Where a vacuum effect alters a photon upstream of the detector, as
+birefringence alters its polarization, it changes the projection weights at the ports, as the
+Stern–Gerlach magnet does (§2), and leaves the jump to be made afterward.
+
 Written out, this is the quantum-jump unravelling of photodetection with Born branch weights. It
 meets every clause of §§3–8 by inheriting clauses 1 and 5 and satisfying 2, 3, 4 and 6. It derives
 nothing, and the two places where it says more than quantum mechanics — the single-site phase
@@ -377,11 +405,14 @@ before any circulation.)*
 - Grangier, P., Roger, G., & Aspect, A. (1986). Experimental evidence for a photon anticorrelation effect on a beam splitter. *Europhys. Lett.* **1**, 173–179. [verify]
 - Gumbel, E. J. (1958). *Statistics of Extremes.* Columbia University Press.
 - Heberle, A. P., Baumberg, J. J., & Köhler, K. (1995). Ultrafast coherent control and destruction of excitons in quantum wells. *Phys. Rev. Lett.* **75**, 2598–2601. [verify]
+- Heisenberg, W., & Euler, H. (1936). Folgerungen aus der Diracschen Theorie des Positrons. *Z. Phys.* **98**, 714–732. [verify]
 - Hensen, B., et al. (2015). Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres. *Nature* **526**, 682–686. [verify]
 - Maddison, C. J., Tarlow, D., & Minka, T. (2014). A* sampling. *Advances in Neural Information Processing Systems* **27**. [verify]
 - McFadden, D. (1974). Conditional logit analysis of qualitative choice behavior. In P. Zarembka (ed.), *Frontiers in Econometrics*, Academic Press, 105–142. [verify]
+- Mignani, R. P., et al. (2017). Evidence for vacuum birefringence from the first optical-polarimetry measurement of the isolated neutron star RX J1856.5−3754. *Mon. Not. R. Astron. Soc.* **465**, 492–500. [verify]
 - Shalm, L. K., et al. (2015). Strong loophole-free test of local realism. *Phys. Rev. Lett.* **115**, 250402. [verify]
 - Srinivas, M. D., & Davies, E. B. (1981). Photon counting probabilities in quantum optics. *Optica Acta* **28**, 981–996. [verify]
+- Uehling, E. A. (1935). Polarization effects in the positron theory. *Phys. Rev.* **48**, 55–63. [verify]
 - Wiseman, H. M., & Milburn, G. J. (2010). *Quantum Measurement and Control.* Cambridge University Press. [verify]
 - Yellott, J. I. (1977). The relationship between Luce's choice axiom, Thurstone's theory of comparative judgment, and the double exponential distribution. *J. Math. Psychol.* **15**, 109–144. [verify]
 - [DK record] Bramble, J. M., & Claude (Anthropic). *DiracKuramotoFramework*, https://github.com/rayolddog/DiracKuramotoFramework: `NEGATIVE_RESULT.md`; `drafts/PAPER1_DRAFT_born_selection.md` v0.11; `born_selection_AI_review_2026-09/`.
