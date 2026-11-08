@@ -1,0 +1,235 @@
+{
+  "nine_angle_sweep": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "n_trials_per_point": 20000,
+    "absorb_tol": 1.0,
+    "discrete_theta_1": {
+      "p_win1": [
+        0.0996,
+        0.2016,
+        0.2995,
+        0.396,
+        0.5023,
+        0.6024,
+        0.6936,
+        0.7982,
+        0.9025
+      ],
+      "mean_steps": [
+        9.95,
+        15.41,
+        18.84,
+        20.79,
+        21.38,
+        20.75,
+        19.04,
+        15.36,
+        9.83
+      ],
+      "fit": {
+        "p_hat": 1.9995,
+        "se_p": 0.0103,
+        "ci95": [
+          1.9792,
+          2.0197
+        ],
+        "rms_vs_born": 0.00299,
+        "chi2_vs_born": 8.31,
+        "dof": 9,
+        "p_value_vs_born": 0.5032
+      }
+    },
+    "gated_theta_072_no_vac": {
+      "p_win1": [
+        0.0833,
+        0.1737,
+        0.2816,
+        0.3871,
+        0.5023,
+        0.617,
+        0.7135,
+        0.8248,
+        0.9171
+      ],
+      "fit": {
+        "p_hat": 2.2104,
+        "se_p": 0.011,
+        "ci95": [
+          2.1888,
+          2.2321
+        ],
+        "rms_vs_born": 0.01782,
+        "chi2_vs_born": 378.27,
+        "dof": 9,
+        "p_value_vs_born": 0.0
+      }
+    },
+    "gated_theta_072_vac_0018": {
+      "p_win1": [
+        0.0914,
+        0.1955,
+        0.2994,
+        0.393,
+        0.5004,
+        0.6037,
+        0.7013,
+        0.8008,
+        0.9066
+      ],
+      "fit": {
+        "p_hat": 2.0514,
+        "se_p": 0.0105,
+        "ci95": [
+          2.0309,
+          2.0719
+        ],
+        "rms_vs_born": 0.00475,
+        "chi2_vs_born": 34.16,
+        "dof": 9,
+        "p_value_vs_born": 8.377e-05
+      }
+    }
+  },
+  "multivariate_fixation_times": {
+    "N2_equal": {
+      "N": 2,
+      "observed_mean_steps": 33.85,
+      "kimura_ohta_predicted_steps": 34.66,
+      "naive_shannon_predicted_steps": 34.66,
+      "p_site0": 0.4958,
+      "s0_init": 0.5,
+      "n_timeouts": 0
+    },
+    "N2_80_20": {
+      "N": 2,
+      "observed_mean_steps": 24.31,
+      "kimura_ohta_predicted_steps": 25.02,
+      "naive_shannon_predicted_steps": 25.02,
+      "p_site0": 0.8022,
+      "s0_init": 0.8,
+      "n_timeouts": 0
+    },
+    "N4_equal": {
+      "N": 4,
+      "observed_mean_steps": 126.91,
+      "kimura_ohta_predicted_steps": 129.46,
+      "naive_shannon_predicted_steps": 207.94,
+      "p_site0": 0.2493,
+      "s0_init": 0.25,
+      "n_timeouts": 0
+    },
+    "N10_aperture": {
+      "N": 10,
+      "observed_mean_steps": 233.94,
+      "kimura_ohta_predicted_steps": 239.74,
+      "naive_shannon_predicted_steps": 516.03,
+      "p_site0": 0.4996,
+      "s0_init": 0.5,
+      "n_timeouts": 0
+    }
+  },
+  "ten_site_aperture": {
+    "n_trials": 20000,
+    "absorb_tol": 1.0,
+    "discrete_theta_1": {
+      "p_bright": 0.4984,
+      "mean_steps": 234.9,
+      "n_timeouts": 0
+    },
+    "gated_theta_072_lam_002": {
+      "no_vac": {
+        "p_bright": 0.5322,
+        "mean_steps": 158.11,
+        "n_timeouts": 0
+      },
+      "pairwise_vac_0012": {
+        "p_bright": 0.4941,
+        "mean_steps": 170.27,
+        "n_timeouts": 0
+      },
+      "global_vac_0012": {
+        "p_bright": 0.3141,
+        "mean_steps": 274.96,
+        "n_timeouts": 0
+      },
+      "pairwise_vac_0018_heldout": {
+        "p_bright": 0.4821,
+        "mean_steps": 173.16,
+        "n_timeouts": 0
+      }
+    },
+    "gated_theta_045_lam_002": {
+      "no_vac": {
+        "p_bright": 0.6313,
+        "mean_steps": 86.23,
+        "n_timeouts": 0
+      },
+      "pairwise_vac_0012": {
+        "p_bright": 0.5959,
+        "mean_steps": 91.67,
+        "n_timeouts": 0
+      },
+      "global_vac_0012": {
+        "p_bright": 0.4263,
+        "mean_steps": 129.38,
+        "n_timeouts": 0
+      }
+    }
+  },
+  "port_mismatch_mc": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      0.9
+    ],
+    "p_sim": [
+      0.0838,
+      0.1714,
+      0.3015,
+      0.4368,
+      0.604,
+      0.7625,
+      0.876
+    ],
+    "gamma_sub": 0.01065,
+    "sigma": 0.22,
+    "kappa_analytical": -0.22
+  },
+  "bell_chsh_mc": {
+    "eta_grid": [
+      0.5,
+      0.7071,
+      0.85,
+      0.95,
+      1.0
+    ],
+    "S_chsh_sim": [
+      1.4263,
+      2.0115,
+      2.4026,
+      2.7041,
+      2.8264
+    ],
+    "S_chsh_theory": [
+      1.4142,
+      2.0,
+      2.4042,
+      2.687,
+      2.8284
+    ]
+  }
+}

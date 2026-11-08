@@ -1,0 +1,210 @@
+{
+  "alignment_symmetry_tie_comparison_s050_theta045": {
+    "centered_flat_16fold": {
+      "p_patch1": 0.4966,
+      "s_patch1_born": 0.5,
+      "bias": -0.0034,
+      "mean_steps": 295.86,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.9568,
+      "tie_rate_2pct": 0.8088,
+      "mean_max_initial_atom_share": 0.0389,
+      "align_mode": "centered_flat",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "centered_gaussian_4fold": {
+      "p_patch1": 0.5036,
+      "s_patch1_born": 0.5,
+      "bias": 0.0036,
+      "mean_steps": 290.63,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.545,
+      "tie_rate_2pct": 0.2986,
+      "mean_max_initial_atom_share": 0.0541,
+      "align_mode": "centered_gaussian",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "off_center_random_broken_symmetry": {
+      "p_patch1": 0.503,
+      "s_patch1_born": 0.5,
+      "bias": 0.003,
+      "mean_steps": 289.97,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.2919,
+      "tie_rate_2pct": 0.1232,
+      "mean_max_initial_atom_share": 0.0564,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    }
+  },
+  "2d_crystal_lattice_4x4_per_patch": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "n_trials_per_point": 12000,
+    "lattice_geometry": "Two 4x4 2D crystal lattice patches (16 atoms/patch, 32 atoms total) with random sub-lattice wave-packet alignment offset delta_r0 ~ U(-0.5, +0.5) a_lat, nearest-neighbor exciton hopping, and shared vacuum bus",
+    "mean_tie_rate_5pct": 0.2975,
+    "mean_tie_rate_2pct": 0.1237,
+    "theta_072_p_patch1": [
+      0.1022,
+      0.2021,
+      0.308,
+      0.3982,
+      0.5008,
+      0.5944,
+      0.6937,
+      0.8023,
+      0.9032
+    ],
+    "theta_072_rms_vs_born": 0.00426,
+    "theta_072_fit": {
+      "p_hat": 1.9887,
+      "se_p": 0.0133,
+      "ci95": [
+        1.9627,
+        2.0147
+      ],
+      "rms_vs_born": 0.00426,
+      "chi2_vs_born": 10.42,
+      "dof": 9,
+      "p_value_vs_born": 0.3173
+    },
+    "theta_045_p_patch1": [
+      0.0994,
+      0.1903,
+      0.2983,
+      0.396,
+      0.4973,
+      0.6005,
+      0.7067,
+      0.8007,
+      0.9056
+    ],
+    "theta_045_rms_vs_born": 0.00469,
+    "theta_045_fit": {
+      "p_hat": 2.0407,
+      "se_p": 0.0135,
+      "ci95": [
+        2.0142,
+        2.0673
+      ],
+      "rms_vs_born": 0.00469,
+      "chi2_vs_born": 15.22,
+      "dof": 9,
+      "p_value_vs_born": 0.0852
+    },
+    "mean_steps_theta_072": [
+      513.6,
+      521.91,
+      538.32,
+      537.47,
+      537.44,
+      535.88,
+      531.07,
+      527.37,
+      517.51
+    ],
+    "mean_steps_theta_045": [
+      274.35,
+      277.99,
+      282.56,
+      287.56,
+      287.98,
+      288.07,
+      286.38,
+      279.05,
+      270.15
+    ]
+  },
+  "ablation_study_s070_theta045": {
+    "full_baseline": {
+      "p_patch1": 0.7102,
+      "s_patch1_born": 0.7,
+      "bias": 0.0102,
+      "mean_steps": 285.27,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_dominant_atom_phase_pulling_kappa_pull_0": {
+      "p_patch1": 0.7003,
+      "s_patch1_born": 0.7,
+      "bias": 0.0003,
+      "mean_steps": 286.1,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_surface_vonmises_kappa_surf_0": {
+      "p_patch1": 0.7113,
+      "s_patch1_born": 0.7,
+      "bias": 0.0113,
+      "mean_steps": 284.76,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3019,
+      "tie_rate_2pct": 0.1262,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_premodulus_phase_seeding_alpha_seed_0": {
+      "p_patch1": 0.7103,
+      "s_patch1_born": 0.7,
+      "bias": 0.0103,
+      "mean_steps": 285.32,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3549,
+      "tie_rate_2pct": 0.1497,
+      "mean_max_initial_atom_share": 0.076,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_vacuum_drift_surface_vac_eps_0": {
+      "p_patch1": 0.7093,
+      "s_patch1_born": 0.7,
+      "bias": 0.0093,
+      "mean_steps": 279.57,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.3035,
+      "tie_rate_2pct": 0.1254,
+      "mean_max_initial_atom_share": 0.0787,
+      "align_mode": "off_center_random",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    },
+    "no_off_center_alignment_flat_16fold": {
+      "p_patch1": 0.6977,
+      "s_patch1_born": 0.7,
+      "bias": -0.0022,
+      "mean_steps": 289.97,
+      "n_timeouts": 0,
+      "tie_rate_5pct": 0.9594,
+      "tie_rate_2pct": 0.8088,
+      "mean_max_initial_atom_share": 0.0544,
+      "align_mode": "centered_flat",
+      "lattice_size_per_patch": "4x4=16",
+      "total_lattice_atoms": 32
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "periodic_seed_invariance_checks": {
+    "max_error_inc_plus_2pi": 2.220446049250313e-16,
+    "max_error_vac_minus_2pi": 2.220446049250313e-16,
+    "max_error_det_plus_2pi": 2.220446049250313e-16,
+    "max_error_common_phase_shift": 1.1102230246251565e-16,
+    "min_F_m": 0.8650221360291507,
+    "max_F_m": 1.142680161263283
+  },
+  "whole_quantum_theta1_20atom_sweep": {
+    "sigma": 0.25,
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "p_observed": [
+      0.0993,
+      0.2002,
+      0.2975,
+      0.4131,
+      0.497,
+      0.5968,
+      0.7023,
+      0.7913,
+      0.8978
+    ],
+    "mean_steps": [
+      574.21,
+      580.37,
+      577.1,
+      579.84,
+      582.3,
+      584.34,
+      578.19,
+      580.64,
+      568.86
+    ],
+    "total_unresolved": 0,
+    "max_conservation_error": 1.887379141862766e-15,
+    "p_hat": 1.9807,
+    "se_p": 0.0132,
+    "ci_95": [
+      1.955,
+      2.007
+    ],
+    "chi2_born": 16.57,
+    "p_value": 0.0558,
+    "rms_error_pp": 0.56
+  },
+  "whole_quantum_theta1_32lattice_sweep": {
+    "sigma": 0.35,
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "p_observed": [
+      0.1013,
+      0.2012,
+      0.2978,
+      0.406,
+      0.4983,
+      0.5916,
+      0.7033,
+      0.7997,
+      0.9006
+    ],
+    "mean_steps": [
+      446.98,
+      449.5,
+      459.78,
+      464.93,
+      463.03,
+      464.5,
+      461.81,
+      453.16,
+      443.64
+    ],
+    "total_unresolved": 0,
+    "max_conservation_error": 1.3322676295501878e-15,
+    "p_hat": 1.9949,
+    "se_p": 0.0133,
+    "ci_95": [
+      1.969,
+      2.021
+    ],
+    "chi2_born": 6.75,
+    "p_value": 0.6627,
+    "rms_error_pp": 0.38
+  },
+  "analytical_two_site_eps_vac_drift_table": [
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.0,
+      "q_010": 0.1,
+      "q_030": 0.3,
+      "q_070": 0.7,
+      "fitted_p": 2.0
+    },
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.005,
+      "q_010": 0.1048,
+      "q_030": 0.3046,
+      "q_070": 0.6954,
+      "fitted_p": 1.95
+    },
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.006,
+      "q_010": 0.1058,
+      "q_030": 0.3055,
+      "q_070": 0.6945,
+      "fitted_p": 1.94
+    },
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.008,
+      "q_010": 0.1078,
+      "q_030": 0.3073,
+      "q_070": 0.6927,
+      "fitted_p": 1.92
+    },
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.012,
+      "q_010": 0.1119,
+      "q_030": 0.3111,
+      "q_070": 0.6889,
+      "fitted_p": 1.881
+    },
+    {
+      "sigma": 0.25,
+      "eps_vac": 0.018,
+      "q_010": 0.1182,
+      "q_030": 0.3167,
+      "q_070": 0.6833,
+      "fitted_p": 1.821
+    }
+  ],
+  "threshold_balance_and_5vs15_refinement": {
+    "max_uncompensated_backward_residual": 0.004856,
+    "max_compensated_backward_residual": 3.469446951953614e-18,
+    "max_sum_of_compensating_drifts": 1.8431436932253575e-18,
+    "five_vs_fifteen_step_refinement_s050_theta045": [
+      {
+        "dt": 1.0,
+        "sigma_h": 0.25,
+        "lambda_h": 0.02,
+        "n_trials": 10000,
+        "n_unresolved": 0,
+        "observed_port1_fraction": 0.5163,
+        "ci_95": [
+          0.5065,
+          0.5261
+        ],
+        "p_value_vs_050": 0.001152999146979755
+      },
+      {
+        "dt": 0.5,
+        "sigma_h": 0.17678,
+        "lambda_h": 0.01,
+        "n_trials": 10000,
+        "n_unresolved": 0,
+        "observed_port1_fraction": 0.5217,
+        "ci_95": [
+          0.5119,
+          0.5315
+        ],
+        "p_value_vs_050": 1.4867599264408001e-05
+      },
+      {
+        "dt": 0.25,
+        "sigma_h": 0.125,
+        "lambda_h": 0.005,
+        "n_trials": 10000,
+        "n_unresolved": 0,
+        "observed_port1_fraction": 0.5229,
+        "ci_95": [
+          0.5131,
+          0.5327
+        ],
+        "p_value_vs_050": 4.8596355290853975e-06
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "two_site_exposure": {
+    "0.45": {
+      "min": {
+        "p_win1": 0.4963666666666667,
+        "mean_total_steps": 115.4291,
+        "mean_winner_exp_steps": 102.9537,
+        "mean_exp_fraction": 0.9181612132724647
+      },
+      "sqrt": {
+        "p_win1": 0.49906666666666666,
+        "mean_total_steps": 21.254766666666665,
+        "mean_winner_exp_steps": 16.858366666666665,
+        "mean_exp_fraction": 0.8588060536964128
+      }
+    },
+    "0.72": {
+      "min": {
+        "p_win1": 0.5018666666666667,
+        "mean_total_steps": 115.84393333333334,
+        "mean_winner_exp_steps": 90.0096,
+        "mean_exp_fraction": 0.7956982084986155
+      },
+      "sqrt": {
+        "p_win1": 0.4967,
+        "mean_total_steps": 21.23443333333333,
+        "mean_winner_exp_steps": 8.201566666666666,
+        "mean_exp_fraction": 0.4549723503457565
+      }
+    },
+    "0.9": {
+      "min": {
+        "p_win1": 0.49983333333333335,
+        "mean_total_steps": 115.20073333333333,
+        "mean_winner_exp_steps": 64.06036666666667,
+        "mean_exp_fraction": 0.5739151330078084
+      },
+      "sqrt": {
+        "p_win1": 0.5006666666666667,
+        "mean_total_steps": 21.312366666666666,
+        "mean_winner_exp_steps": 2.2596333333333334,
+        "mean_exp_fraction": 0.1334685592844144
+      }
+    },
+    "0.94": {
+      "min": {
+        "p_win1": 0.5011,
+        "mean_total_steps": 115.17086666666667,
+        "mean_winner_exp_steps": 50.091166666666666,
+        "mean_exp_fraction": 0.454953196883895
+      },
+      "sqrt": {
+        "p_win1": 0.4988666666666667,
+        "mean_total_steps": 21.216,
+        "mean_winner_exp_steps": 1.4017333333333333,
+        "mean_exp_fraction": 0.09577284666813242
+      }
+    }
+  },
+  "ten_site_exposure": {
+    "0.45": {
+      "min": {
+        "p_bright": 0.4978,
+        "mean_total_steps": 1410.0324,
+        "mean_winner_exp_steps": 1165.1473333333333,
+        "mean_exp_fraction": 0.8421782536092006
+      },
+      "sqrt": {
+        "p_bright": 0.4992,
+        "mean_total_steps": 232.55773333333335,
+        "mean_winner_exp_steps": 150.9484,
+        "mean_exp_fraction": 0.6982505128219944
+      }
+    },
+    "0.72": {
+      "min": {
+        "p_bright": 0.4978,
+        "mean_total_steps": 1398.2687333333333,
+        "mean_winner_exp_steps": 970.2753333333334,
+        "mean_exp_fraction": 0.699864486612217
+      },
+      "sqrt": {
+        "p_bright": 0.5027333333333334,
+        "mean_total_steps": 231.7116,
+        "mean_winner_exp_steps": 72.00493333333333,
+        "mean_exp_fraction": 0.3595091983843532
+      }
+    },
+    "0.9": {
+      "min": {
+        "p_bright": 0.49773333333333336,
+        "mean_total_steps": 1392.1772,
+        "mean_winner_exp_steps": 664.1324,
+        "mean_exp_fraction": 0.4810747365739326
+      },
+      "sqrt": {
+        "p_bright": 0.5000666666666667,
+        "mean_total_steps": 231.71006666666668,
+        "mean_winner_exp_steps": 22.0942,
+        "mean_exp_fraction": 0.1220895940992446
+      }
+    },
+    "0.94": {
+      "min": {
+        "p_bright": 0.5006,
+        "mean_total_steps": 1407.2610666666667,
+        "mean_winner_exp_steps": 519.6066666666667,
+        "mean_exp_fraction": 0.37450781189224547
+      },
+      "sqrt": {
+        "p_bright": 0.4941333333333333,
+        "mean_total_steps": 232.8952,
+        "mean_winner_exp_steps": 11.928266666666667,
+        "mean_exp_fraction": 0.06951960584172287
+      }
+    }
+  },
+  "s_sweep_theta_072_lam_004": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "min_step": [
+      0.03895,
+      0.1309,
+      0.2474,
+      0.37485,
+      0.5074,
+      0.63025,
+      0.7532,
+      0.87605,
+      0.96125
+    ],
+    "sqrt_step": [
+      0.0833,
+      0.17935,
+      0.28805,
+      0.38675,
+      0.4973,
+      0.6117,
+      0.7159,
+      0.82425,
+      0.92155
+    ],
+    "sqrt_plus_vacuum": [
+      0.0967,
+      0.1939,
+      0.3018,
+      0.3895,
+      0.4882,
+      0.6019,
+      0.6945,
+      0.8012,
+      0.904
+    ]
+  },
+  "ten_site_gated": {
+    "0.45": {
+      "min_p_bright": 0.7731666666666667,
+      "sqrt_p_bright": 0.627,
+      "sqrt_plus_vac_p_bright": 0.59475
+    },
+    "0.72": {
+      "min_p_bright": 0.5853333333333334,
+      "sqrt_p_bright": 0.5389166666666667,
+      "sqrt_plus_vac_p_bright": 0.5023333333333333
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "regime_comparison_8qubits_s070": {
+    "M_qubits": 8,
+    "s_port1_input": 0.7,
+    "regime_A_oracle_noise_inversion": {
+      "final_mean_max_qubit_prob": 0.175,
+      "final_coherence_overlap": 1.0,
+      "single_qubit_fixation_rate": 0.0
+    },
+    "regime_B_fixed_linear_iswap_control": {
+      "final_mean_max_qubit_prob": 0.333,
+      "final_coherence_overlap": 0.1234,
+      "single_qubit_fixation_rate": 0.0
+    },
+    "regime_C_su2_martingale_container": {
+      "final_mean_max_qubit_prob": 1.0,
+      "final_coherence_overlap": 0.144,
+      "single_qubit_fixation_rate": 1.0,
+      "n_unresolved": 0,
+      "observed_port1_probability": 0.6917,
+      "born_target_probability": 0.7,
+      "mean_steps_to_basis_state": 204.66,
+      "max_unitary_norm_deviation": 1.554312234475219e-14
+    },
+    "regime_D_monitored_kraus_instrument": {
+      "g_coupling": 0.35,
+      "localization_tolerance": 1e-08,
+      "final_mean_max_qubit_prob": 1.0,
+      "final_coherence_overlap": 0.1431,
+      "asymptotic_localization_rate": 1.0,
+      "n_unresolved": 0,
+      "observed_port1_probability": 0.681,
+      "mean_sweeps_to_tolerance": 50.23
+    }
+  },
+  "nine_angle_sweeps_8qubits": {
+    "regime_C_su2_martingale_sweep": {
+      "p_observed": [
+        0.1059,
+        0.1991,
+        0.299,
+        0.4005,
+        0.4955,
+        0.5916,
+        0.6991,
+        0.7973,
+        0.8961
+      ],
+      "p_hat": 1.9706,
+      "se_p": 0.0161,
+      "chi2_born": 7.93,
+      "p_value": 0.5414,
+      "rms_error": 0.0041,
+      "s_grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "mean_steps": [
+        195.92,
+        199.91,
+        205.96,
+        203.51,
+        206.07,
+        203.05,
+        201.61,
+        199.36,
+        195.03
+      ]
+    },
+    "regime_D_monitored_kraus_sweep": {
+      "p_observed": [
+        0.0975,
+        0.2021,
+        0.3033,
+        0.3989,
+        0.5036,
+        0.6042,
+        0.7085,
+        0.8011,
+        0.9067
+      ],
+      "p_hat": 2.0273,
+      "se_p": 0.0166,
+      "chi2_born": 9.04,
+      "p_value": 0.4339,
+      "rms_error": 0.00437,
+      "s_grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "mean_sweeps": [
+        48.37,
+        48.95,
+        50.13,
+        50.07,
+        49.8,
+        49.93,
+        50.37,
+        49.04,
+        48.62
+      ]
+    }
+  }
+}

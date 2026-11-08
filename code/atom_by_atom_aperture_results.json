@@ -1,0 +1,216 @@
+{
+  "theta_045_aperture_resolution_test": {
+    "lumped_1_bright_vs_9_dim_no_vac": {
+      "p_region1": 0.6328,
+      "s_region1_born": 0.5,
+      "bias": 0.1328,
+      "mean_steps": 86.65,
+      "n_timeouts": 0,
+      "M1_atoms": 1,
+      "M2_atoms": 9,
+      "align_mode": "off_center_random",
+      "tie_rate_5pct": 0.0,
+      "tie_rate_2pct": 0.0,
+      "max_initial_atom_share": 0.5
+    },
+    "resolved_5_bright_vs_15_dim_no_vac": {
+      "p_region1": 0.5202,
+      "s_region1_born": 0.5,
+      "bias": 0.0202,
+      "mean_steps": 200.35,
+      "n_timeouts": 0,
+      "M1_atoms": 5,
+      "M2_atoms": 15,
+      "align_mode": "off_center_random",
+      "tie_rate_5pct": 0.2954,
+      "tie_rate_2pct": 0.1226,
+      "max_initial_atom_share": 0.1233
+    },
+    "resolved_5_bright_vs_15_dim_with_surface_vac": {
+      "p_region1": 0.5082,
+      "s_region1_born": 0.5,
+      "bias": 0.0082,
+      "mean_steps": 207.76,
+      "n_timeouts": 0,
+      "M1_atoms": 5,
+      "M2_atoms": 15,
+      "align_mode": "off_center_random",
+      "tie_rate_5pct": 0.2979,
+      "tie_rate_2pct": 0.1239,
+      "max_initial_atom_share": 0.1233
+    },
+    "resolved_10_bright_vs_10_dim_no_vac": {
+      "p_region1": 0.5002,
+      "s_region1_born": 0.5,
+      "bias": 0.0002,
+      "mean_steps": 207.21,
+      "n_timeouts": 0,
+      "M1_atoms": 10,
+      "M2_atoms": 10,
+      "align_mode": "off_center_random",
+      "tie_rate_5pct": 0.5131,
+      "tie_rate_2pct": 0.2256,
+      "max_initial_atom_share": 0.0645
+    },
+    "resolved_10_bright_vs_10_dim_centered_flat_comparison": {
+      "p_region1": 0.5004,
+      "s_region1_born": 0.5,
+      "bias": 0.0004,
+      "mean_steps": 206.78,
+      "n_timeouts": 0,
+      "M1_atoms": 10,
+      "M2_atoms": 10,
+      "align_mode": "centered_flat",
+      "tie_rate_5pct": 0.8672,
+      "tie_rate_2pct": 0.6415,
+      "max_initial_atom_share": 0.0594
+    }
+  },
+  "twenty_atom_aperture_sweep": {
+    "s_grid": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "M1_atoms_per_port": 10,
+    "M2_atoms_per_port": 10,
+    "align_mode": "off_center_random",
+    "n_trials_per_point": 12000,
+    "discrete_theta_1": {
+      "p_region1": [
+        0.1016,
+        0.2008,
+        0.2955,
+        0.4044,
+        0.4928,
+        0.6022,
+        0.6972,
+        0.7983,
+        0.8988
+      ],
+      "fit": {
+        "p_hat": 1.9904,
+        "se_p": 0.0133,
+        "ci95": [
+          1.9642,
+          2.0165
+        ],
+        "rms_vs_born": 0.00352,
+        "chi2_vs_born": 6.1,
+        "dof": 9,
+        "p_value_vs_born": 0.7297
+      },
+      "rms_vs_born": 0.00352
+    },
+    "gated_theta_072_no_vac": {
+      "p_region1": [
+        0.0987,
+        0.2021,
+        0.2878,
+        0.3976,
+        0.5008,
+        0.596,
+        0.7027,
+        0.8054,
+        0.901
+      ],
+      "fit": {
+        "p_hat": 2.0238,
+        "se_p": 0.0135,
+        "ci95": [
+          1.9973,
+          2.0502
+        ],
+        "rms_vs_born": 0.00489,
+        "chi2_vs_born": 12.92,
+        "dof": 9,
+        "p_value_vs_born": 0.1664
+      },
+      "rms_vs_born": 0.00489
+    },
+    "gated_theta_072_vac_0006": {
+      "p_region1": [
+        0.1102,
+        0.2056,
+        0.3092,
+        0.4052,
+        0.4971,
+        0.5942,
+        0.6969,
+        0.7943,
+        0.8947
+      ],
+      "fit": {
+        "p_hat": 1.9324,
+        "se_p": 0.0131,
+        "ci95": [
+          1.9066,
+          1.9581
+        ],
+        "rms_vs_born": 0.00632,
+        "chi2_vs_born": 31.23,
+        "dof": 9,
+        "p_value_vs_born": 0.0003
+      },
+      "rms_vs_born": 0.00632
+    },
+    "gated_theta_045_no_vac": {
+      "p_region1": [
+        0.0938,
+        0.1935,
+        0.2933,
+        0.3931,
+        0.5021,
+        0.5991,
+        0.7084,
+        0.8097,
+        0.9052
+      ],
+      "fit": {
+        "p_hat": 2.0687,
+        "se_p": 0.0137,
+        "ci95": [
+          2.042,
+          2.0955
+        ],
+        "rms_vs_born": 0.00641,
+        "chi2_vs_born": 28.19,
+        "dof": 9,
+        "p_value_vs_born": 0.0009
+      },
+      "rms_vs_born": 0.00641
+    },
+    "gated_theta_045_vac_0006": {
+      "p_region1": [
+        0.0968,
+        0.1969,
+        0.2924,
+        0.3937,
+        0.5002,
+        0.593,
+        0.7017,
+        0.8031,
+        0.903
+      ],
+      "fit": {
+        "p_hat": 2.0324,
+        "se_p": 0.0135,
+        "ci95": [
+          2.0059,
+          2.0588
+        ],
+        "rms_vs_born": 0.00457,
+        "chi2_vs_born": 11.91,
+        "dof": 9,
+        "p_value_vs_born": 0.2185
+      },
+      "rms_vs_born": 0.00457
+    }
+  }
+}
