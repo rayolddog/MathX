@@ -300,4 +300,10 @@ All prompts below are reproduced **verbatim** (including original informal phras
 
 - **[Step 1342 | `2026-11-08T16:29:54Z`]:**
   > "Yes. I think that would reduce objections of a reviewer. There is another consequence. If the entire wave packet contains the energy, either there is enough time for the energy perpendicular to the axis of detector to drain into the drain site, or the calculation of energy and measurements of orbital energy are off by the measure squared? We are treating absorbed energy as though it is the diameter of the wave packet, either in the spatial or time domain?"
-  - **Resulting Addition (§1.3):** Added discussion of space-to-time wave-train delivery ($f(z-ct)$), Franz–Keldysh / Poole–Frenkel bias-field barrier lowering and resonant dipole absorption cross-section ($\sigma_{\text{abs}} \sim \frac{3}{2\pi}\lambda^2$), longitudinal single-photon detector capture, and the distinction between carrier frequency $\omega$ setting orbital transition energy $\hbar\omega$ vs. lateral draining within the causal capture cone $D_\perp \lesssim c\,\Delta T$.
+
+- **[Step 1359 | `2026-11-08T16:40:35Z`]:**
+  > "Is it true that on the surface of the detector, that an electron hole will create a sink for energy absorption?"
+
+- **[Step 1361 | `2026-11-08T16:42:33Z`]:**
+  > "Yes, add that paragraph. I think it should also be committed and pushed to the repositories."
+  - **Resulting Addition (§1.3):** Added discussion of space-to-time wave-train delivery ($f(z-ct)$), Franz–Keldysh / Poole–Frenkel bias-field barrier lowering, the incipient surface electron–hole pair acting as a Poynting-flux and excitonic energy sink ($\sigma_{\text{abs}} \sim \frac{3}{2\pi}\lambda^2$, citing Bohren 1983 and Paul & Fischer 1983), longitudinal single-photon detector capture, and the distinction between carrier frequency $\omega$ setting orbital transition energy $\hbar\omega$ vs. lateral draining within the causal capture cone $D_\perp \lesssim c\,\Delta T$.
