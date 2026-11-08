@@ -273,9 +273,31 @@ All prompts below are reproduced **verbatim** (including original informal phras
   > "Does this have any relationship to the idea I once proposed, that Feynman broke down quantum interactions into calculations that could be performed by people using calculators. What I have framed is more or less a wavefront calculation best performed with computers using the Fourier transform?"
   - **Resulting Figures & Section:** [`code/fig_v2_9_feynman_arrows_peaks_troughs_two_slit.png`](code/fig_v2_9_feynman_arrows_peaks_troughs_two_slit.png), [`code/fig_v2_10_feynman_action_curve_and_path_rarity.png`](code/fig_v2_10_feynman_action_curve_and_path_rarity.png), [`code/fig_v2_11_feynman_diagram_to_wave_peaks_troughs.png`](code/fig_v2_11_feynman_diagram_to_wave_peaks_troughs.png), and §4.8 of [`02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md`](02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md#L334-L361).
 
-### 10. Archiving the Prompt Provenance Log (Nov 7, 2026)
+### 10. Archiving the Prompt Provenance Log, Softening Historical Speculations, and Space-to-Time Wave-Packet Absorption (Nov 7–8, 2026)
 - **[Step 1082 | `2026-11-07T16:29:19Z`]:**
   > "I was checking a review of AI identification of solutions to mathematical conjectures. One of the points made I think is useful. A record of the prompts used as input to the AI is useful in understanding and assessing the AI authored manuscript. Is there a record of prompts that have contributed to the latest revision of what developed as a microscopic simulation showing individual events of quantum interaction accumulatinga distribution close to the Born rule calculated distribution?"
 
 - **[Step 1096 | `2026-11-07T16:38:31Z`]:**
   > "Yes, please generate that file. I think that would be a good addition to the AI scientific journal. Just as the critical reviews and revision history is a more complete description of the ideas presented in a manuscript, the prompts reveal the underlying current in the development of the ideas."
+
+- **[Step 1246 | `2026-11-08T06:19:33Z`]:**
+  > "I would also note that I don't claim to be the expert stating what Einstein's objections to QM, and Feynman's recipe for calculation of quantum interactions relying on human calculators rather than wavefront computations. The statements may need to be softening to be speculations."
+
+- **[Step 1264 | `2026-11-08T06:30:20Z`]:**
+  > "Since the work is a continuation of Born selection, I wonder if it would be best to place a copy of this latest manuscript in the Born Selection repo, and the Dirac Kuramoto repo. The respective readme.md files would be updated to explain that the added manuscript is the result of many revisions of the same basic postulates applied to the same problem."
+
+- **[Step 1326 | `2026-11-08T15:25:34Z`]:**
+  > "revisiting Einstein's view that Quantum theory was incomplete. I focused on the recipe for calculation in which the final step is random selection from the Born Rule applied to the complex interference. In the Copenhagen interpretation, the wave packet represents probability and action in Hilbert space. Was Einstein's objection about the ontologic interpretation used to justify the Born rule?"
+
+- **[Step 1330 | `2026-11-08T15:47:12Z`]:**
+  > "I suspect the greatest weakness of the stage 2 mechanism is the absorption of the energy of the wave packet?"
+
+- **[Step 1334 | `2026-11-08T15:59:42Z`]:**
+  > "Nonlocal nature of a wave is both spatial and time. In a given interval of time, the spatial distribution at a frozen time is recreated at a single location over time. is that correct?"
+
+- **[Step 1338 | `2026-11-08T16:21:20Z`]:**
+  > "Is it also true that because of the applied electrical field lowering the energy threshold of creating an electron hole in the surface of the detector, that process selects the site which over time absorbs the complete energy of the wave packet. In the case of the longitudinal single photon detector, the length will absorb the entire wave packet. Is that correct?"
+
+- **[Step 1342 | `2026-11-08T16:29:54Z`]:**
+  > "Yes. I think that would reduce objections of a reviewer. There is another consequence. If the entire wave packet contains the energy, either there is enough time for the energy perpendicular to the axis of detector to drain into the drain site, or the calculation of energy and measurements of orbital energy are off by the measure squared? We are treating absorbed energy as though it is the diameter of the wave packet, either in the spatial or time domain?"
+  - **Resulting Addition (§1.3):** Added discussion of space-to-time wave-train delivery ($f(z-ct)$), Franz–Keldysh / Poole–Frenkel bias-field barrier lowering and resonant dipole absorption cross-section ($\sigma_{\text{abs}} \sim \frac{3}{2\pi}\lambda^2$), longitudinal single-photon detector capture, and the distinction between carrier frequency $\omega$ setting orbital transition energy $\hbar\omega$ vs. lateral draining within the causal capture cone $D_\perp \lesssim c\,\Delta T$.
