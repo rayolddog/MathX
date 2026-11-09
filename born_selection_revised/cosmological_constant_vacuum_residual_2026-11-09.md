@@ -35,7 +35,7 @@ Here we replace that phenomenological $H^2$ ansatz with a direct microscopic cal
 
 A classical observer's light cone ($ds^2 = c^2 dt^2 - d\mathbf{x}^2 = 0$) is a macroscopic causal structure belonging to real, on-shell excitations propagating within an established $3+1\text{D}$ spacetime. Virtual vacuum fluctuations, by contrast, are inherently **off-shell** ($k_\mu k^\mu \neq m^2 c^2/\hbar^2$) and extend across spacelike intervals outside the causal light cone (as reflected mathematically in the non-vanishing Wightman propagator $D^+(x - y) \neq 0$ for $(x - y)^2 < 0$ and the time-symmetric Bargmann–Hall–Wightman extended tube [Streater & Wightman 1964]).
 
-In the two-spinor complexified vacuum $\mathbb{C}^4 = \mathbb{C}^2_L \oplus \mathbb{C}^2_R$ developed in Articles 0001–0004 (and more generally in the Wheeler–DeWitt [DeWitt 1967], Page–Wootters [Page & Wootters 1983], and Feynman–Stückelberg [Stückelberg 1941; Feynman 1949] frameworks), each internal vacuum oscillator $k$ carries a complex phase factor:
+In the two-spinor complexified vacuum $\mathbb{C}^4 = \mathbb{C}^2_L \oplus \mathbb{C}^2_R$ and 3D space + complex clock wave framework developed in Companion **Article 0003** ([`../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md`](../../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md) [Gemini & Bramble 2026])—and more generally in the Wheeler–DeWitt [DeWitt 1967], Page–Wootters [Page & Wootters 1983], and Feynman–Stückelberg [Stückelberg 1941; Feynman 1949] frameworks—each internal vacuum oscillator $k$ carries a complex phase factor:
 $$\psi_{\mathbf{k}}(t) = A_{\mathbf{k}}\,\exp\!\big(-i\,\sigma_k\,\omega_{\mathbf{k}}\,t + i\phi_{\mathbf{k},0}\big), \qquad \sigma_k \in \{+1, -1\}, \qquad (3)$$
 where $\sigma_k = +1$ denotes a **forward-time ($+t$, matter-sector)** temporal orientation and $\sigma_k = -1$ denotes a **backward-time ($-t$, antimatter-sector / CPT-conjugate)** temporal orientation.
 
@@ -134,6 +134,7 @@ Because Route A and Route B reflect two different physical mechanisms by which t
 * Boyle, L., Finn, K., & Turok, N. (2018). CPT-symmetric universe. *Phys. Rev. Lett.* **121**, 251301.
 * DeWitt, B. S. (1967). Quantum theory of gravity. I. The canonical theory. *Phys. Rev.* **160**, 1113–1148.
 * Feynman, R. P. (1949). The theory of positrons. *Phys. Rev.* **76**, 749–759.
+* Gemini & Bramble, J. M. (2026). 3D Space + Time as a Complex Clock Wave: Light-Cone Confinement from Two-Spinor Mass Coupling, Gravitational Clock-Frequency Refraction, and Quantum Correlations. *Aperture* **2026**, `0003-complex-4d-vacuum-projections` (Stage-02 Revision 2.0, Nov 2, 2026; §5.3).
 * Kapner, D. J., Cook, T. S., Adelberger, E. G., Gundlach, J. H., Heckel, B. R., Hoyle, C. D., & Swanson, H. E. (2007). Tests of the gravitational inverse-square law below the dark-energy length scale. *Phys. Rev. Lett.* **98**, 021101.
 * Page, D. N., & Wootters, W. K. (1983). Evolution without evolution: Dynamics described by stationary observables. *Phys. Rev. D* **27**, 2885–2892.
 * Particle Data Group [Navas, S., et al.] (2024). Review of Particle Physics. *Phys. Rev. D* **110**, 030001.

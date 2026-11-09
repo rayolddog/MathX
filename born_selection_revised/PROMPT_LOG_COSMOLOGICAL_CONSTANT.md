@@ -51,7 +51,11 @@ This log preserves the verbatim human prompts (`John M. Bramble, MD`, including 
 ### 3. Authoring the Short Manuscript and Recording the Conversation
 - **[Step 1411 | `2026-11-09T07:08:09Z` (`2026-11-09T00:08:09-07:00` local)]:**
   > "It is worth recording this conversation. Can you also author a short manuscript describing the correction to the calculation of the cosmological constant from quantum mechanics to be closer to the observed cosmological constant?"
+
+- **[Step 1429 | `2026-11-09T07:20:44Z` (`2026-11-09T00:20:44-07:00` local)]:**
+  > "It is possible that this might be included in the manuscript, 03 complex 4D vacuum. At least, there may be a reference added to manuscript 4 to manuscript 3."
   - **Resulting Deliverables:**
-    - Manuscript: [`02-first-revision-and-review/manuscript-revised-2026-11-09.md`](02-first-revision-and-review/manuscript-revised-2026-11-09.md)
+    - Manuscript (Article 0004 Stage-02): [`02-first-revision-and-review/manuscript-revised-2026-11-09.md`](02-first-revision-and-review/manuscript-revised-2026-11-09.md)
+    - Companion Integration (Article 0003 Stage-02, §5.3 & Ref. [23]): [`../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md`](../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md#L333-L350)
     - Verification Script: [`code/compute_vacuum_residual_cosmological_constant.py`](code/compute_vacuum_residual_cosmological_constant.py)
     - Figure: [`code/fig_vacuum_time_cancellation_cosmological_constant.png`](code/fig_vacuum_time_cancellation_cosmological_constant.png)
