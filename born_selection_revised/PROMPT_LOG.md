@@ -307,3 +307,13 @@ All prompts below are reproduced **verbatim** (including original informal phras
 - **[Step 1361 | `2026-11-08T16:42:33Z`]:**
   > "Yes, add that paragraph. I think it should also be committed and pushed to the repositories."
   - **Resulting Addition (§1.3):** Added discussion of space-to-time wave-train delivery ($f(z-ct)$), Franz–Keldysh / Poole–Frenkel bias-field barrier lowering, the incipient surface electron–hole pair acting as a Poynting-flux and excitonic energy sink ($\sigma_{\text{abs}} \sim \frac{3}{2\pi}\lambda^2$, citing Bohren 1983 and Paul & Fischer 1983), longitudinal single-photon detector capture, and the distinction between carrier frequency $\omega$ setting orbital transition energy $\hbar\omega$ vs. lateral draining within the causal capture cone $D_\perp \lesssim c\,\Delta T$.
+
+- **[Step 1445–1453 | `2026-11-09T17:17:32Z–17:19:23Z`]:**
+  > "I put both paper 03 and 04 to review by Sol. I think the following suggestion for clarification in paper three would be helpful in developing the theme of the explorationL"
+  >
+  > "\"We organize the description of gravitational motion around the accumulation of quantum action phase. For a free massive particle, the amplitude associated with a worldline contains the factor \(e^{iS/\hbar}\), with \(S=-mc^2\int d\tau\). Differences in accumulated proper time therefore produce differences in quantum phase, while stationary action determines classical trajectories.
+  >
+  > We use “complex clock wave” to describe this relationship between proper time and complex quantum amplitude. The formulation retains real spacetime coordinates and requires no additional spatial dimension. Drawing on Feynman’s treatments of action and gravitation, we interpret spacetime geometry through its effects on phase accumulation. Whether an underlying phase structure can generate the metric itself is a further hypothesis, not a result established here.\""
+  >
+  > "The revision to be revised is 2.9. Sorry I didn't specify that."
+  - **Resulting Integration:** Incorporated into §2.1 of Revision 2.9 ([`02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md`](02-first-revision-and-review/manuscript-revised-2026-11-02-1415.md#L109-L111)) as well as the Abstract and §1.2 of Companion Article 0003 ([`../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md`](../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md)).
