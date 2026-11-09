@@ -29,13 +29,13 @@ Here we replace that phenomenological $H^2$ ansatz with a direct microscopic cal
 
 ---
 
-## 2. Random Temporal Orientations ($\pm t$) Outside the Light Cone and Symmetric Vacuum Cancellation
+## 2. Off-Shell Vacuum Configurations Without Persistent Clock Coherence vs. Higgs-Mediated Shared Temporal Orientation
 
-### 2.1 Timeless Off-Shell Vacuum Modes and the Feynman–Stückelberg $\pm t$ Pairing
+### 2.1 Proposed Ontology: Persistent Clock Coherence of On-Shell Fermions vs. Off-Shell Vacuum Cancellation
 
-A classical observer's light cone ($ds^2 = c^2 dt^2 - d\mathbf{x}^2 = 0$) is a macroscopic causal structure belonging to real, on-shell excitations propagating within an established $3+1\text{D}$ spacetime. Virtual vacuum fluctuations, by contrast, are inherently **off-shell** ($k_\mu k^\mu \neq m^2 c^2/\hbar^2$) and extend across spacelike intervals outside the causal light cone (as reflected mathematically in the non-vanishing Wightman propagator $D^+(x - y) \neq 0$ for $(x - y)^2 < 0$ and the time-symmetric Bargmann–Hall–Wightman extended tube [Streater & Wightman 1964]).
+Following the companion formulation in **Article 0003** ([`../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md`](../../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md) [Gemini & Bramble 2026]), we propose an ontology of physical fields distributed in three-dimensional space, with massive fermionic excitations carrying individual proper-time-dependent quantum phases ($e^{iS/\hbar}$ with $S = -mc^2\int d\tau$). **Higgs-mediated chiral coupling establishes massive fermion dynamics** ($m_f = y_f v_{\text{EW}}/\sqrt{2}$); we further hypothesize that this coupling supports **persistent clock coherence** and contributes to the emergence of a **shared temporal orientation** ($+t$). Crucially, individual clocks accumulate phase according to their distinct masses ($\omega_f = m_f c^2/\hbar$) and worldline histories, rather than sharing an identical universal frequency, while classical trajectories emerge through stationary accumulated action phase ($\delta S = 0$). Whether this clock structure can determine proper time and effective spacetime geometry itself remains the central open question of the proposed framework.
 
-In the two-spinor complexified vacuum $\mathbb{C}^4 = \mathbb{C}^2_L \oplus \mathbb{C}^2_R$ and 3D space + complex clock wave framework developed in Companion **Article 0003** ([`../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md`](../../0003-complex-4d-vacuum-projections/02-first-revision-and-review/manuscript-revised-2026-11-02.md) [Gemini & Bramble 2026])—and more generally in the Wheeler–DeWitt [DeWitt 1967], Page–Wootters [Page & Wootters 1983], and Feynman–Stückelberg [Stückelberg 1941; Feynman 1949] frameworks—each internal vacuum oscillator $k$ carries a complex phase factor:
+Within this phase description, **off-shell vacuum contributions** ($k_\mu k^\mu \neq m^2 c^2/\hbar^2$, extending across spacelike intervals outside the causal light cone as in the Wightman propagator $D^+(x - y) \neq 0$ for $(x - y)^2 < 0$ and the Bargmann–Hall–Wightman extended tube [Streater & Wightman 1964]) **represent configurations without the same persistent clock coherence**. In the Wheeler–DeWitt [DeWitt 1967], Page–Wootters [Page & Wootters 1983], and Feynman–Stückelberg [Stückelberg 1941; Feynman 1949] frameworks, each off-shell vacuum oscillator $k$ carries a complex phase factor:
 $$\psi_{\mathbf{k}}(t) = A_{\mathbf{k}}\,\exp\!\big(-i\,\sigma_k\,\omega_{\mathbf{k}}\,t + i\phi_{\mathbf{k},0}\big), \qquad \sigma_k \in \{+1, -1\}, \qquad (3)$$
 where $\sigma_k = +1$ denotes a **forward-time ($+t$, matter-sector)** temporal orientation and $\sigma_k = -1$ denotes a **backward-time ($-t$, antimatter-sector / CPT-conjugate)** temporal orientation.
 
@@ -61,9 +61,9 @@ When the symmetric $+t$ and $-t$ vacuum modes annihilate into the phase-random r
 
 ---
 
-### 3.1 Route A: Microscopic Quark-Vacuum Residual ($\eta_B^4$ Suppression of the Fundamental Nucleon Quark Scale)
+### 3.1 Route A: Microscopic Quark-Vacuum Residual ($\eta_B^4$ Suppression of the Higgs-Generated Nucleon Quark Scale)
 
-Stable baryonic matter in the universe consists of protons ($uud$) and neutrons ($udd$), whose fundamental fermionic constituents are the first-generation up ($u$) and down ($d$) quarks. Unlike the composite proton mass ($m_p c^2 = 938.27\;\text{MeV}$), which is predominantly kinetic and gluonic binding energy, the fundamental Higgs/electroweak rest masses of the bare light quarks (PDG 2024 $\overline{\text{MS}}$ values [Particle Data Group 2024]) are:
+Because individual fermionic clocks in our ontology accumulate phase according to their **distinct Higgs-generated masses** ($m_f = y_f v_{\text{EW}}/\sqrt{2}$) rather than sharing an identical universal frequency, the persistent temporal orientation ($+t$) of the surviving matter sector ($\eta_B = 6.12 \times 10^{-10}$) is anchored specifically by the fundamental fermions that populate stable cosmic matter: the first-generation up ($u$) and down ($d$) valence quarks of protons ($uud$) and neutrons ($udd$). Unlike the composite proton mass ($m_p c^2 = 938.27\;\text{MeV}$), which is predominantly kinetic and gluonic binding energy, the fundamental Higgs/electroweak rest masses of the bare light quarks (PDG 2024 $\overline{\text{MS}}$ values [Particle Data Group 2024]) are:
 $$m_u c^2 = 2.16^{+0.49}_{-0.26}\;\text{MeV}, \qquad m_d c^2 = 4.67^{+0.48}_{-0.17}\;\text{MeV}. \qquad (6)$$
 The isospin-averaged light-quark mass and the valence-averaged quark masses of the proton and neutron are therefore:
 $$\bar{m}_{q,\text{iso}} c^2 = \frac{m_u + m_d}{2} = 3.415\;\text{MeV}, \qquad \bar{m}_{q,p} c^2 = \frac{2m_u + m_d}{3} = 2.997\;\text{MeV}, \qquad \bar{m}_{q,n} c^2 = \frac{m_u + 2m_d}{3} = 3.833\;\text{MeV}. \qquad (7)$$
